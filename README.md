@@ -1,12 +1,12 @@
 # egxo.dev
 
+![egxodev](https://github.com/user-attachments/assets/dc512900-ef3b-41d5-b6c1-f67a8aee41fb)
+
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) ![GitHub repo size](https://img.shields.io/github/repo-size/egarrisxn/egxo-dev) ![GitHub last commit](https://img.shields.io/github/last-commit/egarrisxn/egxo-dev)
 
 ## Description
 
 My website/portfolio.
-
-![egxworldv2](https://github.com/user-attachments/assets/39019abb-85cf-4912-99df-fcec32813581)
 
 ## Technologies
 
