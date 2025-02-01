@@ -55,15 +55,7 @@ const Projects = [
     type: 'project',
     image: '/projects/swaybae.png',
   },
-  {
-    title: 'egxworld v1',
-    description:
-      'My first portfolio / website / whatever you would like to call it. Powered by Next.js, JavaScript, Tailwind CSS, shadcn/ui, & deployed with Vercel.',
-    href: 'https://github.com/egarrisxn/egxworld-v1',
-    years: ['2024'],
-    type: 'project',
-    image: '/projects/egxworld.png',
-  },
+
   {
     title: 'Resbuilder: ATS Resumes',
     description:
@@ -81,6 +73,15 @@ const Projects = [
     years: ['2024'],
     type: 'project',
     image: '/projects/websanity.png',
+  },
+  {
+    title: 'egxworld v1',
+    description:
+      'My first portfolio / website / whatever you would like to call it. Powered by Next.js, JavaScript, Tailwind CSS, shadcn/ui, & deployed with Vercel.',
+    href: 'https://github.com/egarrisxn/egxworld-v1',
+    years: ['2023', '2024'],
+    type: 'project',
+    image: '/projects/egxworld.png',
   },
   {
     title: 'egxo.fyi',
