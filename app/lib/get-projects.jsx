@@ -53,16 +53,16 @@ const Projects = [
     href: 'https://github.com/egarrisxn/swaybaeofficial',
     years: ['2024'],
     type: 'project',
-    image: '/projects/swaybaeofficial.png',
+    image: '/projects/swaybae.png',
   },
   {
-    title: 'EGXWORLD v1',
+    title: 'egxworld v1',
     description:
       'My first portfolio / website / whatever you would like to call it. Powered by Next.js, JavaScript, Tailwind CSS, shadcn/ui, & deployed with Vercel.',
     href: 'https://github.com/egarrisxn/egxworld-v1',
     years: ['2024'],
     type: 'project',
-    image: '/projects/egxworldv1.png',
+    image: '/projects/egxworld.png',
   },
   {
     title: 'Resbuilder: ATS Resumes',
@@ -74,15 +74,6 @@ const Projects = [
     image: '/projects/resumebuilder.png',
   },
   {
-    title: 'egxo.fyi',
-    description:
-      'My personal blog I created as an attempt to write a little more. Spun up by the new Next.js, Sanity, JavaScript, Tailwind CSS, shadcn/ui, & deployed with Vercel.',
-    href: 'https://github.com/egarrisxn/egxo-fyi',
-    years: ['2024'],
-    type: 'project',
-    image: '/projects/egxblog.png',
-  },
-  {
     title: 'WebSanity: Website Builder',
     description:
       'A powerful, user-friendly tool designed to help you create stunning websites effortlessly! Powered by Next.js, Sanity, JavaScript, Tailwind CSS, & deployed with Vercel.',
@@ -92,11 +83,20 @@ const Projects = [
     image: '/projects/websanity.png',
   },
   {
+    title: 'egxo.fyi',
+    description:
+      'My personal blog I created as an attempt to write a little more. Spun up by the new Next.js, Sanity, JavaScript, Tailwind CSS, shadcn/ui, & deployed with Vercel.',
+    href: 'https://github.com/egarrisxn/egxo-fyi',
+    years: ['2023', '2024'],
+    type: 'project',
+    image: '/projects/egxblog.png',
+  },
+  {
     title: 'EZCOPY BUTTONS',
     description:
       'A nice and simple gallery of copy-and-paste buttons for seamless use. Built with Next.js, JavaScript, Tailwind CSS, & deployed with Vercel.',
     href: 'https://github.com/egarrisxn/ezcopy-buttons',
-    years: ['2024'],
+    years: ['2023'],
     type: 'project',
     image: '/projects/ezcopy.png',
   },
@@ -105,7 +105,7 @@ const Projects = [
     description:
       'An aestheticlly pleasing (not ATS compliant) resume template using the powers that are Next.js, Typescript, Tailwind CSS, Material-Tailwind, & deployed with Vercel.',
     href: 'https://github.com/egarrisxn/devbuild-resume',
-    years: ['2024'],
+    years: ['2023'],
     type: 'project',
     image: '/projects/devbuildresume.png',
   },
@@ -114,18 +114,9 @@ const Projects = [
     description:
       'An intuitive movie search engine offering everything you would expect from a comprehensive movie database. Built with Angular, TypeScript, Tailwind CSS, & more.',
     href: 'https://github.com/egarrisxn/eg-angular-movies',
-    years: ['2023', '2024'],
-    type: 'project',
-    image: '/projects/egmovies.png',
-  },
-  {
-    title: 'The Tech Forum',
-    description:
-      'A forum application designed in a CMS style, demonstrating the CRUD principles. This app is built with Express, MySQL, Handlebars, Bootstrap, & deployed with Heroku.',
-    href: 'https://github.com/egarrisxn/mvc-tech-forum-2023',
     years: ['2023'],
     type: 'project',
-    image: '/projects/mvctechforum.png',
+    image: '/projects/egmovies.png',
   },
 ]
 
