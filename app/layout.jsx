@@ -3,6 +3,7 @@ import styles from './layout.module.css'
 import {Space_Grotesk, Roboto_Mono} from 'next/font/google'
 import {ThemeProvider} from 'next-themes'
 import {Analytics} from '@vercel/analytics/react'
+import manifest from './manifest'
 
 export const dynamic = 'force-static'
 
@@ -30,7 +31,6 @@ export const metadata = {
     'eg, ethan_g, ethang, ethan-g, egarrisxn, egxworld, website, portfolio, projects, about, nextjs, next, next14, shadcn-ui, shadcn/ui, radixui, tailwindcss, javascript, react, fullstack, full-stack, webdeveloper, web-developer',
   ],
   creator: 'https://egxo.dev.',
-
   robots: {
     index: true,
     follow: true,

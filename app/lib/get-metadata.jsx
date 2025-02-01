@@ -36,12 +36,12 @@ export function getMetadata({
       <meta name='apple-mobile-web-app-title' content='egxo.dev' />
       <meta name='author' content={author} />
       <meta property='og:type' content='website' />
-      <meta charSet='utf-8' />
       <meta property='og:locale' content='en' />
+      <meta charSet='utf-8' />
+      <meta name='theme-color' content='#fcf5ff' />
       <link rel='manifest' href='/manifest.json' />
-      <meta name='theme-color' content='#152028' />
-      <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png' />
-      <link rel='icon' type='image/x-icon' href='/favicons/favicon.ico' key='dynamic-favicon' />
+      <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-icon.png' />
+      <link rel='icon' type='image/x-icon' href='/favicon/favicon.ico' key='dynamic-favicon' />
 
       {date && <meta name='date' content={date} />}
       {lastModified && <meta name='last-modified' content={lastModified} />}
