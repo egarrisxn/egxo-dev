@@ -1,6 +1,16 @@
 import styles from './socials.module.css'
 import {SocialButton} from '../social-button'
-import {LinkedIn, GitHub, XIcon, Instagram, Discord, Spotify1, BlueSky} from '../icons/social'
+import {
+  LinkedIn,
+  GitHub,
+  XIcon,
+  Instagram,
+  Discord,
+  Spotify1,
+  BlueSky,
+  Peerlist,
+  Threads,
+} from '../icons/social'
 
 export default function Socials(props) {
   return (
@@ -20,6 +30,11 @@ export default function Socials(props) {
         icon={<Instagram strokeWidth={2} />}
         tooltip='Instagram'
       />
+      <SocialButton
+        href='https://threads.net/@eg___xo'
+        icon={<Threads strokeWidth={2} />}
+        tooltip='Threads'
+      />
       <SocialButton href='https://x.com/eg__xo' icon={<XIcon strokeWidth={2} />} tooltip='X' />
       <SocialButton
         href='https://bsky.app/profile/egxo.bsky.social'
@@ -27,14 +42,19 @@ export default function Socials(props) {
         tooltip='BlueSky'
       />
       <SocialButton
-        href='https://open.spotify.com/user/egarrisxn'
-        icon={<Spotify1 strokeWidth={2} />}
-        tooltip='Spotify'
+        href='https://peerlist.io/eg_xo'
+        icon={<Peerlist strokeWidth={2} />}
+        tooltip='Peerlist'
       />
       <SocialButton
         href='https://discord.com/users/eg___xo'
         icon={<Discord strokeWidth={2} />}
         tooltip='Discord'
+      />
+      <SocialButton
+        href='https://open.spotify.com/user/egarrisxn'
+        icon={<Spotify1 strokeWidth={2} />}
+        tooltip='Spotify'
       />
     </div>
   )
