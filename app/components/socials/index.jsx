@@ -1,6 +1,6 @@
 import styles from './socials.module.css'
 import {SocialButton} from '../social-button'
-import {LinkedIn, GitHub, XIcon, Instagram, Discord, Spotify1} from '../icons/social'
+import {LinkedIn, GitHub, XIcon, Instagram, Discord, Spotify1, BlueSky} from '../icons/social'
 
 export default function Socials(props) {
   return (
@@ -15,11 +15,16 @@ export default function Socials(props) {
         icon={<LinkedIn strokeWidth={2} />}
         tooltip='LinkedIn'
       />
-      <SocialButton href='https://x.com/eg__xo' icon={<XIcon strokeWidth={2} />} tooltip='X' />
       <SocialButton
         href='https://instagram.com/eg___xo'
         icon={<Instagram strokeWidth={2} />}
         tooltip='Instagram'
+      />
+      <SocialButton href='https://x.com/eg__xo' icon={<XIcon strokeWidth={2} />} tooltip='X' />
+      <SocialButton
+        href='https://bsky.app/profile/egxo.bsky.social'
+        icon={<BlueSky strokeWidth={2} />}
+        tooltip='BlueSky'
       />
       <SocialButton
         href='https://open.spotify.com/user/egarrisxn'

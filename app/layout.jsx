@@ -3,7 +3,6 @@ import styles from './layout.module.css'
 import {Space_Grotesk, Roboto_Mono} from 'next/font/google'
 import {ThemeProvider} from 'next-themes'
 import {Analytics} from '@vercel/analytics/react'
-import manifest from './manifest'
 
 export const dynamic = 'force-static'
 

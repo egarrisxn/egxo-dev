@@ -1,3 +1,4 @@
+export {default as BlueSky} from './bluesky'
 export {default as Discord} from './discord'
 export {default as GitHub} from './github'
 export {default as Instagram} from './instagram'
