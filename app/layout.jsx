@@ -25,19 +25,12 @@ export const metadata = {
     default: 'egxo.dev',
   },
   description: 'Full Stack Developer. Digital Product Designer.',
+  applicationName: 'egxo.dev',
   referrer: 'origin-when-cross-origin',
   keywords: [
     'eg, ethan_g, ethang, ethan-g, egarrisxn, egxworld, website, portfolio, projects, about, nextjs, next, next14, shadcn-ui, shadcn/ui, radixui, tailwindcss, javascript, react, fullstack, full-stack, webdeveloper, web-developer',
   ],
   creator: 'https://egxo.dev.',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
   openGraph: {
     title: 'egxo.dev',
     description: 'Full Stack Developer. Digital Product Designer.',
@@ -62,21 +55,28 @@ export const metadata = {
     site: '@eg__xo',
     images: [
       {
-        url: '/twitter-image',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
         alt: 'Full Stack Developer. Digital Product Designer.',
       },
     ],
   },
-  icons: {
-    icon: [
-      {url: '/favicon/favicon.ico', sizes: '32x32', type: 'image/x-icon'},
-      {url: '/favicon/icon.png', sizes: '96x96', type: 'image/png'},
-      {url: '/favicon/icon.svg', type: 'image/svg+xml'},
-    ],
-    apple: [{url: '/favicon/apple-icon.png', sizes: '180x180', type: 'image/png'}],
+  appleWebApp: {
+    capable: true,
+    title: 'egxo.dev',
+    startupImage: '/opengraph-image',
+    statusBarStyle: 'black-translucent',
   },
+  formatDetection: {
+    telephone: true,
+    date: true,
+    address: true,
+    email: true,
+    url: true,
+  },
+  verification: {},
+  appLinks: {},
 }
 
 export const viewport = {
