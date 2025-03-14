@@ -2,122 +2,267 @@ import {cache} from 'react'
 
 const Projects = [
   {
-    title: 'xprod',
+    title: 'XPROD',
     description:
-      'An all-in-one productivity web application to help keep your days in order! Spun up with Next.js, Supabase, TypeScript, Tailwind CSS, zod, & deployed with Vercel.',
+      'A comprehensive productivity web app designed to streamline your daily tasks and organization. Technologies: Next.js, React, TypeScript, Supabase, Zod, Tailwind CSS, Vercel, & more.',
     href: 'https://github.com/egarrisxn/xprod',
     years: ['2025'],
     type: 'project',
     image: '/projects/xprod.png',
   },
   {
-    title: 'CC NextFolio',
+    title: 'ScribeVoice',
     description:
-      'A super sleek and clean website template just for you! Put together with Next.js, Content Collections, TypeScript, Tailwind CSS, zustand, & deployed with Vercel.',
-    href: 'https://github.com/egarrisxn/cc-nextfolio',
+      'A powerful voice-to-text transcription tool for notes, transcripts, lists, and more. Technologies: Next.js, React, TypeScript, Supabase, OpenAI, Tailwind CSS, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/scribevoice',
+    website: 'https://scribevoice.vercel.app',
     years: ['2025'],
     type: 'project',
-    image: '/projects/ccnextfolio.png',
+    image: '/projects/scribevoice.png',
+  },
+  {
+    title: 'XO Chatbot',
+    description:
+      'An AI-powered chatbot with Grok integration, designed for smooth and intuitive conversations. Technologies: Next.js, React, TypeScript, Grok, Next-Auth, Tailwind CSS, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/xochatbot',
+    website: 'https://xochatbot.vercel.app',
+    years: ['2025'],
+    type: 'project',
+    image: '/projects/xochatbot.png',
   },
   {
     title: 'International Worldwide',
     description:
-      'A multilingual and multi-themed platform featuring coding practice questions across various topics. Built with Next.js, Next-Intl, JavaScript, Tailwind CSS, & deployed with Vercel.',
+      'A multilingual coding practice platform featuring themed challenges across various topics. Technologies: Next.js, React, JavaScript, Next-Intl, Tailwind CSS, Vercel, & more.',
     href: 'https://github.com/egarrisxn/international-worldwide',
-    years: ['2024', '2025'],
+    years: ['2025'],
     type: 'project',
     image: '/projects/internationalworldwide.png',
   },
   {
     title: 'Unofficial Merchandise',
     description:
-      'A fully functional e-commerce store built with users in mind! Leveraging modern web teb technologies like Next.js,Stripe, Sanity, JavaScript, Tailwind CSS, & deployed with Vercel.',
+      'A fully functional e-commerce store with seamless shopping and secure payments. Technologies: Next.js, React, JavaScript, Stripe, Sanity, Tailwind CSS, Vercel, & more.',
     href: 'https://github.com/egarrisxn/unofficial-merchandise',
-    years: ['2024'],
+    years: ['2025'],
     type: 'project',
     image: '/projects/unofficialmerch.png',
   },
   {
+    title: 'CC NextFolio',
+    description:
+      'A sleek and customizable website template tailored for modern portfolios. Technologies: Next.js, React, TypeScript, Content Collections, Zustand, Tailwind CSS, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/cc-nextfolio',
+    years: ['2025'],
+    type: 'project',
+    image: '/projects/ccnextfolio.png',
+  },
+  {
     title: 'n00bdev - Tips & Tricks',
     description:
-      'A cutting-edge, server-side rendered blog designed by developers, for developers. Built with the Astro Framework, TypeScript, Tailwind CSS, & deployed with Vercel.',
+      'A developer-centric blog featuring insightful tips, tricks, and best practices. Technologies: Astro, TypeScript, Tailwind CSS, Vercel, & more.',
     href: 'https://github.com/egarrisxn/n00bdev',
-    years: ['2024'],
+    years: ['2025'],
     type: 'project',
     image: '/projects/n00bdev.png',
   },
   {
     title: 'Sway Bae Official',
     description:
-      'The place to be for full-time streamer and content creator, Sway Bae. Created using Next.js, Sanity, JavaScript, Tailwind CSS, daisyUI, & deployed with Vercel.',
+      'The official site for full-time streamer and content creator Sway Bae, featuring updates and exclusive content. Technologies: Next.js, React, JavaScript, Sanity, Tailwind CSS, daisyUI, Vercel, & more.',
     href: 'https://github.com/egarrisxn/swaybaeofficial',
     years: ['2024'],
     type: 'project',
     image: '/projects/swaybae.png',
   },
-
+  {
+    title: 'XO Starter',
+    description:
+      'A modern, optimized Next.js starter template built for performance and flexibility. Technologies: Next.js, React, TypeScript, Tailwind CSS, Radix-UI, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/xostarter',
+    years: ['2024'],
+    type: 'project',
+    image: '/projects/xostarter.png',
+  },
   {
     title: 'Resbuilder: ATS Resumes',
     description:
-      'A simple and professional ATS friendly resume template and more using the likes of Next.js, JavaScript, MDX, Tailwind CSS, & deployed with Vercel.',
+      'A professional, ATS-friendly resume builder designed for optimal job application success. Technologies: Next.js, React, JavaScript, MDX, Tailwind CSS, Vercel, & more.',
     href: 'https://github.com/egarrisxn/ats-resbuilder',
     years: ['2024'],
     type: 'project',
     image: '/projects/resumebuilder.png',
   },
   {
-    title: 'WebSanity: Website Builder',
+    title: 'WebSanity Builder',
     description:
-      'A powerful, user-friendly tool designed to help you create stunning websites effortlessly! Powered by Next.js, Sanity, JavaScript, Tailwind CSS, & deployed with Vercel.',
+      'An intuitive website builder that simplifies the process of creating stunning web pages. Technologies: Next.js, React, JavaScript, Sanity, Tailwind CSS, Vercel, & more.',
     href: 'https://github.com/egarrisxn/websanity-builder',
     years: ['2024'],
     type: 'project',
     image: '/projects/websanity.png',
   },
   {
+    title: 'Pushin Mongo: Movies',
+    description:
+      'A full-stack movie database app leveraging the MERN stack for dynamic browsing and discovery. Technologies: Next.js, React, TypeScript, Express, MongoDB, Tailwind CSS, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/pushin-mongo-movies',
+    years: ['2024'],
+    type: 'project',
+    image: '/projects/pushinmongo.png',
+  },
+  {
     title: 'egxworld v1',
     description:
-      'My first portfolio / website / whatever you would like to call it. Powered by Next.js, JavaScript, Tailwind CSS, shadcn/ui, & deployed with Vercel.',
+      'My first portfolio website—designed to showcase projects, skills, and more. Technologies: Next.js, React, JavaScript, Tailwind CSS, Radix-UI, Vercel, & more.',
     href: 'https://github.com/egarrisxn/egxworld-v1',
-    years: ['2023', '2024'],
+    years: ['2024'],
     type: 'project',
-    image: '/projects/egxworld.png',
+    image: '/projects/egxworldv1.png',
   },
   {
     title: 'egxo.fyi',
     description:
-      'My personal blog I created as an attempt to write a little more. Spun up by the new Next.js, Sanity, JavaScript, Tailwind CSS, shadcn/ui, & deployed with Vercel.',
+      'A personal blog built to document insights, experiences, and tech-related thoughts. Technologies: Next.js, React, JavaScript, Sanity, Tailwind CSS, Radix-UI, Vercel, & more.',
     href: 'https://github.com/egarrisxn/egxo-fyi',
-    years: ['2023', '2024'],
+    years: ['2024'],
     type: 'project',
-    image: '/projects/egxblog.png',
+    image: '/projects/egxofyi.png',
   },
   {
-    title: 'EZCOPY BUTTONS',
+    title: 'EZCPY BTNS',
     description:
-      'A nice and simple gallery of copy-and-paste buttons for seamless use. Built with Next.js, JavaScript, Tailwind CSS, & deployed with Vercel.',
-    href: 'https://github.com/egarrisxn/ezcopy-buttons',
-    years: ['2023'],
+      'A handy collection of pre-styled, copy-paste buttons for effortless UI development. Technologies: Next.js, JavaScript, Tailwind CSS, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/ezcopy-buttons-2024',
+    years: ['2024'],
     type: 'project',
     image: '/projects/ezcopy.png',
   },
   {
-    title: 'DevBuild: Resume Builder',
+    title: 'NotCoolors',
     description:
-      'An aestheticlly pleasing (not ATS compliant) resume template using the powers that are Next.js, Typescript, Tailwind CSS, Material-Tailwind, & deployed with Vercel.',
-    href: 'https://github.com/egarrisxn/devbuild-resume',
-    years: ['2023'],
+      'A fast and user-friendly color palette generator for all your design needs. Technologies: Next.js, React, JavaScript, Tailwind CSS, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/not-coolors-2024',
+    years: ['2024'],
+    type: 'project',
+    image: '/projects/notcoolors.png',
+  },
+  {
+    title: 'DevBuild Resume',
+    description:
+      'A visually appealing resume builder, prioritizing aesthetics over ATS compliance. Technologies: Next.js, TypeScript, Tailwind CSS, Material-Tailwind, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/devbuild-resume-2024',
+    years: ['2024'],
     type: 'project',
     image: '/projects/devbuildresume.png',
   },
   {
-    title: 'Angular MovieDB',
+    title: 'Angular Movies DB',
     description:
-      'An intuitive movie search engine offering everything you would expect from a comprehensive movie database. Built with Angular, TypeScript, Tailwind CSS, & more.',
-    href: 'https://github.com/egarrisxn/eg-angular-movies',
-    years: ['2023'],
+      'A feature-rich movie search engine providing comprehensive film details. Technologies: Angular, TypeScript, Tailwind CSS, Netlify, & more.',
+    href: 'https://github.com/egarrisxn/eg-angular-movies-2024',
+    years: ['2024'],
     type: 'project',
     image: '/projects/egmovies.png',
+  },
+  {
+    title: 'Vite Theme Party',
+    description:
+      'A dynamic playground for experimenting with different UI themes. Technologies: Vite, JavaScript, CSS3, HTML5, Netlify, & more.',
+    href: 'https://github.com/egarrisxn/theme-party-2024',
+    years: ['2024'],
+    type: 'project',
+    image: '/projects/themeparty.png',
+  },
+  {
+    title: '(PEHN) User Management',
+    description:
+      'A minimalist CRUD application for managing user contacts efficiently. Technologies: Express, HTMX, Pug, JavaScript, Heroku, & more.',
+    href: 'https://github.com/egarrisxn/pehn-user-management-2024',
+    years: ['2024'],
+    type: 'project',
+    image: '/projects/usermanagement.png',
+  },
+  {
+    title: 'M3RN B00KSTACK',
+    description:
+      'A full-stack MERN book application demonstrating REST APIs, authentication, and CRUD operations. Technologies: Express, MongoDB, React, JavaScript, Tailwind CSS, Render, & more.',
+    href: 'https://github.com/egarrisxn/m3rnb00kstack-2023',
+    years: ['2023'],
+    type: 'project',
+    image: '/projects/m3rnb00kstack.png',
+  },
+  {
+    title: 'MVC Tech Forum',
+    description:
+      'A CMS-style tech forum for discussions and updates, built with the MVC pattern. Technologies: Express, MySQL, Sequelize, Handlebars, JavaScript, Bootstrap, CSS3, Heroku, & more.',
+    href: 'https://github.com/egarrisxn/mvc-tech-forum-2023',
+    years: ['2023'],
+    type: 'project',
+    image: '/projects/mvctechforum.png',
+  },
+  {
+    title: 'Express Note Taker',
+    description:
+      'A simple yet powerful note-taking app with full CRUD functionality. Technologies: Express, JavaScript, Bootstrap, CSS3, Heroku, & more.',
+    href: 'https://github.com/egarrisxn/express-note-taker-2023',
+    years: ['2023'],
+    type: 'project',
+    image: '/projects/expressnotetaker.png',
+  },
+  {
+    title: 'Vanilla Portfolio Template',
+    description:
+      'A clean, modern portfolio template using pure HTML, CSS, and JavaScript. Technologies: HTML5, CSS3, JavaScript, GitHub Pages, & more.',
+    href: 'https://github.com/egarrisxn/html-portfolio-template-2023',
+    years: ['2023'],
+    type: 'project',
+    image: '/projects/portfoliotemplate.png',
+  },
+  {
+    title: 'The Weather Dashboard',
+    description:
+      'A fast, lightweight weather app that fetches real-time data using APIs. Technologies: jQuery, JavaScript, CSS3, HTML5, GitHub Pages, & more.',
+    href: 'https://github.com/egarrisxn/jquery-weather-dashboard-2023',
+    years: ['2023'],
+    type: 'project',
+    image: '/projects/weatherdashboard.png',
+  },
+  {
+    title: 'Quiz Game: Code Edition',
+    description:
+      'A fun coding quiz game that challenges your programming knowledge while tracking high scores. Technologies: jQuery, JavaScript, CSS3, HTML5, GitHub Pages, & more.',
+    href: 'https://github.com/egarrisxn/jquery-quiz-game-2023',
+    years: ['2023'],
+    type: 'project',
+    image: '/projects/thequizgame.png',
+  },
+  {
+    title: 'Daily Scheduler',
+    description:
+      'A simple and efficient scheduler for organizing daily tasks. Technologies: jQuery, JavaScript, CSS3, HTML5, GitHub Pages, & more.',
+    href: 'https://github.com/egarrisxn/jquery-daily-scheduler-2023',
+    years: ['2023'],
+    type: 'project',
+    image: '/projects/dailyscheduler.png',
+  },
+  {
+    title: 'Password Generator',
+    description:
+      'A web-based tool that creates secure, randomized passwords with various customization options. Technologies: JavaScript, Bootstrap, CSS3, HTML5, GitHub Pages, & more.',
+    href: 'https://github.com/egarrisxn/password-generator-2023',
+    years: ['2023'],
+    type: 'project',
+    image: '/projects/passwordgenerator.png',
+  },
+  {
+    title: 'Player One Reads',
+    description:
+      "A recommendation app that suggests books based on a user's favorite video game genres. Technologies: Bulma, JavaScript, CSS3, HTML5, GitHub Pages, & more.",
+    href: 'https://github.com/egarrisxn/Player-One-Reads',
+    years: ['2023'],
+    type: 'project',
+    image: '/projects/playeronereads.png',
   },
 ]
 
