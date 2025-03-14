@@ -186,7 +186,7 @@ const Projects = [
   {
     title: 'M3RN B00KSTACK',
     description:
-      'A full-stack MERN book application demonstrating REST APIs, authentication, and CRUD operations. Technologies: Express, MongoDB, React, JavaScript, Tailwind CSS, Render, & more.',
+      'A full-stack MERN book application demonstrating REST APIs, authentication, and CRUD operations. Technologies: Express, MongoDB, React, JavaScript, Tailwind CSS, Heroku, & more.',
     href: 'https://github.com/egarrisxn/m3rnb00kstack-2023',
     years: ['2023'],
     type: 'project',
