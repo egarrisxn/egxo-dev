@@ -73,10 +73,6 @@
       "sharp"
     ]
   },
-  "engines": {
-    "node": "23.x",
-    "pnpm": "10.x"
-  },
   "prettier": {
     "semi": false,
     "tabWidth": 2,
