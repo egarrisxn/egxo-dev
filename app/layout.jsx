@@ -91,7 +91,7 @@ export default function RootLayout({children}) {
     <html
       lang='en'
       suppressHydrationWarning
-      className={`${space_grotesk.variable} ${roboto_mono.variable} `}
+      className={`${space_grotesk.variable} ${roboto_mono.variable}`}
     >
       <body>
         <ThemeProvider>
