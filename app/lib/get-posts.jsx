@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import path from 'path'
 
 const thirdPartyPosts = [
-    {
+  {
     title: '#12 | My Favorite Web Dev Tools (Design, Code, SEO & More)',
     description:
       'Here’s my curated collection of tools I regularly use (and recommend!) across every part of the frontend workflow.',
