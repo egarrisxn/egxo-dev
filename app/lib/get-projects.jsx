@@ -67,6 +67,24 @@ const Projects = [
     image: '/projects/n00bdev.png',
   },
   {
+    title: 'Resplashpad',
+    description:
+      'A free high-resolution photo aggregator powered by the Unsplash API. Technologies: Vite, React, TypeScript, TanStack Query, Tailwind CSS, Readix-UI, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/resplashpad',
+    years: ['2025'],
+    type: 'project',
+    image: '/projects/resplashpad.png',
+  },
+  {
+    title: 'Mississippi Paint',
+    description:
+      'A web based application spin on the classic Microsoft Paint. Technologies: Nextjs, React, TypeScript, Tailwind CSS, Readix-UI, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/mississippi-paint',
+    years: ['2025'],
+    type: 'project',
+    image: '/projects/ms-paint.png',
+  },
+  {
     title: 'Sway Bae Official',
     description:
       'The official site for full-time streamer and content creator Sway Bae, featuring updates and exclusive content. Technologies: Next.js, React, JavaScript, Sanity, Tailwind CSS, daisyUI, Vercel, & more.',
