@@ -1,0 +1,64 @@
+---
+title: My Sitemap
+description: A glimpse at my current sitemap.js.
+slug: my-sitemap
+type: thought
+date: April 2, 2025
+---
+
+```jsx
+import getPosts from './lib/get-posts'
+import getThoughts from './lib/get-thoughts'
+
+export default async function sitemap() {
+  const posts = await getPosts()
+  const thoughts = await getThoughts()
+
+  const blogs = posts
+    .map((post) => ({
+      url: `http://egxo.dev/posts/${post.slug}`,
+      lastModified: post.lastModified
+        ? new Date(post.lastModified).toISOString().split('T')[0]
+        : new Date().toISOString().split('T')[0],
+    }))
+    .concat(
+      thoughts.map((thought) => ({
+        url: `http://egxo.dev/thoughts/${thought.slug}`,
+        lastModified: thought.lastModified
+          ? new Date(thought.lastModified).toISOString().split('T')[0]
+          : new Date().toISOString().split('T')[0],
+      })),
+    )
+
+  const routes = ['', '/about', '/projects', '/posts', '/thoughts', '/contact'].map((route) => ({
+    url: `http://egxo.dev${route}`,
+    lastModified: new Date().toISOString().split('T')[0],
+  }))
+
+  return [...routes, ...blogs]
+}
+```
+
+## First Question...What is This?
+
+This is a `sitemap.js` file, a critical component for SEO and search engine crawling. It dynamically generates a sitemap based on your posts, thoughts, and other pages on your site. By doing so, you ensure that search engines can easily discover and index your content, improving your site's visibility.
+
+The `sitemap.js` script uses functions (`getPosts` and `getThoughts`) to pull in data about posts and thoughts and generate a structured list of URLs. It also includes common routes like `/about`, `/projects`, and `/contact` to ensure that all significant parts of your website are included in the sitemap.
+
+## What is a Sitemap?
+
+A sitemap is a file (usually in XML format) that provides a map of all the important pages of a website. It helps search engines easily crawl and index the content of a website. Sitemaps can contain both URLs of the pages on your website and additional metadata, such as the last modified date, priority, and frequency of updates.
+
+The sitemap file serves two main purposes:
+
+1. It helps search engines discover all of your pages, even if some of them are not linked or are buried deep within your site.
+2. It ensures that search engines know about updates, such as new content or modifications, and can re-crawl your site accordingly.
+
+## Why You Should Have One
+
+1. **Improved Search Engine Indexing**: A sitemap makes it easier for search engines to discover all pages of your website, improving the likelihood that all of your content gets indexed. Without a sitemap, search engines may miss pages or fail to index them properly, especially if the site's structure is complex.
+2. **Increased SEO Visibility**: By providing detailed metadata about when pages were last updated, you help search engines prioritize and re-crawl your pages in a timely manner. This is crucial for staying relevant in search results.
+3. **Better Crawling of Dynamic Content**: If your website generates content dynamically (like posts, thoughts, or other user-generated data), a sitemap ensures that these pages are discovered, even if they’re not directly linked from other parts of the site.
+4. **Easy Updates**: By generating your sitemap dynamically through JavaScript (as shown in the code above), it ensures that your sitemap is always up-to-date without manual intervention. Any time a new post or thought is added, the sitemap is regenerated and submitted to search engines automatically.
+
+-EG

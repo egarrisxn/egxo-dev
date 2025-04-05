@@ -4,6 +4,19 @@ import matter from 'gray-matter'
 import path from 'path'
 
 const thirdPartyPosts = [
+    {
+    title: '#12 | My Favorite Web Dev Tools (Design, Code, SEO & More)',
+    description:
+      'Here’s my curated collection of tools I regularly use (and recommend!) across every part of the frontend workflow.',
+    body: '',
+    date: '2025-04-04',
+    slug: 'my-favorite-web-dev-tools',
+    tags: [],
+    lastModified: 0,
+    isThirdParty: true,
+    href: 'https://egxo.fyi/blog/my-favorite-web-dev-tools',
+    type: 'post',
+  },
   {
     title: '#11 | TypeScript: The Future of JavaScript Development',
     description:
