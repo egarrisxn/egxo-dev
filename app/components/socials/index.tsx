@@ -8,6 +8,7 @@ import {
   BlueSky,
   Peerlist,
   Threads,
+  Mastadon,
 } from '../icons/social'
 import {SocialButton} from '../social-button'
 import styles from './socials.module.css'
@@ -29,8 +30,9 @@ export default function Socials(props: Omit<React.HTMLProps<HTMLDivElement>, 'cl
         icon={<BlueSky />}
         tooltip='BlueSky'
       />
-      <SocialButton href='https://peerlist.io/eg_xo' icon={<Peerlist />} tooltip='Peerlist' />
       <SocialButton href='https://discord.com/users/eg___xo' icon={<Discord />} tooltip='Discord' />
+      <SocialButton href='https://peerlist.io/eg_xo' icon={<Peerlist />} tooltip='Peerlist' />
+      <SocialButton href='https://mastodon.social/@eg_Xo' icon={<Mastadon />} tooltip='Mastadon' />
       <SocialButton
         href='https://open.spotify.com/user/egarrisxn'
         icon={<Spotify1 />}
