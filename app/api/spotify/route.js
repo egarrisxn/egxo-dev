@@ -27,7 +27,6 @@ export async function POST() {
 
   if (response.ok) {
     return NextResponse.json(data)
-  } else {
-    return NextResponse.json(data, {status: response.status})
   }
+  return NextResponse.json(data, {status: response.status})
 }

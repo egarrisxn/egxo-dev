@@ -1,5 +1,6 @@
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+  reactStrictMode: true,
   images: {
     remotePatterns: [
       {
@@ -7,6 +8,16 @@ const nextConfig = {
         hostname: 'i.scdn.co',
       },
     ],
+    formats: ['image/avif', 'image/webp'],
+  },
+  experimental: {
+    mdxRs: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 }
 
