@@ -11,9 +11,10 @@ My website/portfolio.
 ## Technologies
 
 - Next.js
-- MDX
 - React
+- TypeScript
 - JavaScript
+- MDX
 - Vercel
 - Etc.
 
