@@ -1,4 +1,4 @@
-import getThoughts from '../../../lib/get-thoughts'
+import getThoughts from '@/lib/get-thoughts'
 import ThoughtsList from '../index'
 
 export async function TheThoughtsList({paginate}: {paginate: boolean}) {

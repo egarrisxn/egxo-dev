@@ -1,4 +1,4 @@
-import Info from '../../components/icons/other/info'
+import Info from '@/components/icons/other/info'
 import styles from './mdx-thought.module.css'
 
 export function MDXThought({children, ...props}: React.HTMLAttributes<HTMLElement>) {

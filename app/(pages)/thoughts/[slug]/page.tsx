@@ -1,6 +1,6 @@
 import {notFound} from 'next/navigation'
-import getThoughts, {getThought} from '../../../lib/get-thoughts'
-import {BlogBody} from '../../../mdx/blog-body'
+import getThoughts, {getThought} from '@/lib/get-thoughts'
+import {BlogBody} from '@/mdx/blog-body'
 
 export async function generateStaticParams() {
   const thoughts = await getThoughts()

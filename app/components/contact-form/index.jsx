@@ -1,12 +1,13 @@
 'use client'
-import styles from './contactform.module.css'
+
 import {z} from 'zod'
 import {useForm} from 'react-hook-form'
 import {zodResolver} from '@hookform/resolvers/zod'
-import {sendEmail} from '../../lib/send-email'
+import {sendEmail} from '@/lib/send-email'
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '../form'
 import Input from '../input'
 import Textarea from '../textarea'
+import styles from './contactform.module.css'
 
 const formSchema = z.object({
   name: z.string().min(3).max(100),

@@ -11,6 +11,6 @@ export async function sendEmail(data) {
     const response = await res.json()
     alert(response.message)
   } catch (err) {
-    alert('Failed to send email: ' + err)
+    alert(`Failed to send email: ${err}`)
   }
 }

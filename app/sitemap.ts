@@ -1,5 +1,4 @@
 import {MetadataRoute} from 'next'
-
 import getPosts from './lib/get-posts'
 import getThoughts from './lib/get-thoughts'
 
@@ -17,10 +16,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .concat(
       thoughts.map((thought) => ({
         url: `http://egxo.dev/thoughts/${thought.slug}`,
-        // @ts-expect-error
         lastModified: thought.lastModified
-          ? // @ts-expect-error
-            new Date(thought.lastModified).toISOString().split('T')[0]
+          ? new Date(thought.lastModified).toISOString().split('T')[0]
           : new Date().toISOString().split('T')[0],
       })),
     )

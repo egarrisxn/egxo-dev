@@ -1,5 +1,5 @@
 import './styles/global.css'
-import type {Viewport, Metadata} from 'next'
+import {Viewport, Metadata} from 'next'
 import {ReactNode} from 'react'
 import {Space_Grotesk, Roboto_Mono} from 'next/font/google'
 import {ThemeProvider} from 'next-themes'
@@ -32,7 +32,6 @@ export const metadata: Metadata = {
   keywords: [
     'eg, ethan_g, ethang, ethan-g, egarrisxn, egxworld, website, portfolio, projects, about, nextjs, next, next14, shadcn-ui, shadcn/ui, radixui, tailwindcss, javascript, react, fullstack, full-stack, webdeveloper, web-developer',
   ],
-  creator: 'https://egxo.dev.',
   openGraph: {
     title: 'egxo.dev',
     description: 'Full Stack Developer. Digital Product Designer.',
@@ -64,9 +63,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  icons: {
-    shortcut: 'https://egxo.dev/favicon.ico',
-  },
   appleWebApp: {
     capable: true,
     title: 'egxo.dev',
@@ -80,8 +76,6 @@ export const metadata: Metadata = {
     email: true,
     url: true,
   },
-  verification: {},
-  appLinks: {},
 }
 
 export const viewport: Viewport = {

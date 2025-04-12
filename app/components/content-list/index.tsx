@@ -1,7 +1,7 @@
 import {Suspense} from 'react'
+import getThoughts from '@/lib/get-thoughts'
+import getPosts from '@/lib/get-posts'
 import FilterableList from '../filterable-list'
-import getThoughts from '../../lib/get-thoughts'
-import getPosts from '../../lib/get-posts'
 import {getTag, renderItem} from './render'
 
 export async function ContentList() {

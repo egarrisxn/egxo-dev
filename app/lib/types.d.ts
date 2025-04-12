@@ -5,20 +5,16 @@ export type Base = {
 }
 
 export type Post = Base & {
-  // Not defined for third party posts
-  slug: string | undefined
   date: string
+  slug: string | undefined
   tags: string[]
-  body: string
+  body?: string
   lastModified?: number
-  views?: number
-  // Third party only
   isThirdParty?: boolean
   type: 'post'
 }
 
 export type Project = Base & {
-  role?: string
   website?: string
   years?: string[]
   stars?: number
@@ -28,7 +24,8 @@ export type Project = Base & {
 
 export type Thought = Base & {
   date: string
-  body: string
   slug: string
+  body: string
+  lastModified?: number
   type: 'thought'
 }

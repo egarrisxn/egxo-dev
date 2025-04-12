@@ -1,5 +1,5 @@
-import styles from './techbadge.module.css'
 import Link from '../link'
+import styles from './techbadge.module.css'
 
 export function TechBadge({href, label, icon, children}) {
   return (

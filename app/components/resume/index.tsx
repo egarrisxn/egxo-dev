@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import {Arrow} from '../../components/icons/other'
+import {Arrow} from '@/components/icons/other'
 
 export default function ViewResume() {
   return (

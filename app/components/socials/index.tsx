@@ -1,4 +1,3 @@
-import {SocialButton} from '../social-button'
 import {
   LinkedIn,
   GitHub,
@@ -10,6 +9,7 @@ import {
   Peerlist,
   Threads,
 } from '../icons/social'
+import {SocialButton} from '../social-button'
 import styles from './socials.module.css'
 
 export default function Socials(props: Omit<React.HTMLProps<HTMLDivElement>, 'className'>) {

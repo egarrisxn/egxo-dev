@@ -1,6 +1,6 @@
 import {notFound} from 'next/navigation'
-import getPosts, {getPost} from '../../../lib/get-posts'
-import {BlogBody} from '../../../mdx/blog-body'
+import getPosts, {getPost} from '@/lib/get-posts'
+import {BlogBody} from '@/mdx/blog-body'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -13,9 +13,8 @@ export default async function PostSlugPage(props: {
   }>
 }) {
   const params = await props.params
-
   const post = await getPost(params.slug)
   if (!post) return notFound()
 
-  return <BlogBody>{post?.body}</BlogBody>
+  return <BlogBody>{String(post?.body)}</BlogBody>
 }

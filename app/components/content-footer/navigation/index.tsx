@@ -1,6 +1,6 @@
 import Link from '../../link'
 import styles from './navigation.module.css'
-import {Thought, Post} from '@/lib/types'
+import type {Thought, Post} from '@/lib/types'
 
 export default function Navigation({
   previous,

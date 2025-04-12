@@ -1,9 +1,9 @@
-import {ThePostsList} from '../../components/posts-list/thepostslist/index'
-import Socials from '../../components/socials/index'
+import {ThePostsList} from '@/components/posts-list/thepostslist/index'
+import Socials from '@/components/socials/index'
 
 export const metadata = {
   title: 'Posts',
-  description: 'Posts.',
+  description: 'Blog posts I have written.',
   alternates: {
     canonical: 'https://egxo.dev/posts',
   },

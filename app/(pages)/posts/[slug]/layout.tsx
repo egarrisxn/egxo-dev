@@ -1,9 +1,9 @@
+import styles from './postslayout.module.css'
 import {Metadata} from 'next'
 import {JSX} from 'react'
-import getPosts from '../../../lib/get-posts'
-import Navigation from '../../../components/content-footer/navigation'
-import ContentFooter from '../../../components/content-footer/footer'
-import styles from './postslayout.module.css'
+import getPosts from '@/lib/get-posts'
+import Navigation from '@/components/content-footer/navigation'
+import ContentFooter from '@/components/content-footer/footer'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -21,6 +21,9 @@ export const generateMetadata = async (props: {
   return {
     title: post?.title || 'Default Title',
     description: post?.description || 'Default Description',
+    alternates: {
+      canonical: `https://egxo.dev/posts/${params.slug}`,
+    },
   }
 }
 
@@ -33,7 +36,6 @@ async function getData({slug}: {slug: string}) {
   }
 
   const post = posts[postIndex]
-
   const {...rest} = post
 
   return {

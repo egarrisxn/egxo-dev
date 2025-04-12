@@ -1,9 +1,9 @@
+import styles from './thoughtslayout.module.css'
 import {Metadata} from 'next'
 import {JSX} from 'react'
-import getThoughts from '../../../lib/get-thoughts'
-import ContentFooter from '../../../components/content-footer/footer'
-import Navigation from '../../../components/content-footer/navigation'
-import styles from '../../thoughts/[slug]/thoughtslayout.module.css'
+import getThoughts from '@/lib/get-thoughts'
+import Navigation from '@/components/content-footer/navigation'
+import ContentFooter from '@/components/content-footer/footer'
 
 export async function generateStaticParams() {
   const thoughts = await getThoughts()
@@ -36,11 +36,12 @@ async function getData({slug}: {slug: string}) {
   }
 
   const thought = thoughts[thoughtIndex]
+  const {...rest} = thought
 
   return {
     previous: thoughts[thoughtIndex + 1] || null,
     next: thoughts[thoughtIndex - 1] || null,
-    ...thought,
+    ...rest,
   }
 }
 

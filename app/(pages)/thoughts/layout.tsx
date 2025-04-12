@@ -1,4 +1,4 @@
-import Outline from '../../components/layout-outline'
+import Outline from '@/components/layout-outline'
 
 export default function ThoughtsLayout({children}: {children: React.ReactNode}) {
   return (

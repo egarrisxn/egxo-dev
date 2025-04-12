@@ -1,6 +1,6 @@
-import styles from './projects.module.css'
 import Link from '../link'
 import {Entry} from '../entry'
+import styles from './projects.module.css'
 import type {Project} from '@lib/types'
 
 type Props = {

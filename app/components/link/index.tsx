@@ -1,8 +1,9 @@
-import styles from './link.module.css'
 import NextLink from 'next/link'
 import clsx from 'clsx'
+import styles from './link.module.css'
 
 type LinkProps = React.ComponentProps<typeof NextLink>
+
 type Props = LinkProps & {
   external?: boolean
   href: string

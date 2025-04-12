@@ -1,9 +1,9 @@
-import {TheThoughtsList} from '../../components/thoughts-list/thethoughtslist/index'
-import Socials from '../../components/socials/index'
+import {TheThoughtsList} from '@/components/thoughts-list/thethoughtslist'
+import Socials from '@/components/socials'
 
 export const metadata = {
-  title: 'Thoughts Page',
-  description: 'Some random thoughts I have',
+  title: 'Thoughts',
+  description: 'Random thoughts that I have.',
   alternates: {
     canonical: 'https://egxo.dev/thoughts',
   },

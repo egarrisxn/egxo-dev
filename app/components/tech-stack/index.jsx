@@ -1,4 +1,3 @@
-import styles from './techstack.module.css'
 import {TechBadge} from '../tech-badge'
 import {
   Auth0,
@@ -26,6 +25,7 @@ import {
   Zod,
   Zustand,
 } from '../icons/tech'
+import styles from './techstack.module.css'
 
 export default function TechStack(props) {
   return (

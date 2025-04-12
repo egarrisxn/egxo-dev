@@ -1,5 +1,5 @@
-import styles from './fade-in.module.css'
 import {ReactNode} from 'react'
+import styles from './fade-in.module.css'
 
 type Props = {
   children: ReactNode

@@ -1,5 +1,5 @@
 import {PropsWithChildren} from 'react'
-import ThemeSwitcher from '../../../components/theme-switcher'
+import ThemeSwitcher from '@/components/theme-switcher'
 import styles from './header.module.css'
 
 export default function Header({children}: PropsWithChildren) {

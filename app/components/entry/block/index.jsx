@@ -1,11 +1,11 @@
-import styles from './block.module.css'
 import Link from '../../link'
+import styles from './block.module.css'
 
 export default function BlockEntry(props) {
   if ('skeleton' in props) {
     return <li className={styles.skeleton} />
   }
-  const {title, description, type, href, date, views, isThirdParty} = props
+  const {title, description, type, href, date, isThirdParty} = props
 
   return (
     <li className={styles.item}>

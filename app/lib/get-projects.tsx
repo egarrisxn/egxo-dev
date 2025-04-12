@@ -10,7 +10,6 @@ const Projects: Project[] = [
     years: ['2025'],
     type: 'project',
     image: '/projects/xprod.png',
-    role: 'Developer',
   },
   {
     title: 'ScribeVoice',
@@ -21,7 +20,6 @@ const Projects: Project[] = [
     years: ['2025'],
     type: 'project',
     image: '/projects/scribevoice.png',
-    role: 'Developer',
   },
   {
     title: 'XO Chatbot',
@@ -31,7 +29,6 @@ const Projects: Project[] = [
     years: ['2025'],
     type: 'project',
     image: '/projects/xochatbot.png',
-    role: 'Developer',
   },
   {
     title: 'International Worldwide',
@@ -41,7 +38,6 @@ const Projects: Project[] = [
     years: ['2025'],
     type: 'project',
     image: '/projects/internationalworldwide.png',
-    role: 'Developer',
   },
   {
     title: 'Unofficial Merchandise',
@@ -51,7 +47,6 @@ const Projects: Project[] = [
     years: ['2025'],
     type: 'project',
     image: '/projects/unofficialmerch.png',
-    role: 'Developer',
   },
   {
     title: 'n00bdev - Tips & Tricks',
@@ -61,7 +56,6 @@ const Projects: Project[] = [
     years: ['2025'],
     type: 'project',
     image: '/projects/n00bdev.png',
-    role: 'Developer',
   },
   {
     title: 'Resplashpad',
@@ -71,7 +65,6 @@ const Projects: Project[] = [
     years: ['2025'],
     type: 'project',
     image: '/projects/resplashpad.png',
-    role: 'Developer',
   },
   {
     title: 'CC NextFolio',
@@ -81,7 +74,6 @@ const Projects: Project[] = [
     years: ['2025'],
     type: 'project',
     image: '/projects/ccnextfolio.png',
-    role: 'Developer',
   },
   {
     title: 'Mississippi Paint',
@@ -91,7 +83,6 @@ const Projects: Project[] = [
     years: ['2025'],
     type: 'project',
     image: '/projects/ms-paint.png',
-    role: 'Developer',
   },
   {
     title: 'Sway Bae Official',
@@ -101,7 +92,6 @@ const Projects: Project[] = [
     years: ['2024'],
     type: 'project',
     image: '/projects/swaybae.png',
-    role: 'Developer',
   },
   {
     title: 'XO Starter',
@@ -111,7 +101,6 @@ const Projects: Project[] = [
     years: ['2024'],
     type: 'project',
     image: '/projects/xostarter.png',
-    role: 'Developer',
   },
   {
     title: 'Resbuilder: ATS Resumes',
@@ -121,7 +110,6 @@ const Projects: Project[] = [
     years: ['2024'],
     type: 'project',
     image: '/projects/resumebuilder.png',
-    role: 'Developer',
   },
   {
     title: 'WebSanity Builder',
@@ -131,7 +119,6 @@ const Projects: Project[] = [
     years: ['2024'],
     type: 'project',
     image: '/projects/websanity.png',
-    role: 'Developer',
   },
   {
     title: 'Pushin Mongo: Movies',
@@ -141,7 +128,6 @@ const Projects: Project[] = [
     years: ['2024'],
     type: 'project',
     image: '/projects/pushinmongo.png',
-    role: 'Developer',
   },
   {
     title: 'egxworld v1',
@@ -151,7 +137,6 @@ const Projects: Project[] = [
     years: ['2024'],
     type: 'project',
     image: '/projects/egxworldv1.png',
-    role: 'Developer',
   },
   {
     title: 'egxo.fyi',
@@ -161,7 +146,6 @@ const Projects: Project[] = [
     years: ['2024'],
     type: 'project',
     image: '/projects/egxofyi.png',
-    role: 'Developer',
   },
   {
     title: 'Easy Copy Buttons',
@@ -171,7 +155,6 @@ const Projects: Project[] = [
     years: ['2024'],
     type: 'project',
     image: '/projects/ezcopy.png',
-    role: 'Developer',
   },
   {
     title: 'NotCoolors',
@@ -181,7 +164,6 @@ const Projects: Project[] = [
     years: ['2024'],
     type: 'project',
     image: '/projects/notcoolors.png',
-    role: 'Developer',
   },
   {
     title: 'DevBuild Resume',
@@ -191,7 +173,6 @@ const Projects: Project[] = [
     years: ['2024'],
     type: 'project',
     image: '/projects/devbuildresume.png',
-    role: 'Developer',
   },
   {
     title: 'Angular Movies DB',
@@ -201,7 +182,6 @@ const Projects: Project[] = [
     years: ['2023'],
     type: 'project',
     image: '/projects/egmovies.png',
-    role: 'Developer',
   },
   {
     title: '(PEHN) User Management',
@@ -211,7 +191,6 @@ const Projects: Project[] = [
     years: ['2023'],
     type: 'project',
     image: '/projects/usermanagement.png',
-    role: 'Developer',
   },
   {
     title: 'M3RN B00KSTACK',
@@ -221,7 +200,6 @@ const Projects: Project[] = [
     years: ['2023'],
     type: 'project',
     image: '/projects/m3rnb00kstack.png',
-    role: 'Developer',
   },
   // {
   //   title: 'MVC Tech Forum',
@@ -231,7 +209,7 @@ const Projects: Project[] = [
   //   years: ['2023'],
   //   type: 'project',
   //   image: '/projects/mvctechforum.png',
-  //   role: 'Developer',
+  //
   // },
   // {
   //   title: 'Express Note Taker',
@@ -241,7 +219,7 @@ const Projects: Project[] = [
   //   years: ['2023'],
   //   type: 'project',
   //   image: '/projects/expressnotetaker.png',
-  //   role: 'Developer',
+  //
   // },
   // {
   //   title: 'Vanilla Portfolio Template',
@@ -251,7 +229,7 @@ const Projects: Project[] = [
   //   years: ['2023'],
   //   type: 'project',
   //   image: '/projects/portfoliotemplate.png',
-  //   role: 'Developer',
+  //
   // },
   // {
   //   title: 'The Weather Dashboard',
@@ -261,7 +239,7 @@ const Projects: Project[] = [
   //   years: ['2023'],
   //   type: 'project',
   //   image: '/projects/weatherdashboard.png',
-  //   role: 'Developer',
+  //
   // },
   // {
   //   title: 'Quiz Game: Code Edition',
@@ -271,7 +249,7 @@ const Projects: Project[] = [
   //   years: ['2023'],
   //   type: 'project',
   //   image: '/projects/thequizgame.png',
-  //   role: 'Developer',
+  //
   // },
   // {
   //   title: 'Daily Scheduler',
@@ -281,7 +259,7 @@ const Projects: Project[] = [
   //   years: ['2023'],
   //   type: 'project',
   //   image: '/projects/dailyscheduler.png',
-  //   role: 'Developer',
+  //
   // },
   // {
   //   title: 'Password Generator',
@@ -291,7 +269,7 @@ const Projects: Project[] = [
   //   years: ['2023'],
   //   type: 'project',
   //   image: '/projects/passwordgenerator.png',
-  //   role: 'Developer',
+  //
   // },
   // {
   //   title: 'Player One Reads',
@@ -301,7 +279,7 @@ const Projects: Project[] = [
   //   years: ['2023'],
   //   type: 'project',
   //   image: '/projects/playeronereads.png',
-  //   role: 'Developer',
+  //
   // },
 ]
 

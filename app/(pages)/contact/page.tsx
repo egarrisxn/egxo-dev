@@ -1,12 +1,12 @@
-import Link from '../../components/link'
-import ContactForm from '../../components/contact-form'
-import {Arrow} from '../../components/icons/other'
-import Socials from '../../components/socials'
-import Pacman from '../../components/pacman'
+import Link from '@/components/link'
+import ContactForm from '@/components/contact-form'
+import Socials from '@/components/socials'
+import Pacman from '@components/pacman'
+import {Arrow} from '@/components/icons/other'
 
 export const metadata = {
-  title: 'Contact Page',
-  description: 'How you can contact me',
+  title: 'Contact',
+  description: 'How to get in touch.',
   alternates: {
     canonical: 'https://egxo.dev/contact',
   },

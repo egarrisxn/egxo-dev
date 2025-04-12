@@ -16,9 +16,9 @@
       "message": "Initial commit from Create Next App",
       "tree": {
         "sha": "90c93aa95b61f062b16d3a9a6263ab77518aee51",
-        "url": "https://api.github.com/repos/egarrisxn/egxworld-v2/git/trees/90c93aa95b61f062b16d3a9a6263ab77518aee51"
+        "url": "https://api.github.com/repos/egarrisxn/egxo-dev/git/trees/90c93aa95b61f062b16d3a9a6263ab77518aee51"
       },
-      "url": "https://api.github.com/repos/egarrisxn/egxworld-v2/git/commits/8e1b459944cd09e1fbb8e57f17acde0984d48cb8",
+      "url": "https://api.github.com/repos/egarrisxn/egxo-dev/git/commits/8e1b459944cd09e1fbb8e57f17acde0984d48cb8",
       "comment_count": 0,
       "verification": {
         "verified": false,
@@ -27,9 +27,9 @@
         "payload": null
       }
     },
-    "url": "https://api.github.com/repos/egarrisxn/egxworld-v2/commits/8e1b459944cd09e1fbb8e57f17acde0984d48cb8",
-    "html_url": "https://github.com/egarrisxn/egxworld-v2/commit/8e1b459944cd09e1fbb8e57f17acde0984d48cb8",
-    "comments_url": "https://api.github.com/repos/egarrisxn/egxworld-v2/commits/8e1b459944cd09e1fbb8e57f17acde0984d48cb8/comments",
+    "url": "https://api.github.com/repos/egarrisxn/egxo-dev/commits/8e1b459944cd09e1fbb8e57f17acde0984d48cb8",
+    "html_url": "https://github.com/egarrisxn/egxo-dev/commit/8e1b459944cd09e1fbb8e57f17acde0984d48cb8",
+    "comments_url": "https://api.github.com/repos/egarrisxn/egxo-dev/commits/8e1b459944cd09e1fbb8e57f17acde0984d48cb8/comments",
     "author": {
       "login": "egarrisxn",
       "id": 126130230,

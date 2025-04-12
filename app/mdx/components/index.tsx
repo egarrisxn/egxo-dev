@@ -3,8 +3,8 @@ import {MDXComponents} from 'mdx/types'
 import {Code} from 'bright'
 import {MDXThought} from './mdx-thought'
 import {MDXImage} from './mdx-image'
-import Info from '../../components/icons/other/info'
-import Home from '../../components/icons/other/home'
+import Info from '@/components/icons/other/info'
+import Home from '@/components/icons/other/home'
 
 Code.theme = {
   dark: 'solarized-dark',

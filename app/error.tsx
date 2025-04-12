@@ -1,4 +1,5 @@
 'use client'
+
 import Button from './components/button'
 
 export default function Error({error, reset}: {error: Error; reset: () => void}) {

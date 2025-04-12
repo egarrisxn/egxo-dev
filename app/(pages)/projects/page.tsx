@@ -1,12 +1,12 @@
-import Link from '../../components/link'
-import Socials from '../../components/socials'
-import ProjectList from '../../components/projects'
-import {getProjects} from '../../lib/get-projects'
-import {Arrow} from '../../components/icons/other'
+import Link from '@/components/link'
+import Socials from '@/components/socials'
+import ProjectList from '@/components/projects'
+import {getProjects} from '@/lib/get-projects'
+import {Arrow} from '@/components/icons/other'
 
 export const metadata = {
   title: 'Projects',
-  description: 'Projects.',
+  description: 'Some Projects of mine.',
   alternates: {
     canonical: 'https://egxo.dev/projects',
   },

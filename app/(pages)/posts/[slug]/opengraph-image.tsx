@@ -8,7 +8,7 @@ export const runtime = 'edge'
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async function ({params}: {params: {slug: string}}): Promise<ImageResponse> {
   const res = await fetch(
-    `https://raw.githubusercontent.com/egarrisxn/egxworld-v2/master/posts/${params.slug}.mdx`,
+    `https://raw.githubusercontent.com/egarrisxn/egxo-dev/main/posts/${params.slug}.mdx`,
   )
 
   if (!res.ok) {
@@ -37,7 +37,7 @@ export default async function ({params}: {params: {slug: string}}): Promise<Imag
           alignItems: 'center',
           background: '#000000',
           flexDirection: 'column',
-          border: '6px solid #DCDCDC',
+          border: '8px solid #DCDCDC',
           borderRadius: '4px',
         }}
       >
@@ -47,29 +47,25 @@ export default async function ({params}: {params: {slug: string}}): Promise<Imag
             justifyContent: 'space-between',
             alignItems: 'flex-start',
             width: '100%',
-            padding: '10px 0px 0px 10px',
+            padding: '8px 0px 0px 10px',
           }}
         >
           <span
             style={{
               fontSize: 25,
               color: '#FFFFFF',
-              padding: '10px 0px 0px 10px',
+              padding: '8px 0px 0px 10px',
             }}
           >
-            ||||
-          </span>
-          {date && (
-            <div
+            egxo
+            <span
               style={{
-                fontSize: 30,
                 color: '#87CEEB',
-                padding: '10px 10px 0px 0px',
               }}
             >
-              {date}
-            </div>
-          )}
+              .dev
+            </span>
+          </span>
         </div>
         <div
           style={{
@@ -78,23 +74,44 @@ export default async function ({params}: {params: {slug: string}}): Promise<Imag
             alignItems: 'center',
             justifyContent: 'center',
             width: '100%',
-            padding: '0 50px',
-            color: '#FFFFFF',
+            padding: '0 100px',
+            color: '#87CEEB',
             textAlign: 'center',
             height: 630 - 50 - 50,
             maxWidth: 1000,
+            fontSize: 50,
           }}
         >
           {title && (
             <div
               style={{
-                fontSize: 60,
-                marginBottom: 40,
                 lineHeight: 1,
+                marginBottom: 40,
               }}
             >
               {title}
             </div>
+          )}
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignItems: 'flex-end',
+            width: '100%',
+            padding: '0px 10px 8px 0px',
+          }}
+        >
+          {date && (
+            <span
+              style={{
+                fontSize: 25,
+                color: '#FFFFFF',
+                padding: '0px 10px 8px 0px',
+              }}
+            >
+              {date}
+            </span>
           )}
         </div>
       </div>

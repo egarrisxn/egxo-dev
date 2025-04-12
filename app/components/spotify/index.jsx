@@ -1,9 +1,10 @@
 'use client'
-import styles from './spotify.module.css'
+
 import {useEffect, useState} from 'react'
-import getNowPlayingItem from '../../lib/get-spotify'
-import Spotify2 from '../icons/social/spotify2'
 import Image from 'next/image'
+import getNowPlayingItem from '@/lib/get-spotify'
+import Spotify2 from '../icons/social/spotify2'
+import styles from './spotify.module.css'
 
 export function SpotifyNowPlaying(props) {
   const [loading, setLoading] = useState(true)

@@ -1,28 +1,13 @@
-import styles from './about.module.css'
 import Image from 'next/image'
-import Link from '../../components/link'
-import TechStack from '../../components/tech-stack'
-import TechList from '../../components/tech-list'
-import Socials from '../../components/socials'
-import {Arrow} from '../../components/icons/other'
-
-const currentTech = [
-  {name: 'TypeScript', url: 'https://www.typescriptlang.org/'},
-  {name: 'PostgreSQL', url: 'https://postgresql.org/'},
-  {name: 'Deno', url: 'https://deno.land/'},
-  {name: 'Figma', url: 'https://www.figma.com/'},
-]
-
-const futureTech = [
-  {name: 'Svelte', url: 'https://svelte.dev/'},
-  {name: 'SQLite', url: 'https://www.sqlite.org/'},
-  {name: 'Docker', url: 'https://www.docker.com/'},
-  {name: 'Python', url: 'https://www.python.org/'},
-  {name: 'Vue.js', url: 'https://www.vuejs.org/'},
-]
+import Link from '@/components/link'
+import TechStack from '@/components/tech-stack'
+import TechList from '@/components/tech-list'
+import Socials from '@/components/socials'
+import {Arrow} from '@/components/icons/other'
+import styles from './about.module.css'
 
 export const metadata = {
-  title: 'About Page',
+  title: 'About',
   description: 'A little bit about me',
   alternates: {
     canonical: 'https://egxo.dev/about',
@@ -30,6 +15,21 @@ export const metadata = {
 }
 
 export default function AboutPage() {
+  const currentTech = [
+    {name: 'TypeScript', url: 'https://www.typescriptlang.org/'},
+    {name: 'PostgreSQL', url: 'https://postgresql.org/'},
+    {name: 'Deno', url: 'https://deno.land/'},
+    {name: 'Figma', url: 'https://www.figma.com/'},
+  ]
+
+  const futureTech = [
+    {name: 'Svelte', url: 'https://svelte.dev/'},
+    {name: 'SQLite', url: 'https://www.sqlite.org/'},
+    {name: 'Docker', url: 'https://www.docker.com/'},
+    {name: 'Python', url: 'https://www.python.org/'},
+    {name: 'Vue.js', url: 'https://www.vuejs.org/'},
+  ]
+
   return (
     <>
       <header className={styles.header}>

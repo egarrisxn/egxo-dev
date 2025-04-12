@@ -21,7 +21,7 @@ export default async function (): Promise<ImageResponse> {
           alignItems: 'center',
           background: '#000000',
           flexDirection: 'column',
-          border: '6px solid #DCDCDC',
+          border: '8px solid #DCDCDC',
           borderRadius: '4px',
         }}
       >
@@ -31,40 +31,68 @@ export default async function (): Promise<ImageResponse> {
             justifyContent: 'space-between',
             alignItems: 'flex-start',
             width: '100%',
-            padding: '10px 0px 0px 10px',
+            padding: '8px 0px 0px 10px',
           }}
         >
           <span
             style={{
               fontSize: 25,
               color: '#FFFFFF',
-              padding: '10px 0px 0px 10px',
+              padding: '8px 0px 0px 10px',
             }}
           >
-            MMXXV
+            egxo
+            <span
+              style={{
+                color: '#87CEEB',
+              }}
+            >
+              .dev
+            </span>
           </span>
         </div>
         <div
           style={{
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             width: '100%',
+            padding: '0 100px',
             color: '#FFFFFF',
             textAlign: 'center',
             height: 630 - 50 - 50,
             maxWidth: 1000,
-            fontSize: 100,
+            fontSize: 50,
+            marginBottom: 40,
           }}
         >
-          egxo
+          Full Stack Developer.
           <span
             style={{
               color: '#87CEEB',
             }}
           >
-            .dev
+            Digitial Product Designer.
+          </span>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignItems: 'flex-end',
+            width: '100%',
+            padding: '0px 10px 8px 0px',
+          }}
+        >
+          <span
+            style={{
+              fontSize: 25,
+              color: '#FFFFFF',
+              padding: '0px 10px 8px 0px',
+            }}
+          >
+            MMXXV
           </span>
         </div>
       </div>

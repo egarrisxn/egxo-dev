@@ -1,8 +1,8 @@
 import styles from './resume.module.css'
 
 export const metadata = {
-  title: 'Resume Page',
-  description: 'Here is my resume.',
+  title: 'Resume',
+  description: 'My current resume.',
   alternates: {
     canonical: 'https://egxo.dev/resume',
   },
