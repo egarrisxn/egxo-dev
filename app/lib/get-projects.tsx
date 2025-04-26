@@ -16,7 +16,6 @@ const Projects: Project[] = [
     description:
       'A powerful voice-to-text transcription tool for notes, transcripts, lists, and more. Technologies: Next.js, React, TypeScript, Supabase, OpenAI, Tailwind CSS, Vercel, & more.',
     href: 'https://github.com/egarrisxn/scribevoice',
-    website: 'https://scribevoice.vercel.app',
     years: ['2025'],
     type: 'project',
     image: '/projects/scribevoice.png',
@@ -25,7 +24,7 @@ const Projects: Project[] = [
     title: 'XO Chatbot',
     description:
       'An AI-powered chatbot with Grok integration, designed for smooth and intuitive conversations. Technologies: Next.js, React, TypeScript, Grok, Next-Auth, Tailwind CSS, Vercel, & more.',
-    website: 'https://xochatbot.vercel.app',
+    href: 'https://github.com/egarrisxn/xochatbot',
     years: ['2025'],
     type: 'project',
     image: '/projects/xochatbot.png',

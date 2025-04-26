@@ -1,5 +1,5 @@
 import './styles/global.css'
-import {Viewport, Metadata} from 'next'
+import type {Viewport, Metadata} from 'next'
 import {ReactNode} from 'react'
 import {Space_Grotesk, Roboto_Mono} from 'next/font/google'
 import {ThemeProvider} from 'next-themes'
@@ -33,6 +33,8 @@ export const metadata: Metadata = {
     'eg, ethan_g, ethang, ethan-g, egarrisxn, egxworld, website, portfolio, projects, about, nextjs, next, next14, shadcn-ui, shadcn/ui, radixui, tailwindcss, javascript, react, fullstack, full-stack, webdeveloper, web-developer',
   ],
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
     title: 'egxo.dev',
     description: 'Full Stack Developer. Digital Product Designer.',
     url: 'https://egxo.dev',
@@ -45,8 +47,6 @@ export const metadata: Metadata = {
         alt: 'Full Stack Developer. Digital Product Designer.',
       },
     ],
-    type: 'website',
-    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
@@ -63,19 +63,24 @@ export const metadata: Metadata = {
       },
     ],
   },
-  appleWebApp: {
-    capable: true,
-    title: 'egxo.dev',
-    startupImage: '/opengraph-image',
-    statusBarStyle: 'black-translucent',
+  icons: {
+    icon: {
+      url: '/icons/icon.png',
+      sizes: '192x192',
+      type: 'image/png',
+    },
+    apple: {
+      url: '/icons/apple-icon.png',
+      sizes: '180x180',
+      type: 'image/png',
+    },
+    other: {
+      rel: 'icon',
+      url: '/icons/icon.svg',
+      type: 'image/svg+xml',
+    },
   },
-  formatDetection: {
-    telephone: true,
-    date: true,
-    address: true,
-    email: true,
-    url: true,
-  },
+  verification: {},
 }
 
 export const viewport: Viewport = {
