@@ -1,6 +1,6 @@
 # egxo.dev
 
-![egxodev](https://github.com/user-attachments/assets/dc512900-ef3b-41d5-b6c1-f67a8aee41fb)
+![og-image](https://github.com/user-attachments/assets/9864d9fe-934e-4c63-aed2-c7f1fc503658)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) ![GitHub repo size](https://img.shields.io/github/repo-size/egarrisxn/egxo-dev) ![GitHub last commit](https://img.shields.io/github/last-commit/egarrisxn/egxo-dev)
 
@@ -11,9 +11,10 @@ My website/portfolio.
 ## Technologies
 
 - Next.js
-- MDX
 - React
+- TypeScript
 - JavaScript
+- MDX
 - Vercel
 - Etc.
 
