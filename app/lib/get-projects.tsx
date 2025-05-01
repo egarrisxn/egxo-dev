@@ -93,15 +93,6 @@ const Projects: Project[] = [
     image: '/projects/swaybae.png',
   },
   {
-    title: 'XO Starter',
-    description:
-      'A modern, optimized Next.js starter template built for performance and flexibility. Technologies: Next.js, React, TypeScript, Tailwind CSS, Radix-UI, Vercel, & more.',
-    href: 'https://github.com/egarrisxn/xostarter',
-    years: ['2024'],
-    type: 'project',
-    image: '/projects/xostarter.png',
-  },
-  {
     title: 'Resbuilder: ATS Resumes',
     description:
       'A professional, ATS-friendly resume builder designed for optimal job application success. Technologies: Next.js, React, JavaScript, MDX, Tailwind CSS, Vercel, & more.',
@@ -129,13 +120,40 @@ const Projects: Project[] = [
     image: '/projects/pushinmongo.png',
   },
   {
-    title: 'egxworld v1',
+    title: 'XO Starter',
     description:
-      'My first portfolio website—designed to showcase projects, skills, and more. Technologies: Next.js, React, JavaScript, Tailwind CSS, Radix-UI, Vercel, & more.',
-    href: 'https://github.com/egarrisxn/egxworld-v1',
+      'A modern, optimized Next.js starter template built for performance and flexibility. Technologies: Next.js, React, TypeScript, Tailwind CSS, Radix-UI, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/xostarter',
     years: ['2024'],
     type: 'project',
-    image: '/projects/egxworldv1.png',
+    image: '/projects/xostarter.png',
+  },
+  {
+    title: 'Not Coolors',
+    description:
+      'A fast and user-friendly color palette generator for all your design needs. Technologies: Next.js, React, JavaScript, Tailwind CSS, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/not-coolors',
+    years: ['2024'],
+    type: 'project',
+    image: '/projects/notcoolors.png',
+  },
+  {
+    title: 'Easy Copy Buttons',
+    description:
+      'A handy collection of pre-styled, copy-paste buttons for effortless UI development. Technologies: Next.js, JavaScript, Tailwind CSS, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/ezcopy-buttons',
+    years: ['2024'],
+    type: 'project',
+    image: '/projects/ezcopy.png',
+  },
+  {
+    title: 'DevBuild Resume',
+    description:
+      'A visually appealing resume builder, prioritizing aesthetics over ATS compliance. Technologies: Next.js, TypeScript, Tailwind CSS, Material-Tailwind, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/devbuild-resume',
+    years: ['2024'],
+    type: 'project',
+    image: '/projects/devbuildresume.png',
   },
   {
     title: 'egxo.fyi',
@@ -147,59 +165,41 @@ const Projects: Project[] = [
     image: '/projects/egxofyi.png',
   },
   {
-    title: 'Easy Copy Buttons',
+    title: 'egxworld v1',
     description:
-      'A handy collection of pre-styled, copy-paste buttons for effortless UI development. Technologies: Next.js, JavaScript, Tailwind CSS, Vercel, & more.',
-    href: 'https://github.com/egarrisxn/ezcopy-buttons-2024',
+      'My first portfolio website—designed to showcase projects, skills, and more. Technologies: Next.js, React, JavaScript, Tailwind CSS, Radix-UI, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/egxworld-v1',
     years: ['2024'],
     type: 'project',
-    image: '/projects/ezcopy.png',
+    image: '/projects/egxworldv1.png',
   },
-  {
-    title: 'NotCoolors',
-    description:
-      'A fast and user-friendly color palette generator for all your design needs. Technologies: Next.js, React, JavaScript, Tailwind CSS, Vercel, & more.',
-    href: 'https://github.com/egarrisxn/not-coolors-2024',
-    years: ['2024'],
-    type: 'project',
-    image: '/projects/notcoolors.png',
-  },
-  {
-    title: 'DevBuild Resume',
-    description:
-      'A visually appealing resume builder, prioritizing aesthetics over ATS compliance. Technologies: Next.js, TypeScript, Tailwind CSS, Material-Tailwind, Vercel, & more.',
-    href: 'https://github.com/egarrisxn/devbuild-resume-2024',
-    years: ['2024'],
-    type: 'project',
-    image: '/projects/devbuildresume.png',
-  },
-  {
-    title: 'Angular Movies DB',
-    description:
-      'A feature-rich movie search engine providing comprehensive film details. Technologies: Angular, TypeScript, Tailwind CSS, Netlify, & more.',
-    href: 'https://github.com/egarrisxn/angular-movies-db-2023',
-    years: ['2023'],
-    type: 'project',
-    image: '/projects/egmovies.png',
-  },
-  {
-    title: '(PEHN) User Management',
-    description:
-      'A minimalist CRUD application for managing user contacts efficiently. Technologies: Express, HTMX, Pug, JavaScript, Heroku, & more.',
-    href: 'https://github.com/egarrisxn/pehn-user-management-2023',
-    years: ['2023'],
-    type: 'project',
-    image: '/projects/usermanagement.png',
-  },
-  {
-    title: 'M3RN B00KSTACK',
-    description:
-      'A full-stack MERN book application demonstrating REST APIs, authentication, and CRUD operations. Technologies: Express, MongoDB, React, JavaScript, Tailwind CSS, Heroku, & more.',
-    href: 'https://github.com/egarrisxn/m3rnb00kstack-2023',
-    years: ['2023'],
-    type: 'project',
-    image: '/projects/m3rnb00kstack.png',
-  },
+  // {
+  //   title: 'Angular Movies DB',
+  //   description:
+  //     'A feature-rich movie search engine providing comprehensive film details. Technologies: Angular, TypeScript, Tailwind CSS, Netlify, & more.',
+  //   href: 'https://github.com/egarrisxn/angular-movies-db-2023',
+  //   years: ['2023'],
+  //   type: 'project',
+  //   image: '/projects/egmovies.png',
+  // },
+  // {
+  //   title: '(PEHN) User Management',
+  //   description:
+  //     'A minimalist CRUD application for managing user contacts efficiently. Technologies: Express, HTMX, Pug, JavaScript, Heroku, & more.',
+  //   href: 'https://github.com/egarrisxn/pehn-user-management-2023',
+  //   years: ['2023'],
+  //   type: 'project',
+  //   image: '/projects/usermanagement.png',
+  // },
+  // {
+  //   title: 'M3RN B00KSTACK',
+  //   description:
+  //     'A full-stack MERN book application demonstrating REST APIs, authentication, and CRUD operations. Technologies: Express, MongoDB, React, JavaScript, Tailwind CSS, Heroku, & more.',
+  //   href: 'https://github.com/egarrisxn/m3rnb00kstack-2023',
+  //   years: ['2023'],
+  //   type: 'project',
+  //   image: '/projects/m3rnb00kstack.png',
+  // },
   // {
   //   title: 'MVC Tech Forum',
   //   description:

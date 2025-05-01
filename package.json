@@ -23,9 +23,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --check .",
-    "format:fix": "prettier --write ."
+    "lint": "eslint",
+    "next-lint": "next lint",
+    "format": "prettier --check \"**/*.{js,jsx}\" --cache",
+    "format:fix": "prettier --write \"**/*.{js,jsx}\" --cache"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -53,6 +54,8 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.24.0",
     "@types/diff": "7.0.2",
     "@types/mdx": "2.0.13",
     "@types/node": "22.14.1",
@@ -60,8 +63,6 @@
     "@types/react-dom": "^19.1.2",
     "@typescript-eslint/eslint-plugin": "8.29.1",
     "@typescript-eslint/parser": "8.29.1",
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.24.0",
     "dotenv": "16.5.0",
     "eslint": "^9.24.0",
     "eslint-config-next": "15.3.0",
@@ -91,7 +92,9 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "sharp"
+      "@parcel/watcher",
+      "sharp",
+      "unrs-resolver"
     ]
   }
 }
