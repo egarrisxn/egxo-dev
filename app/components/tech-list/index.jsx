@@ -5,37 +5,40 @@ export default function TechList() {
     <>
       <ul className={styles.techList}>
         <li>
-          <span>Languages:</span> MySQL, Markdown
-        </li>
-        <li>
-          <span>Frontend:</span> Angular, Astro, Alpine.js, HTMX, jQuery
+          <span>Frontend:</span> Angular, Astro, jQuery
         </li>
         <li>
           <span>Backend:</span> Hono
         </li>
         <li>
-          <span>CSS & UI Libraries:</span> Bootstrap, React Aria, NextUI, daisyUI
+          <span>CSS & UI Libraries:</span> Bootstrap, React Aria, daisyUI
         </li>
         <li>
-          <span>Templating Engines:</span> Pug, Handlebars
+          <span>Runtimes:</span> Deno
         </li>
         <li>
-          <span>Database & Platforms:</span> MySQL, Supabase, Prisma
+          <span>Bundlers:</span> Webpack
+        </li>
+        <li>
+          <span>Databases & ORM:</span> MySQL, Prisma, Sequelize
         </li>
         <li>
           <span>Package Managers:</span> npm
         </li>
         <li>
-          <span>Testing:</span> Vitest, Insomnia
+          <span>Templating:</span> Pug, Handlebars
         </li>
         <li>
-          <span>Authentication & Authorization:</span> Auth.js
+          <span>Testing:</span> Vitest
         </li>
         <li>
-          <span>Hosting:</span> Netlify, Heroku, AWS, GitHub Pages
+          <span>Authentication:</span> Auth.js
         </li>
         <li>
-          <span>Various Tools:</span> Vite, Sequelize, Inquirer, Adobe Suite
+          <span>Deployment & Hosting:</span> Netlify, Heroku, AWS
+        </li>
+        <li>
+          <span>Build & Design Tools:</span> Vite, Adobe Suite
         </li>
       </ul>
     </>

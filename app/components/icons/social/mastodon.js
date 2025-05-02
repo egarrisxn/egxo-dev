@@ -1,4 +1,4 @@
-const Mastadon = () => {
+const Mastodon = () => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -14,4 +14,4 @@ const Mastadon = () => {
   )
 }
 
-export default Mastadon
+export default Mastodon

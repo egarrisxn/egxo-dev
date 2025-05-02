@@ -1,8 +1,16 @@
-.iframe {
+.pdfUS,
+.pdfA4 {
+  display: block;
   width: 100%;
-  min-height: 100vh;
-  height: 100%;
   border: none;
-  border-radius: var(--inline-radius);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+  border-radius: (--radius);
+}
+
+.pdfUS {
+  aspect-ratio: 8.5 / 11;
+}
+
+.pdfA4 {
+  aspect-ratio: 827 / 1169;
 }

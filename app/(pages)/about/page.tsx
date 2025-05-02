@@ -15,19 +15,16 @@ export const metadata = {
 }
 
 export default function AboutPage() {
-  const currentTech = [
-    {name: 'TypeScript', url: 'https://www.typescriptlang.org/'},
-    {name: 'PostgreSQL', url: 'https://postgresql.org/'},
-    {name: 'Deno', url: 'https://deno.land/'},
-    {name: 'Figma', url: 'https://www.figma.com/'},
+  const holyTrinity = [
+    {name: 'HTML', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML'},
+    {name: 'CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS'},
+    {name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'},
   ]
 
   const futureTech = [
-    {name: 'Svelte', url: 'https://svelte.dev/'},
-    {name: 'SQLite', url: 'https://www.sqlite.org/'},
     {name: 'Docker', url: 'https://www.docker.com/'},
     {name: 'Python', url: 'https://www.python.org/'},
-    {name: 'Vue.js', url: 'https://www.vuejs.org/'},
+    {name: 'SQLite', url: 'https://www.sqlite.org/'},
   ]
 
   return (
@@ -50,45 +47,57 @@ export default function AboutPage() {
       <article>
         <h3>Who Am I?</h3>
         <p>
-          First and foremost, hello! My name is Ethan. Currently, I live in the the Southeastern
-          region of the United States, more specifically the wetlands of Central Florida.
+          Hey there!, I&apos;m Ethan, a developer and designer with a deep appreciation for clean
+          code and thoughtful design. I build modern, user-focused web apps that prioritize
+          usability, performance, and accessibility.
         </p>
         <p>
-          I specialize in building digital products that are as intuitive as they are innovative and
-          dedicated to mastering the tools and frameworks that power the web today. I thrive on the
-          challenge of simplifying complex systems and making them accessible. My work is driven by
-          a deep understanding of both the technical and creative aspects of development, ensuring
-          that every project is not only functional but also engaging.
+          With a background that bridges both front-end polish and back-end logic, I enjoy taking
+          ideas from concept to launch. Whether it&apos;s crafting intuitive interfaces or
+          architecting scalable systems, I&apos;m all about delivering work that feels purposeful
+          and refined.
         </p>
         <p>
-          I&apos;m constantly exploring new technologies and refining my skills in those I use
-          regularly. This commitment to learning keeps my work at the cutting edge of design and
-          development.
+          I stay curious, keep up with emerging technologies, and love exploring new tools that push
+          the web forward. Outside of the screen, I&apos;m probably tinkering with creative projects
+          or digging into a good piece of tech history.
         </p>
-        <p>Let&apos;s work together and create something out of this world! ✨</p>
+        <p>
+          If you&apos;re into thoughtful software and great digital experiences, we&apos;ll probably
+          get along just fine.
+        </p>
+
         <hr />
         <h3>My Tech Stack:</h3>
         <TechStack />
         <p className={styles.tech}>
-          {` Currently sharpening my knowledge on these: `}
-          {currentTech.map((current) => (
-            <Link key={current.name} href={current.url} external={true} className={styles.techLink}>
-              {current.name},
-            </Link>
+          {'Shoutout to the holy trinity of web development: '}
+          {holyTrinity.map((tech, index) => (
+            <span key={tech.name}>
+              <Link href={tech.url} external className={styles.techLink}>
+                {tech.name}
+              </Link>
+              {index < holyTrinity.length - 2 ? ', ' : ''}
+              {index === holyTrinity.length - 2 ? ', & ' : ''}
+              {index === holyTrinity.length - 1 ? '!' : ''}
+            </span>
           ))}
-          {` & more! `}
         </p>
         <hr />
         <h3>Previously Used Technologies & Tools:</h3>
         <TechList />
         <p className={styles.tech}>
           {` Interests for Future Learning: `}
-          {futureTech.map((future) => (
-            <Link key={future.name} href={future.url} external={true} className={styles.techLink}>
-              {future.name},
-            </Link>
+          {futureTech.map((tech, index) => (
+            <span key={tech.name}>
+              <Link href={tech.url} external className={styles.techLink}>
+                {tech.name}
+              </Link>
+              {index < futureTech.length - 2 ? ', ' : ''}
+              {index === futureTech.length - 2 ? ', ' : ''}
+              {index === futureTech.length - 1 ? ', & all things AI!' : ''}
+            </span>
           ))}
-          {` & so many more! `}
         </p>
         <hr />
         <p>

@@ -32,9 +32,9 @@ export default async function HomePage() {
           </Link>
         </nav>
         <h2>
-          Full Stack Developer & Digital Product Designer looking to make a difference in the world
-          & the web. Constantly pushing myself to step out of my comfort zone and tackle new
-          challenges. <Link href='/about'>Learn more</Link>.
+          Full Stack Developer & Digital Product Designer building thoughtful tools for the web and
+          the world. Taking it one step at a time, guided by a Positive Mental Attitude (PMA).{' '}
+          <Link href='/about'>Learn more </Link>about me and my world!
         </h2>
         <h3>
           Available for work //{' '}
