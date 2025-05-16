@@ -1,0 +1,49 @@
+---
+title: Rethinking Component Boundaries with RSC
+description: A glimpse into how React Server Components encourage a different mindset around rendering and data fetching.
+slug: rsc-boundaries
+type: thought
+date: May 7, 2025
+---
+
+```tsx
+// app/components/UserList.server.tsx
+import {getUsers} from '@/lib/data'
+
+export default async function UserList() {
+  const users = await getUsers()
+
+  return (
+    <ul>
+      {users.map((user) => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+  )
+}
+```
+
+### Thinking Differently with React Server Components
+
+React Server Components (RSC) challenge us to reconsider where logic lives. Traditionally, even simple data-fetching logic lived in client components or hooks. Now, with `.server.tsx` files and full support in frameworks like Next.js, we can move that logic back to the server—where it often belongs.
+
+### What Changed?
+
+In the example above, `UserList` fetches data directly on the server, with no need for loading states, `useEffect`, or even an API route. It’s rendered ahead of time, streamed to the client, and completely removed from the bundle.
+
+This approach makes components leaner, reduces JavaScript shipped to the browser, and simplifies data flow. It also means we don’t need to abstract everything behind an API call just to show a list.
+
+### Why It Matters
+
+RSC promotes clearer separation of concerns:
+
+- **Server** for data + logic
+- **Client** for interactivity
+
+This mental model leads to cleaner, more maintainable apps—especially when combined with caching and streaming.
+
+### Conclusion
+
+React Server Components are more than a performance optimization—they represent a shift in how we think about rendering, data access, and component responsibility. Start by moving non-interactive components like lists, feeds, and dashboards to the server—and watch your app get faster and simpler.
+
+–EG
