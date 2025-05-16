@@ -2,9 +2,8 @@ export default function robots() {
   return {
     rules: {
       userAgent: '*',
-      allow: ['/'],
+      allow: '/',
     },
     sitemap: 'https://egxo.dev/sitemap.xml',
-    host: 'https://egxo.dev',
   }
 }

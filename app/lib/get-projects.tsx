@@ -5,7 +5,7 @@ const Projects: Project[] = [
   {
     title: 'Quik|res',
     description:
-      'A user-friendly, AI-powered resume-to-website builder! Technologies: Next.js, React, TypeScript, AWS S3, Upstash Redis, Clerk, OpenAI, Tailwind CSS, Radix-UI, Vercel, & more.',
+      'An AI-powered resume-to-website generator for creating polished personal sites with ease. Built with Next.js, TypeScript, AWS S3, OpenAI, Clerk, Redis, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/quikres',
     years: ['2025'],
     type: 'project',
@@ -14,7 +14,7 @@ const Projects: Project[] = [
   {
     title: 'ManyLinks',
     description:
-      'A sleek and intuitive way to share your all your links One site! Many Links! Technologies: Next.js, React, TypeScript, MongoDB, Next-Auth, Tailwind CSS, Radix-UI, Vercel, & more.',
+      'A sleek, single-page link aggregator to showcase all your important links in one place. Built with Next.js, TypeScript, MongoDB, Next-Auth, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/manylinks',
     years: ['2025'],
     type: 'project',
@@ -23,7 +23,7 @@ const Projects: Project[] = [
   {
     title: 'XPROD',
     description:
-      'A comprehensive productivity web app designed to streamline your daily tasks and organization. Technologies: Next.js, React, TypeScript, Supabase, Zod, Tailwind CSS, Vercel, & more.',
+      'A full-featured productivity app to manage tasks, notes, and daily routines. Built with Next.js, TypeScript, Supabase, Zod, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/xprod',
     years: ['2025'],
     type: 'project',
@@ -32,7 +32,7 @@ const Projects: Project[] = [
   {
     title: 'ScribeVoice',
     description:
-      'A powerful voice-to-text transcription tool for notes, transcripts, lists, and more. Technologies: Next.js, React, TypeScript, Supabase, OpenAI, Tailwind CSS, Vercel, & more.',
+      'A voice-to-text transcription tool for capturing notes, ideas, and conversations. Built with Next.js, TypeScript, Supabase, OpenAI, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/scribevoice',
     years: ['2025'],
     type: 'project',
@@ -41,7 +41,7 @@ const Projects: Project[] = [
   {
     title: 'XO Chatbot',
     description:
-      'An AI-powered chatbot with Grok integration, designed for smooth and intuitive conversations. Technologies: Next.js, React, TypeScript, Grok, Next-Auth, Tailwind CSS, Vercel, & more.',
+      'An interactive AI chatbot powered by Grok, designed for seamless and responsive conversations. Built with Next.js, TypeScript, Next-Auth, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/xochatbot',
     years: ['2025'],
     type: 'project',
@@ -50,7 +50,7 @@ const Projects: Project[] = [
   {
     title: 'International Worldwide',
     description:
-      'A multilingual coding practice platform featuring themed challenges across various topics. Technologies: Next.js, React, JavaScript, Next-Intl, Tailwind CSS, Vercel, & more.',
+      'A multilingual platform for practicing coding challenges with internationalization support. Built with Next.js, JavaScript, Next-Intl, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/international-worldwide',
     years: ['2025'],
     type: 'project',
@@ -59,7 +59,7 @@ const Projects: Project[] = [
   {
     title: 'Unofficial Merchandise',
     description:
-      'A fully functional e-commerce store with seamless shopping and secure payments. Technologies: Next.js, React, JavaScript, Stripe, Sanity, Tailwind CSS, Vercel, & more.',
+      'A modern e-commerce storefront offering smooth shopping and Stripe-powered payments. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/unofficial-merchandise',
     years: ['2025'],
     type: 'project',
@@ -68,7 +68,7 @@ const Projects: Project[] = [
   {
     title: 'n00bdev - Tips & Tricks',
     description:
-      'A developer-centric blog featuring insightful tips, tricks, and best practices. Technologies: Astro, TypeScript, Tailwind CSS, Vercel, & more.',
+      'A developer blog sharing practical coding tips, tools, and insights. Built with Astro, TypeScript, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/n00bdev',
     years: ['2025'],
     type: 'project',
@@ -77,7 +77,7 @@ const Projects: Project[] = [
   {
     title: 'Resplashpad',
     description:
-      'A free high-resolution photo aggregator powered by the Unsplash API. Technologies: Vite, React, TypeScript, TanStack Query, Tailwind CSS, Readix-UI, Vercel, & more.',
+      'A high-resolution photo browser powered by the Unsplash API. Built with Vite, TypeScript, TanStack Query, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/resplashpad',
     years: ['2025'],
     type: 'project',
@@ -86,7 +86,7 @@ const Projects: Project[] = [
   {
     title: 'CC NextFolio',
     description:
-      'A sleek and customizable website template tailored for modern portfolios. Technologies: Next.js, React, TypeScript, Content Collections, Zustand, Tailwind CSS, Vercel, & more.',
+      'A customizable portfolio template built for modern developers. Built with Next.js, TypeScript, Content Collections, Zustand, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/cc-nextfolio',
     years: ['2025'],
     type: 'project',
@@ -95,7 +95,7 @@ const Projects: Project[] = [
   {
     title: 'Mississippi Paint',
     description:
-      'A web based application spin on the classic Microsoft Paint. Technologies: Nextjs, React, TypeScript, Tailwind CSS, Readix-UI, Vercel, & more.',
+      'A browser-based remake of the classic Microsoft Paint experience. Built with Next.js, TypeScript, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/mississippi-paint',
     years: ['2025'],
     type: 'project',
@@ -104,7 +104,7 @@ const Projects: Project[] = [
   {
     title: 'Sway Bae Official',
     description:
-      'The official site for full-time streamer and content creator Sway Bae, featuring updates and exclusive content. Technologies: Next.js, React, JavaScript, Sanity, Tailwind CSS, daisyUI, Vercel, & more.',
+      'The official website for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/swaybaeofficial',
     years: ['2024'],
     type: 'project',
@@ -113,7 +113,7 @@ const Projects: Project[] = [
   {
     title: 'Resbuilder: ATS Resumes',
     description:
-      'A professional, ATS-friendly resume builder designed for optimal job application success. Technologies: Next.js, React, JavaScript, MDX, Tailwind CSS, Vercel, & more.',
+      'A professional resume builder focused on ATS compatibility for better hiring results. Built with Next.js, JavaScript, MDX, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/ats-resbuilder',
     years: ['2024'],
     type: 'project',
@@ -122,7 +122,7 @@ const Projects: Project[] = [
   {
     title: 'WebSanity Builder',
     description:
-      'An intuitive website builder that simplifies the process of creating stunning web pages. Technologies: Next.js, React, JavaScript, Sanity, Tailwind CSS, Vercel, & more.',
+      'An intuitive website builder that makes creating beautiful pages effortless. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/websanity-builder',
     years: ['2024'],
     type: 'project',
@@ -131,7 +131,7 @@ const Projects: Project[] = [
   {
     title: 'Pushin Mongo: Movies',
     description:
-      'A full-stack movie database app leveraging the MERN stack for dynamic browsing and discovery. Technologies: Next.js, React, TypeScript, Express, MongoDB, Tailwind CSS, Vercel, & more.',
+      'A full-stack movie database app powered by the MERN stack for discovering and managing movies. Built with Next.js, TypeScript, Express, MongoDB, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/pushin-mongo-movies',
     years: ['2024'],
     type: 'project',
@@ -140,7 +140,7 @@ const Projects: Project[] = [
   {
     title: 'XO Starter',
     description:
-      'A modern, optimized Next.js starter template built for performance and flexibility. Technologies: Next.js, React, TypeScript, Tailwind CSS, Radix-UI, Vercel, & more.',
+      'A clean and flexible Next.js starter template focused on performance and scalability. Built with Next.js, TypeScript, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/xostarter',
     years: ['2024'],
     type: 'project',
@@ -149,7 +149,7 @@ const Projects: Project[] = [
   {
     title: 'Not Coolors',
     description:
-      'A fast and user-friendly color palette generator for all your design needs. Technologies: Next.js, React, JavaScript, Tailwind CSS, Vercel, & more.',
+      'A fast, no-frills color palette generator for designers and developers. Built with Next.js, JavaScript, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/not-coolors',
     years: ['2024'],
     type: 'project',
@@ -158,7 +158,7 @@ const Projects: Project[] = [
   {
     title: 'Easy Copy Buttons',
     description:
-      'A handy collection of pre-styled, copy-paste buttons for effortless UI development. Technologies: Next.js, JavaScript, Tailwind CSS, Vercel, & more.',
+      'A curated collection of ready-to-use buttons for fast, consistent UI design. Built with Next.js, JavaScript, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/ezcopy-buttons',
     years: ['2024'],
     type: 'project',
@@ -167,7 +167,7 @@ const Projects: Project[] = [
   {
     title: 'DevBuild Resume',
     description:
-      'A visually appealing resume builder, prioritizing aesthetics over ATS compliance. Technologies: Next.js, TypeScript, Tailwind CSS, Material-Tailwind, Vercel, & more.',
+      'A stylish resume builder designed with aesthetics in mind over ATS compliance. Built with Next.js, TypeScript, Tailwind CSS, Material-Tailwind, and more.',
     href: 'https://github.com/egarrisxn/devbuild-resume',
     years: ['2024'],
     type: 'project',
@@ -176,7 +176,7 @@ const Projects: Project[] = [
   {
     title: 'egxo.fyi',
     description:
-      'A personal blog built to document insights, experiences, and tech-related thoughts. Technologies: Next.js, React, JavaScript, Sanity, Tailwind CSS, Radix-UI, Vercel, & more.',
+      'A personal blog to share thoughts, insights, and development experiences. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/egxo-fyi',
     years: ['2024'],
     type: 'project',
@@ -185,119 +185,12 @@ const Projects: Project[] = [
   {
     title: 'egxworld v1',
     description:
-      'My first portfolio website—designed to showcase projects, skills, and more. Technologies: Next.js, React, JavaScript, Tailwind CSS, Radix-UI, Vercel, & more.',
+      'The original version of my portfolio, built to showcase projects and personal branding. Built with Next.js, JavaScript, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/egxworld-v1',
     years: ['2024'],
     type: 'project',
     image: '/projects/egxworldv1.png',
   },
-  // {
-  //   title: 'Angular Movies DB',
-  //   description:
-  //     'A feature-rich movie search engine providing comprehensive film details. Technologies: Angular, TypeScript, Tailwind CSS, Netlify, & more.',
-  //   href: 'https://github.com/egarrisxn/angular-movies-db-2023',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/egmovies.png',
-  // },
-  // {
-  //   title: '(PEHN) User Management',
-  //   description:
-  //     'A minimalist CRUD application for managing user contacts efficiently. Technologies: Express, HTMX, Pug, JavaScript, Heroku, & more.',
-  //   href: 'https://github.com/egarrisxn/pehn-user-management-2023',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/usermanagement.png',
-  // },
-  // {
-  //   title: 'M3RN B00KSTACK',
-  //   description:
-  //     'A full-stack MERN book application demonstrating REST APIs, authentication, and CRUD operations. Technologies: Express, MongoDB, React, JavaScript, Tailwind CSS, Heroku, & more.',
-  //   href: 'https://github.com/egarrisxn/m3rnb00kstack-2023',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/m3rnb00kstack.png',
-  // },
-  // {
-  //   title: 'MVC Tech Forum',
-  //   description:
-  //     'A CMS-style tech forum for discussions and updates, built with the MVC pattern. Technologies: Express, MySQL, Sequelize, Handlebars, JavaScript, Bootstrap, CSS3, Heroku, & more.',
-  //   href: 'https://github.com/egarrisxn/mvc-tech-forum-2023',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/mvctechforum.png',
-  //
-  // },
-  // {
-  //   title: 'Express Note Taker',
-  //   description:
-  //     'A simple yet powerful note-taking app with full CRUD functionality. Technologies: Express, JavaScript, Bootstrap, CSS3, Heroku, & more.',
-  //   href: 'https://github.com/egarrisxn/express-note-taker-2023',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/expressnotetaker.png',
-  //
-  // },
-  // {
-  //   title: 'Vanilla Portfolio Template',
-  //   description:
-  //     'A clean, modern portfolio template using pure HTML, CSS, and JavaScript. Technologies: HTML5, CSS3, JavaScript, GitHub Pages, & more.',
-  //   href: 'https://github.com/egarrisxn/html-portfolio-template-2023',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/portfoliotemplate.png',
-  //
-  // },
-  // {
-  //   title: 'The Weather Dashboard',
-  //   description:
-  //     'A fast, lightweight weather app that fetches real-time data using APIs. Technologies: jQuery, JavaScript, CSS3, HTML5, GitHub Pages, & more.',
-  //   href: 'https://github.com/egarrisxn/jquery-weather-dashboard-2023',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/weatherdashboard.png',
-  //
-  // },
-  // {
-  //   title: 'Quiz Game: Code Edition',
-  //   description:
-  //     'A fun coding quiz game that challenges your programming knowledge while tracking high scores. Technologies: jQuery, JavaScript, CSS3, HTML5, GitHub Pages, & more.',
-  //   href: 'https://github.com/egarrisxn/jquery-quiz-game-2023',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/thequizgame.png',
-  //
-  // },
-  // {
-  //   title: 'Daily Scheduler',
-  //   description:
-  //     'A simple and efficient scheduler for organizing daily tasks. Technologies: jQuery, JavaScript, CSS3, HTML5, GitHub Pages, & more.',
-  //   href: 'https://github.com/egarrisxn/jquery-daily-scheduler-2023',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/dailyscheduler.png',
-  //
-  // },
-  // {
-  //   title: 'Password Generator',
-  //   description:
-  //     'A web-based tool that creates secure, randomized passwords with various customization options. Technologies: JavaScript, Bootstrap, CSS3, HTML5, GitHub Pages, & more.',
-  //   href: 'https://github.com/egarrisxn/password-generator-2023',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/passwordgenerator.png',
-  //
-  // },
-  // {
-  //   title: 'Player One Reads',
-  //   description:
-  //     "A recommendation app that suggests books based on a user's favorite video game genres. Technologies: Bulma, JavaScript, CSS3, HTML5, GitHub Pages, & more.",
-  //   href: 'https://github.com/egarrisxn/Player-One-Reads',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/playeronereads.png',
-  //
-  // },
 ]
 
 export const getProjects = cache(async (): Promise<Project[]> => {

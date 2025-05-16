@@ -93,6 +93,9 @@ importers:
       '@types/node':
         specifier: 22.14.1
         version: 22.14.1
+      '@types/nodemailer':
+        specifier: ^6.4.17
+        version: 6.4.17
       '@types/react':
         specifier: ^19.1.1
         version: 19.1.4
@@ -1038,6 +1041,9 @@ packages:
 
   '@types/node@22.14.1':
     resolution: {integrity: sha512-u0HuPQwe/dHrItgHHpmw3N2fYCR6x4ivMNbPHRkBVP4CvN+kiRrKHWk3i8tXiO/joPwXLMYvF9TTF0eqgHIuOw==}
+
+  '@types/nodemailer@6.4.17':
+    resolution: {integrity: sha512-I9CCaIp6DTldEg7vyUTZi8+9Vo0hi1/T8gv3C89yk1rSAAzoKQ8H8ki/jBYJSFoH/BisgLP8tkZMlQ91CIquww==}
 
   '@types/postcss-modules-local-by-default@4.0.2':
     resolution: {integrity: sha512-CtYCcD+L+trB3reJPny+bKWKMzPfxEyQpKIwit7kErnOexf5/faaGpkFy4I5AwbV4hp1sk7/aTg0tt0B67VkLQ==}
@@ -4592,6 +4598,10 @@ snapshots:
   '@types/node@22.14.1':
     dependencies:
       undici-types: 6.21.0
+
+  '@types/nodemailer@6.4.17':
+    dependencies:
+      '@types/node': 22.14.1
 
   '@types/postcss-modules-local-by-default@4.0.2':
     dependencies:

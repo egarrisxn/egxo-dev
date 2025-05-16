@@ -1,10 +1,10 @@
-import {NextResponse} from 'next/server'
+import {type NextRequest, NextResponse} from 'next/server'
 import nodemailer from 'nodemailer'
 
 const email_user = process.env.NODEMAILER_EMAIL
 const email_password = process.env.NODEMAILER_PASSWORD
 
-export async function POST(req) {
+export async function POST(req: NextRequest) {
   const {email, name, message} = await req.json()
 
   const transport = nodemailer.createTransport({
