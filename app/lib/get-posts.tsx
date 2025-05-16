@@ -6,6 +6,17 @@ import type {Post} from './types'
 
 const thirdPartyPosts: Post[] = [
   {
+    title: '#13 | Diving Deep into React Server Components',
+    description:
+      'Explore the power of React Server Components (RSCs) and how they can revolutionize your Next.js development workflow, improving performance and simplifying data fetching.',
+    date: '2025-05-16',
+    slug: 'diving-deep-into-react-server-components',
+    tags: [],
+    isThirdParty: true,
+    href: 'https://egxo.fyi/blog/diving-deep-into-react-server-components',
+    type: 'post',
+  },
+  {
     title: '#12 | My Favorite Web Dev Tools (Design, Code, SEO & More)',
     description:
       'Here’s my curated collection of tools I regularly use (and recommend!) across every part of the frontend workflow.',
