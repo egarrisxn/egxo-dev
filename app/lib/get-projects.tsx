@@ -3,6 +3,24 @@ import type {Project} from './types'
 
 const Projects: Project[] = [
   {
+    title: 'Quik|res',
+    description:
+      'A user-friendly, AI-powered resume-to-website builder! Technologies: Next.js, React, TypeScript, AWS S3, Upstash Redis, Clerk, OpenAI, Tailwind CSS, Radix-UI, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/quikres',
+    years: ['2025'],
+    type: 'project',
+    image: '/projects/quikres.png',
+  },
+  {
+    title: 'ManyLinks',
+    description:
+      'A sleek and intuitive way to share your all your links One site! Many Links! Technologies: Next.js, React, TypeScript, MongoDB, Next-Auth, Tailwind CSS, Radix-UI, Vercel, & more.',
+    href: 'https://github.com/egarrisxn/manylinks',
+    years: ['2025'],
+    type: 'project',
+    image: '/projects/manylinks.png',
+  },
+  {
     title: 'XPROD',
     description:
       'A comprehensive productivity web app designed to streamline your daily tasks and organization. Technologies: Next.js, React, TypeScript, Supabase, Zod, Tailwind CSS, Vercel, & more.',
