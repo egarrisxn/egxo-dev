@@ -3,7 +3,7 @@ import type {Project} from './types'
 
 const Projects: Project[] = [
   {
-    title: 'Quik|res',
+    title: 'Quik|Res',
     description:
       'An AI-powered resume-to-website generator for creating polished personal sites with ease. Built with Next.js, TypeScript, AWS S3, OpenAI, Clerk, Redis, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/quikres',
@@ -84,6 +84,15 @@ const Projects: Project[] = [
     image: '/projects/resplashpad.png',
   },
   {
+    title: 'Gavins Typing Game',
+    description:
+      'An easy-to-use typing game created and tailored for my son, Gavin. Built with Next.js, TypeScript, Tailwind CSS, and more.',
+    href: 'https://github.com/egarrisxn/gavins-typing-game',
+    years: ['2025'],
+    type: 'project',
+    image: '/projects/typinggame.png',
+  },
+  {
     title: 'CC NextFolio',
     description:
       'A customizable portfolio template built for modern developers. Built with Next.js, TypeScript, Content Collections, Zustand, Tailwind CSS, and more.',
@@ -99,7 +108,7 @@ const Projects: Project[] = [
     href: 'https://github.com/egarrisxn/mississippi-paint',
     years: ['2025'],
     type: 'project',
-    image: '/projects/ms-paint.png',
+    image: '/projects/mspaint.png',
   },
   {
     title: 'Sway Bae Official',
