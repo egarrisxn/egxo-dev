@@ -80,7 +80,6 @@ export const metadata: Metadata = {
       type: 'image/svg+xml',
     },
   },
-  verification: {},
 }
 
 export const viewport: Viewport = {
@@ -97,6 +96,9 @@ export default function RootLayout({children}: {children: ReactNode}) {
       suppressHydrationWarning
       className={`${space_grotesk.variable} ${roboto_mono.variable}`}
     >
+      <head>
+        <meta name='apple-mobile-web-app-title' content='egxo.dev' />
+      </head>
       <body>
         <ThemeProvider>
           <div className={styles.wrapper}>
