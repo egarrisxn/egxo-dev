@@ -1,0 +1,56 @@
+---
+title: Fetching Data with Modern JavaScript
+description: Learn how to fetch and display data using async/await, optional chaining, and React.
+slug: fetching-data
+type: thought
+date: June 26, 2025
+---
+
+```jsx
+import React, {useEffect, useState} from 'react'
+
+function UserCard() {
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    async function fetchUser() {
+      try {
+        const res = await fetch('https://jsonplaceholder.typicode.com/users/1')
+        const data = await res.json()
+        setUser(data)
+      } catch (error) {
+        console.error('Failed to fetch user:', error)
+      }
+    }
+
+    fetchUser()
+  }, [])
+
+  return (
+    <div>
+      <h1>{user?.name ?? 'Loading...'}</h1>
+      <p>{user?.email ?? 'Fetching email...'}</p>
+    </div>
+  )
+}
+
+export default UserCard
+```
+
+## Fetching Data with Modern JavaScript
+
+Working with APIs is a key part of building dynamic web apps, and modern JavaScript makes it easier than ever. In this example, we’re using `async/await` to simplify asynchronous code, `try/catch` for error handling, and optional chaining to safely access object properties.
+
+## Why This Matters
+
+Using `async/await` instead of traditional promises leads to more readable, cleaner code. Combined with `useEffect` and `useState` from React, it becomes straightforward to fetch and display data in a component.
+
+## The Optional Chaining Advantage
+
+Notice the use of `user?.name` and `user?.email`. This is called optional chaining. It helps prevent runtime errors if the `user` object is still null when rendering begins. It’s one of the most useful additions to modern JavaScript.
+
+## Try It Yourself
+
+Replace the API URL with your own endpoint, and experiment with displaying different user data or loading states. This pattern is common in real-world apps, from dashboards to social feeds.
+
+–EG
