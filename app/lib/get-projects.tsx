@@ -30,16 +30,7 @@ const Projects: Project[] = [
     image: '/projects/scribevoice.png',
   },
   {
-    title: 'International Worldwide',
-    description:
-      'A multilingual platform for practicing coding challenges with internationalization support. Built with Next.js, JavaScript, Next-Intl, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/international-worldwide',
-    years: ['2025'],
-    type: 'project',
-    image: '/projects/internationalworldwide.png',
-  },
-  {
-    title: 'XPROD',
+    title: 'xprod',
     description:
       'A full-featured productivity app to manage tasks, notes, and daily routines. Built with Next.js, TypeScript, Supabase, Zod, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/xprod',
@@ -75,16 +66,25 @@ const Projects: Project[] = [
     image: '/projects/swaybae.png',
   },
   {
-    title: 'n00bdev - Tips & Tricks',
+    title: 'International Worldwide',
     description:
-      'A developer blog sharing practical coding tips, tools, and insights. Built with Astro, TypeScript, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/n00bdev',
+      'A multilingual platform for practicing coding challenges with internationalization support. Built with Next.js, JavaScript, Next-Intl, Tailwind CSS, and more.',
+    href: 'https://github.com/egarrisxn/international-worldwide',
     years: ['2024'],
     type: 'project',
-    image: '/projects/n00bdev.png',
+    image: '/projects/internationalworldwide.png',
   },
   {
-    title: 'Resbuilder: ATS Resumes',
+    title: 'XO Starter',
+    description:
+      'A clean and flexible Next.js starter template focused on performance and scalability. Built with Next.js, TypeScript, Tailwind CSS, and more.',
+    href: 'https://github.com/egarrisxn/xostarter',
+    years: ['2024'],
+    type: 'project',
+    image: '/projects/xostarter.png',
+  },
+  {
+    title: 'ATS | Resbuilder',
     description:
       'A professional resume builder focused on ATS compatibility for better hiring results. Built with Next.js, JavaScript, MDX, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/ats-resbuilder',
@@ -102,22 +102,13 @@ const Projects: Project[] = [
     image: '/projects/resplashpad.png',
   },
   {
-    title: 'Unofficial Merchandise',
+    title: 'n00b:dev',
     description:
-      'A modern e-commerce storefront offering smooth shopping and Stripe-powered payments. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/unofficial-merchandise',
+      'A developer blog sharing practical coding tips, tools, and insights for beginner level developers. Built with Astro, TypeScript, Tailwind CSS, and more.',
+    href: 'https://github.com/egarrisxn/n00bdev',
     years: ['2024'],
     type: 'project',
-    image: '/projects/unofficialmerch.png',
-  },
-  {
-    title: 'XO Starter',
-    description:
-      'A clean and flexible Next.js starter template focused on performance and scalability. Built with Next.js, TypeScript, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/xostarter',
-    years: ['2024'],
-    type: 'project',
-    image: '/projects/xostarter.png',
+    image: '/projects/n00bdev.png',
   },
   // {
   //   title: 'WebSanity Builder',
@@ -129,22 +120,13 @@ const Projects: Project[] = [
   //   image: '/projects/websanity.png',
   // },
   {
-    title: 'Pushin Mongo: Movies',
+    title: 'Unofficial Merchandise',
     description:
-      'A full-stack movie database app powered by the MERN stack for discovering and managing movies. Built with Next.js, TypeScript, Express, MongoDB, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/pushin-mongo-movies',
+      'A modern e-commerce storefront offering smooth shopping and Stripe-powered payments. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
+    href: 'https://github.com/egarrisxn/unofficial-merchandise',
     years: ['2023'],
     type: 'project',
-    image: '/projects/pushinmongo.png',
-  },
-  {
-    title: 'Gavins Typing Game',
-    description:
-      'An easy-to-use typing game created and tailored for my son, Gavin. Built with Next.js, TypeScript, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/gavins-typing-game',
-    years: ['2023'],
-    type: 'project',
-    image: '/projects/typinggame.png',
+    image: '/projects/unofficialmerch.png',
   },
   {
     title: 'egxo.fyi',
@@ -156,14 +138,32 @@ const Projects: Project[] = [
     image: '/projects/egxofyi.png',
   },
   {
-    title: 'egxworld v1',
+    title: 'EG|WORLD v1',
     description:
-      'Version One of my portfolio, built to showcase projects and personal branding. Built with Next.js, JavaScript, Tailwind CSS, and more.',
+      'Verson one of my personal portfolio, built to showcase projects and personal branding. Built with Next.js, JavaScript, Tailwind CSS, and more.',
     href: 'https://github.com/egarrisxn/egxworld-v1',
     years: ['2023'],
     type: 'project',
     image: '/projects/egxworldv1.png',
   },
+  // {
+  //   title: 'Pushin Mongo Movies',
+  //   description:
+  //     'A full-stack movie database app powered by the MERN stack for discovering and managing movies. Built with Next.js, TypeScript, MongoDB, Nuqs, Tailwind CSS, and more.',
+  //   href: 'https://github.com/egarrisxn/pushin-mongo-movies',
+  //   years: ['2023'],
+  //   type: 'project',
+  //   image: '/projects/pushinmongo.png',
+  // },
+  // {
+  //   title: 'Gavs Type Game (GTG)',
+  //   description:
+  //     'An easy-to-use keyboard typing learning game created and tailored for my son, Gavin. Built with Next.js, TypeScript, Tailwind CSS, and more.',
+  //   href: 'https://github.com/egarrisxn/gavins-typing-game',
+  //   years: ['2023'],
+  //   type: 'project',
+  //   image: '/projects/typinggame.png',
+  // },
   // {
   //   title: 'DevBuild Resume',
   //   description:
