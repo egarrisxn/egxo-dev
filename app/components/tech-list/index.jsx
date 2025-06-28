@@ -5,13 +5,13 @@ export default function TechList() {
     <>
       <ul className={styles.techList}>
         <li>
-          <span>Frontend:</span> Angular, Astro, jQuery
+          <span>Frontend:</span> Astro, jQuery
         </li>
         <li>
           <span>Backend:</span> Hono
         </li>
         <li>
-          <span>CSS & UI Libraries:</span> Bootstrap, React Aria, daisyUI
+          <span>CSS & UI Libraries:</span> Bootstrap, daisyUI
         </li>
         <li>
           <span>Runtimes:</span> Deno
@@ -20,25 +20,22 @@ export default function TechList() {
           <span>Bundlers:</span> Webpack
         </li>
         <li>
-          <span>Databases & ORM:</span> MySQL, Prisma, Sequelize
+          <span>Databases & ORM:</span> MySQL, Prisma
         </li>
         <li>
           <span>Package Managers:</span> npm
         </li>
         <li>
-          <span>Templating:</span> Pug, Handlebars
+          <span>Testing:</span> Postman, Vitest
         </li>
         <li>
-          <span>Testing:</span> Vitest
+          <span>Authentication:</span> Auth0, Auth.js
         </li>
         <li>
-          <span>Authentication:</span> Auth.js
+          <span>Deployment & Hosting:</span> Heroku, Netlify
         </li>
         <li>
-          <span>Deployment & Hosting:</span> Netlify, Heroku, AWS
-        </li>
-        <li>
-          <span>Build & Design Tools:</span> Vite, Adobe Suite
+          <span>Build & Design Tools:</span> Adobe Suite, Vite
         </li>
       </ul>
     </>
