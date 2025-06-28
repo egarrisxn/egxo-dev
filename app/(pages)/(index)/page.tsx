@@ -6,7 +6,6 @@ import {ContentList} from '@/components/content-list'
 import TimeOfDay from '@/components/timer'
 import Socials from '@/components/socials'
 import ProjectList from '@/components/projects'
-import {Arrow} from '@/components/icons/other'
 import styles from './page.module.css'
 
 const PROJECT_COUNT = 4
@@ -38,9 +37,9 @@ export default async function HomePage() {
         </h2>
         <h3>
           Available for work //{' '}
-          <Link href='/resume' target='_blank' rel='noopener noreferrer'>
-            Resume <Arrow />
-          </Link>
+          <a href='/other/EG-US-RESUME-2025.pdf' download>
+            Resume
+          </a>
         </h3>
         <SpotifyNowPlaying />
       </header>
