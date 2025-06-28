@@ -30,7 +30,7 @@ export default function AboutPage() {
     <>
       <header className={styles.header}>
         <Image
-          src='/images/avatar.png'
+          src='/images/myavatar.png'
           alt='My personal photo'
           width={100}
           height={100}

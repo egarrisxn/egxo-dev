@@ -38,24 +38,6 @@ const Projects: Project[] = [
     type: 'project',
     image: '/projects/xprod.png',
   },
-  // {
-  //   title: 'CC NextFolio',
-  //   description:
-  //     'A customizable portfolio template built for modern developers. Built with Next.js, TypeScript, Content Collections, Zustand, Tailwind CSS, and more.',
-  //   href: 'https://github.com/egarrisxn/cc-nextfolio',
-  //   years: ['2025'],
-  //   type: 'project',
-  //   image: '/projects/ccnextfolio.png',
-  // },
-  // {
-  //   title: 'XO Chatbot',
-  //   description:
-  //     'An interactive AI chatbot powered by Grok, designed for seamless and responsive conversations. Built with Next.js, TypeScript, Next-Auth, Tailwind CSS, and more.',
-  //   href: 'https://github.com/egarrisxn/xochatbot',
-  //   years: ['2025'],
-  //   type: 'project',
-  //   image: '/projects/xochatbot.png',
-  // },
   {
     title: 'Sway Bae Official',
     description:
@@ -110,15 +92,6 @@ const Projects: Project[] = [
     type: 'project',
     image: '/projects/n00bdev.png',
   },
-  // {
-  //   title: 'WebSanity Builder',
-  //   description:
-  //     'An intuitive website builder that makes creating beautiful pages effortless. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
-  //   href: 'https://github.com/egarrisxn/websanity-builder',
-  //   years: ['2024'],
-  //   type: 'project',
-  //   image: '/projects/websanity.png',
-  // },
   {
     title: 'Unofficial Merchandise',
     description:
@@ -146,33 +119,6 @@ const Projects: Project[] = [
     type: 'project',
     image: '/projects/egxworldv1.png',
   },
-  // {
-  //   title: 'Pushin Mongo Movies',
-  //   description:
-  //     'A full-stack movie database app powered by the MERN stack for discovering and managing movies. Built with Next.js, TypeScript, MongoDB, Nuqs, Tailwind CSS, and more.',
-  //   href: 'https://github.com/egarrisxn/pushin-mongo-movies',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/pushinmongo.png',
-  // },
-  // {
-  //   title: 'Gavs Type Game (GTG)',
-  //   description:
-  //     'An easy-to-use keyboard typing learning game created and tailored for my son, Gavin. Built with Next.js, TypeScript, Tailwind CSS, and more.',
-  //   href: 'https://github.com/egarrisxn/gavins-typing-game',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/typinggame.png',
-  // },
-  // {
-  //   title: 'DevBuild Resume',
-  //   description:
-  //     'A stylish resume builder designed with aesthetics in mind over ATS compliance. Built with Next.js, TypeScript, Tailwind CSS, Material-Tailwind, and more.',
-  //   href: 'https://github.com/egarrisxn/devbuild-resume',
-  //   years: ['2023'],
-  //   type: 'project',
-  //   image: '/projects/devbuildresume.png',
-  // },
 ]
 
 export const getProjects = cache(async (): Promise<Project[]> => {
