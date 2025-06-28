@@ -1,44 +1,22 @@
 # egxo.dev
 
-![og-image](https://github.com/user-attachments/assets/9864d9fe-934e-4c63-aed2-c7f1fc503658)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![GitHub repo size](https://img.shields.io/github/repo-size/egarrisxn/egxo-dev)
+![GitHub last commit](https://img.shields.io/github/last-commit/egarrisxn/egxo-dev)
+[![pnpm](https://img.shields.io/badge/package%20manager-pnpm-blueviolet)](https://pnpm.io)
+[![Next.js](https://img.shields.io/badge/Next.js-v15-black?logo=next.js)](https://nextjs.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4-blue?logo=tailwindcss)](https://tailwindcss.com)
+[![Vercel](https://img.shields.io/badge/Vercel-deployed-brightgreen?logo=vercel)](https://egxo.dev)
 
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) ![GitHub repo size](https://img.shields.io/github/repo-size/egarrisxn/egxo-dev) ![GitHub last commit](https://img.shields.io/github/last-commit/egarrisxn/egxo-dev)
+![egxodev](https://github.com/user-attachments/assets/cc510be4-8535-4bd4-a8e4-3bbb497df36d)
 
 ## Description
 
-My website/portfolio.
+My personal website/portfolio/whatever.
 
 ## Technologies
 
-- Next.js
-- React
-- TypeScript
-- JavaScript
-- MDX
-- Vercel
-- Etc.
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next.js, React, TypeScript, JavaScript, MDX, Vercel, & more.
 
 ## License
 
