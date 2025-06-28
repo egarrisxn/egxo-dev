@@ -102,6 +102,15 @@ const Projects: Project[] = [
     image: '/projects/unofficialmerch.png',
   },
   {
+    title: 'Pushin Mongo Movies',
+    description:
+      'A full-stack movie database app powered by the MERN stack for discovering and managing movies. Built with Next.js, TypeScript, Express, MongoDB, Tailwind CSS, and more.',
+    href: 'https://github.com/egarrisxn/pushin-mongo-movies',
+    years: ['2024'],
+    type: 'project',
+    image: '/projects/pushinmongo.png',
+  },
+  {
     title: 'egxo.fyi',
     description:
       'A personal blog to share thoughts, insights, and development experiences. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
