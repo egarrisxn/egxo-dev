@@ -30,6 +30,15 @@ const Projects: Project[] = [
     image: '/projects/scribevoice.png',
   },
   {
+    title: 'XO Chatbot',
+    description:
+      'An interactive AI chatbot powered by Grok, designed for seamless and responsive conversations. Built with Next.js, TypeScript, Next-Auth, Tailwind CSS, and more.',
+    href: 'https://github.com/egarrisxn/xochatbot',
+    years: ['2025'],
+    type: 'project',
+    image: '/projects/xochatbot.png',
+  },
+  {
     title: 'xprod',
     description:
       'A full-featured productivity app to manage tasks, notes, and daily routines. Built with Next.js, TypeScript, Supabase, Zod, Tailwind CSS, and more.',
