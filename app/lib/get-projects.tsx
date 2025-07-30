@@ -3,10 +3,19 @@ import type {Project} from './types'
 
 const Projects: Project[] = [
   {
+    title: 'Patricia Penisten: A Life Remembered',
+    description:
+      'A website to celebrate the life and legacy of my grandmother, Pat Penisten (1935-2025). Built with Next.js, TypeScript, Supabase, Tailwind CSS, and more.',
+    href: 'https://memories-of-patricia.vercel.app',
+    years: ['2025'],
+    type: 'project',
+    image: '/projects/pgp.png',
+  },
+  {
     title: 'Quik|Res',
     description:
       'An AI-powered resume-to-website generator for creating polished personal sites with ease. Built with Next.js, TypeScript, AWS S3, OpenAI, Clerk, Redis, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/quikres',
+    href: 'https://quikres.vercel.app',
     years: ['2025'],
     type: 'project',
     image: '/projects/quikres.png',
@@ -15,7 +24,7 @@ const Projects: Project[] = [
     title: 'ManyLinks',
     description:
       'A sleek, single-page link aggregator to showcase all your important links in one place. Built with Next.js, TypeScript, MongoDB, Next-Auth, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/manylinks',
+    href: 'https://manylinks.vercel.app',
     years: ['2025'],
     type: 'project',
     image: '/projects/manylinks.png',
@@ -24,7 +33,7 @@ const Projects: Project[] = [
     title: 'ScribeVoice',
     description:
       'A voice-to-text transcription tool for capturing notes, ideas, and conversations. Built with Next.js, TypeScript, Supabase, OpenAI, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/scribevoice',
+    href: 'https://scribevoice.vercel.app',
     years: ['2025'],
     type: 'project',
     image: '/projects/scribevoice.png',
@@ -33,7 +42,7 @@ const Projects: Project[] = [
     title: 'XO Chatbot',
     description:
       'An interactive AI chatbot powered by Grok, designed for seamless and responsive conversations. Built with Next.js, TypeScript, Next-Auth, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/xochatbot',
+    href: 'https://xochatbot.vercel.app',
     years: ['2025'],
     type: 'project',
     image: '/projects/xochatbot.png',
@@ -42,8 +51,8 @@ const Projects: Project[] = [
     title: 'xprod',
     description:
       'A full-featured productivity app to manage tasks, notes, and daily routines. Built with Next.js, TypeScript, Supabase, Zod, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/xprod',
-    years: ['2025'],
+    href: 'https://xprod.vercel.app',
+    years: ['2024'],
     type: 'project',
     image: '/projects/xprod.png',
   },
@@ -51,7 +60,7 @@ const Projects: Project[] = [
     title: 'Sway Bae Official',
     description:
       'The official website for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/swaybaeofficial',
+    href: 'https://swaybae.net',
     years: ['2024'],
     type: 'project',
     image: '/projects/swaybae.png',
@@ -60,7 +69,7 @@ const Projects: Project[] = [
     title: 'International Worldwide',
     description:
       'A multilingual platform for practicing coding challenges with internationalization support. Built with Next.js, JavaScript, Next-Intl, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/international-worldwide',
+    href: 'https://international-worldwide.vercel.app',
     years: ['2024'],
     type: 'project',
     image: '/projects/internationalworldwide.png',
@@ -69,7 +78,7 @@ const Projects: Project[] = [
     title: 'XO Starter',
     description:
       'A clean and flexible Next.js starter template focused on performance and scalability. Built with Next.js, TypeScript, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/xostarter',
+    href: 'https://xostarter.vercel.app',
     years: ['2024'],
     type: 'project',
     image: '/projects/xostarter.png',
@@ -78,7 +87,7 @@ const Projects: Project[] = [
     title: 'ATS | Resbuilder',
     description:
       'A professional resume builder focused on ATS compatibility for better hiring results. Built with Next.js, JavaScript, MDX, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/ats-resbuilder',
+    href: 'https://ats-resbuilder.vercel.app',
     years: ['2024'],
     type: 'project',
     image: '/projects/resumebuilder.png',
@@ -87,8 +96,8 @@ const Projects: Project[] = [
     title: 'Resplashpad',
     description:
       'A high-resolution photo browser powered by the Unsplash API. Built with Vite, TypeScript, TanStack Query, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/resplashpad',
-    years: ['2024'],
+    href: 'https://resplashpad.vercel.app',
+    years: ['2023'],
     type: 'project',
     image: '/projects/resplashpad.png',
   },
@@ -96,8 +105,8 @@ const Projects: Project[] = [
     title: 'n00b:dev',
     description:
       'A developer blog sharing practical coding tips, tools, and insights for beginner level developers. Built with Astro, TypeScript, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/n00bdev',
-    years: ['2024'],
+    href: 'https://n00bdev.vercel.app',
+    years: ['2023'],
     type: 'project',
     image: '/projects/n00bdev.png',
   },
@@ -105,25 +114,25 @@ const Projects: Project[] = [
     title: 'Unofficial Merchandise',
     description:
       'A modern e-commerce storefront offering smooth shopping and Stripe-powered payments. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/unofficial-merchandise',
+    href: 'https://unofficialmerchandise.vercel.app',
     years: ['2023'],
     type: 'project',
     image: '/projects/unofficialmerch.png',
   },
-  {
-    title: 'Pushin Mongo Movies',
-    description:
-      'A full-stack movie database app powered by the MERN stack for discovering and managing movies. Built with Next.js, TypeScript, Express, MongoDB, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/pushin-mongo-movies',
-    years: ['2024'],
-    type: 'project',
-    image: '/projects/pushinmongo.png',
-  },
+  // {
+  //   title: 'Pushin Mongo Movies',
+  //   description:
+  //     'A full-stack movie database app powered by the MERN stack for discovering and managing movies. Built with Next.js, TypeScript, Express, MongoDB, Tailwind CSS, and more.',
+  //   href: 'https://pushin-mongo-movies.vercel.app',
+  //   years: ['2023'],
+  //   type: 'project',
+  //   image: '/projects/pushinmongo.png',
+  // },
   {
     title: 'egxo.fyi',
     description:
       'A personal blog to share thoughts, insights, and development experiences. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/egxo-fyi',
+    href: 'https://egxo.fyi',
     years: ['2023'],
     type: 'project',
     image: '/projects/egxofyi.png',
@@ -132,7 +141,7 @@ const Projects: Project[] = [
     title: 'EG|WORLD v1',
     description:
       'Verson one of my personal portfolio, built to showcase projects and personal branding. Built with Next.js, JavaScript, Tailwind CSS, and more.',
-    href: 'https://github.com/egarrisxn/egxworld-v1',
+    href: 'https://egxworld.vercel.app',
     years: ['2023'],
     type: 'project',
     image: '/projects/egxworldv1.png',
