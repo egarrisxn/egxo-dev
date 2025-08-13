@@ -6,7 +6,7 @@ const Projects: Project[] = [
     title: 'Patricia Penisten: A Life Remembered',
     description:
       'A website to celebrate the life and legacy of my grandmother, Pat Penisten (1935-2025). Built with Next.js, TypeScript, Supabase, Tailwind CSS, and more.',
-    href: 'https://memories-of-patricia.vercel.app',
+    href: 'https://patricia-penisten.com',
     years: ['2025'],
     type: 'project',
     image: '/projects/pgp.png',
