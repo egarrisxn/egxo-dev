@@ -1,0 +1,68 @@
+{
+  "name": "egxo-dev",
+  "version": "1.0.0",
+  "description": "Current version of my personal portfolio/website/whatever.",
+  "author": "Ethan G. (https://egxo.dev)",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prebuild": "pnpm run lint",
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint",
+    "format": "prettier --check \"**/*.{js,jsx,ts,tsx,mdx}\" --cache",
+    "format:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,mdx}\" --cache"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.1",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.5.0",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/mdx": "^2.0.13",
+    "@vercel/analytics": "^1.5.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.540.0",
+    "motion": "^12.23.2",
+    "next": "15.5.0",
+    "next-themes": "^0.4.6",
+    "next-view-transitions": "^0.3.4",
+    "nodemailer": "^7.0.5",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-hook-form": "^7.62.0",
+    "sonner": "^2.0.7",
+    "sugar-high": "^0.9.3",
+    "tailwind-merge": "^3.3.1",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.1.12",
+    "@types/node": "^24.3.0",
+    "@types/nodemailer": "^7.0.1",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "eslint": "^9.33.0",
+    "eslint-config-next": "^15.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-mdx": "^3.6.2",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4.1.12",
+    "tw-animate-css": "^1.3.7",
+    "typescript": "5.8.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "sharp",
+      "unrs-resolver"
+    ]
+  }
+}

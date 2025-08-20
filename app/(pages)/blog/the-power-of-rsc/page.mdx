@@ -1,0 +1,83 @@
+export const metadata = {
+  title: 'The Power of RSC',
+  description:
+    'Discover how React Server Components improves performance and reduces bundle size',
+  alternates: {
+    canonical: '/blog/the-power-of-rsc',
+  },
+}
+
+# The Power of RSC
+
+React Server Components (RSC) are changing the way we build modern web applications. By offloading more work to the server and reducing the amount of JavaScript sent to the client, RSC allows developers to build faster, more efficient, and more scalable applications. In this post, we’ll explore what RSC is, why it matters, and how to effectively leverage its power in your projects.
+
+## Why RSC Matters
+
+With traditional client-rendered React apps, everything—logic, rendering, data fetching—happens in the browser. This leads to larger JavaScript bundles, slower initial loads, and more complexity. React Server Components shift this model by allowing certain components to render entirely on the server, reducing client-side work and improving performance.
+
+RSC isn't just about performance—it also brings better developer ergonomics, reduced duplication between server and client logic, and a simpler mental model for data fetching.
+
+## Key Benefits of React Server Components
+
+Understanding the main advantages of RSC helps illustrate why it's such a transformative tool:
+
+### 1. **Smaller Bundle Sizes**
+
+Because server components never get sent to the client, you can include logic, libraries, and large data dependencies without impacting the client-side JavaScript bundle. This keeps your app lean and fast.
+
+### 2. **Improved Performance**
+
+By doing the heavy lifting on the server and sending serialized output to the client, pages load faster and become interactive sooner—especially important for mobile users and slow networks.
+
+### 3. **Better Data Fetching**
+
+Data can be fetched directly inside server components using server-only APIs, with no need to create APIs specifically for the frontend. This reduces boilerplate and simplifies architecture.
+
+### 4. **Enhanced Security**
+
+Sensitive operations or secrets (like direct database queries) stay on the server and never reach the browser. This naturally creates a more secure boundary between frontend and backend logic.
+
+## Tips for Using RSC Effectively
+
+### 1. **Understand Component Boundaries**
+
+Not all components should be server components. Use server components for data-heavy or non-interactive elements, and use client components for interactive UI elements (e.g., buttons, dropdowns, forms).
+
+### 2. **Minimize Client Components**
+
+Client components should be as small and isolated as possible. Keep interactivity where it's needed, and avoid passing large props from server components to client components unnecessarily.
+
+### 3. **Use Streaming for Faster Loads**
+
+React’s support for streaming lets the server send parts of the UI as they’re ready, improving Time to First Byte (TTFB) and overall perceived performance.
+
+### 4. **Optimize Data Fetching**
+
+Use server components to fetch data directly—whether from a database, CMS, or API—so that you don’t have to expose that logic to the client.
+
+### 5. **Cache Smartly**
+
+Take advantage of caching at the server layer. With tools like Next.js 15’s cache APIs or edge functions, you can serve pre-rendered content with minimal delay while still using fresh data when necessary.
+
+### 6. **Think in Modules**
+
+Break your app into logical, reusable server and client components. This makes your app more maintainable and helps you scale without creating performance bottlenecks.
+
+## Tools and Frameworks Supporting RSC
+
+Several tools and frameworks are evolving to support React Server Components natively:
+
+- **Next.js 13+**: Full RSC support, including app directory, server actions, and layouts.
+- **Vercel**: Optimized deployment environment for streaming and server-side rendering.
+- **React DevTools (Experimental)**: Support for debugging server and client components together.
+- **Flight Protocol**: The underlying protocol that powers RSC, built into the React runtime.
+
+## Conclusion
+
+React Server Components represent a major shift in how we build web applications. By blending the best parts of server and client rendering, RSC enables developers to build apps that are faster, more scalable, and easier to maintain.
+
+If you're building with React in 2025 and beyond, learning and adopting RSC is no longer optional—it's essential. By understanding its benefits, using it wisely, and choosing the right tools, you can unlock the full potential of modern web development.
+
+---
+
+-EG

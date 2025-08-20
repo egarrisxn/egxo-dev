@@ -1,0 +1,76 @@
+export const metadata = {
+  title: 'Truly Understanding MDX',
+  description:
+    'Wrap your brain around MDX and the benefits it has for the modern web',
+  alternates: {
+    canonical: '/blog/truly-understanding-mdx',
+  },
+}
+
+# Truly Understanding MDX
+
+MDX is a powerful format that merges the simplicity of Markdown with the flexibility of JSX, enabling developers to write rich content seamlessly. In this post, we'll explore what MDX is, how it works, and its benefits for modern web development.
+
+## What is MDX?
+
+MDX stands for Markdown with JSX. It allows you to use Markdown syntax alongside React components, making it easy to create interactive content. With MDX, you can import and use any React component directly in your Markdown documents, blurring the lines between content and code.
+
+You can export a `metadata` object at the top of your MDX file like this:
+
+```javascript
+export const metadata = {
+  title: 'Truly Understanding MDX',
+  description:
+    'Wrap your brain around MDX and the benefits it has for the modern web',
+  authors: [{ name: 'Ethan G', url: 'https://egxo.dev' }],
+  openGraph: {
+    images: ['https://egxo.dev/opengraph-image'],
+  },
+}
+```
+
+This metadata will be picked up by Next.js and can be used for SEO, Open Graph, and other meta tags.
+
+## Key Features of MDX
+
+### 1. Seamless Component Integration
+
+MDX allows you to embed React components within Markdown, enabling the creation of dynamic and interactive content. This means you can import components like charts, buttons, and forms directly into your Markdown files.
+
+### 2. Familiar Syntax
+
+For those familiar with Markdown, MDX maintains the familiar syntax while adding JSX capabilities. This makes it easier for content creators to adopt without a steep learning curve.
+
+### 3. Reusable Components
+
+With MDX, you can build reusable components that can be utilized across multiple documents. This promotes a DRY (Don't Repeat Yourself) approach and ensures consistency throughout your content.
+
+## Rendering MDX
+
+MDX is usually rendered with the help of a bundler like Webpack or tools like Next.js or Gatsby. These frameworks can process MDX files, converting them into React components that can be rendered in your application.
+
+## Extending Markdown
+
+MDX also allows you to extend Markdown features. You can create custom components that enhance Markdown capabilities, such as interactive quizzes, graphs, and more, further enriching the user experience.
+
+## Benefits of Using MDX
+
+- Enhanced Interactivity: By combining Markdown with React, MDX allows for the creation of highly interactive documents. This is especially useful for documentation sites, blogs, and tutorials where user engagement is critical.
+- Content Management: MDX can simplify content management workflows. Developers can build a library of reusable components, making it easier to manage complex content layouts and interactions without needing to switch between different file types.
+- Documentation and Blogs: MDX is particularly beneficial for documentation and blogs, where combining rich text with interactive elements can enhance clarity and engagement. It allows developers to write content in a straightforward manner while providing functionality that can improve user experience.
+
+## Why Use Metadata in MDX?
+
+- **SEO**: Improve your page's search engine ranking with relevant titles and descriptions.
+- **Social Sharing**: Enhance how your content appears when shared on social media platforms.
+- **Consistency**: Keep your metadata close to your content for easier management.
+
+## Conclusion: The Future of Content Creation with MDX
+
+MDX is transforming the way developers and content creators approach writing by merging the simplicity of Markdown with the power of React. Its ability to create dynamic and interactive documents opens up new possibilities for content management and user engagement.
+
+If you're looking to build more interactive content, consider incorporating MDX into your workflow. By doing so, you can leverage the best of both worlds—simple text formatting combined with the power of React components—making your documentation, blogs, and tutorials more engaging and effective.
+
+---
+
+-EG
