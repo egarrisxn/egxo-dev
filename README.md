@@ -7,6 +7,8 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4-blue?logo=tailwindcss)](https://tailwindcss.com)
 [![Vercel](https://img.shields.io/badge/Vercel-deployed-brightgreen?logo=vercel)](https://egxo.dev)
 
+<img width="1200" height="630" alt="egxo-dev" src="https://github.com/user-attachments/assets/268a2182-ac9f-4d1b-b39f-e3b8446b3d10" />
+
 ## Description
 
 The current version of my personal website/portfolio/whatever.
