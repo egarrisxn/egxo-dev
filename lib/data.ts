@@ -178,12 +178,26 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
     id: 'project1',
   },
   {
+    name: 'Quik|Res',
+    description: 'AI-powered resume-to-website generator.',
+    link: 'https://quikres.vercel.app/',
+    thumbnail: '/projects/quikres-1.png',
+    id: 'project2',
+  },
+  {
+    name: 'ManyLinks',
+    description: 'Single page link aggregator.',
+    link: 'https://manylinks.vercel.app/',
+    thumbnail: '/projects/manylinks-1.png',
+    id: 'project3',
+  },
+  {
     name: 'ScribeVoice',
     description:
       'A voice-to-text transcription tool for capturing notes, ideas, and conversations. Built with Next.js, TypeScript, Supabase, OpenAI, Tailwind CSS, and more.',
     link: 'https://scribevoice.vercel.app',
     thumbnail: '/projects/scribevoice.png',
-    id: 'project2',
+    id: 'project4',
   },
   {
     name: 'XO Chatbot',
@@ -191,7 +205,7 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
       'An interactive AI chatbot powered by Grok, designed for seamless and responsive conversations. Built with Next.js, TypeScript, Next-Auth, Tailwind CSS, and more.',
     link: 'https://xochatbot.vercel.app',
     thumbnail: '/projects/xochatbot.png',
-    id: 'project3',
+    id: 'project5',
   },
   {
     name: 'XProd',
@@ -199,7 +213,7 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
       'A full-featured productivity app to manage tasks, notes, and daily routines. Built with Next.js, TypeScript, Supabase, Zod, Tailwind CSS, and more.',
     link: 'https://xprod.vercel.app',
     thumbnail: '/projects/xprod.png',
-    id: 'project4',
+    id: 'project6',
   },
   {
     name: 'Sway Bae Offical',
@@ -207,7 +221,7 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
       'The official website for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
     link: 'https://swaybae.net',
     thumbnail: '/projects/swaybae.png',
-    id: 'project5',
+    id: 'project7',
   },
   {
     name: 'International Worldwide',
@@ -215,8 +229,7 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
       'A multilingual platform for practicing coding challenges with internationalization support. Built with Next.js, JavaScript, Next-Intl, Tailwind CSS, and more.',
     link: 'https://international-worldwide.vercel.app',
     thumbnail: '/projects/internationalworldwide.png',
-
-    id: 'project6',
+    id: 'project8',
   },
   {
     name: 'XO Starter',
@@ -224,8 +237,7 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
       'A clean and flexible Next.js starter template focused on performance and scalability. Built with Next.js, TypeScript, Tailwind CSS, and more.',
     link: 'https://xostarter.vercel.app',
     thumbnail: '/projects/xostarter.png',
-
-    id: 'project7',
+    id: 'project9',
   },
   {
     name: 'ATS Resbuilder',
@@ -233,8 +245,7 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
       'A professional resume builder focused on ATS compatibility for better hiring results. Built with Next.js, JavaScript, MDX, Tailwind CSS, and more.',
     link: 'https://ats-resbuilder.vercel.app',
     thumbnail: '/projects/resbuilder.png',
-
-    id: 'project8',
+    id: 'project10',
   },
   {
     name: 'Resplashpad',
@@ -242,8 +253,7 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
       'A high-resolution photo browser powered by the Unsplash API. Built with Vite, TypeScript, TanStack Query, Tailwind CSS, and more.',
     link: 'https://resplashpad.vercel.app',
     thumbnail: '/projects/resplashpad.png',
-
-    id: 'project9',
+    id: 'project11',
   },
   {
     name: 'n00b:dev',
@@ -251,8 +261,7 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
       'A developer blog sharing practical coding tips, tools, and insights for beginner level developers. Built with Astro, TypeScript, Tailwind CSS, and more.',
     link: 'https://n00bdev.vercel.app',
     thumbnail: '/projects/n00bdev.png',
-
-    id: 'project10',
+    id: 'project12',
   },
   {
     name: 'Unofficial Merchandise',
@@ -260,17 +269,15 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
       'A modern e-commerce storefront offering smooth shopping and Stripe-powered payments. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
     link: 'https://unofficialmerchandise.vercel.app',
     thumbnail: '/projects/unofficialmerchandise.png',
-
-    id: 'project11',
+    id: 'project13',
   },
   {
     name: 'Egxo.fyi',
     description:
       'A personal blog to share thoughts, insights, and development experiences. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
     link: 'https://egxo.fyi',
-    thumbnail: '/projects/egxofyi.png',
-
-    id: 'project12',
+    thumbnail: '/projects/egxo-fyi.png',
+    id: 'project14',
   },
 ]
 
