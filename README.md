@@ -15,7 +15,7 @@ The current version of my personal website/portfolio/whatever.
 
 ## Technologies
 
-Next.js, React, TypeScript, JavaScript, Tailwind CSS, MDX, Vercel, & more.
+Next.js, React, TypeScript, JavaScript, Tailwind CSS, Motion, MDX, Vercel, & more.
 
 ## License
 
