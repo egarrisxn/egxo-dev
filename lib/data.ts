@@ -282,7 +282,7 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
     id: 'project14',
   },
   {
-    name: 'Sway Bae Offical (2024)',
+    name: 'Sway Bae Offical (2023)',
     description:
       'The *OLD* online space for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
     link: 'https://swaybae-v1.vercel.app',
