@@ -170,20 +170,12 @@ export const SELECT_PROJECTS: ProjectWithVideo[] = [
 
 export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
   {
-    name: 'Patricia Penisten: A Life Remembered',
-    description:
-      'A website to celebrate the life and legacy of my grandmother, Pat Penisten (1935-2025). Built with Next.js, TypeScript, Supabase, Tailwind CSS, and more.',
-    link: 'https://patricia-penisten.com',
-    thumbnail: '/projects/patriciapenisten.png',
-    id: 'project1',
-  },
-  {
     name: 'Quik|Res',
     description:
       'An AI-powered resume-to-website generator for creating polished personal sites with ease. Built with Next.js, TypeScript, AWS S3, Clerk, Tailwind CSS, and more.',
     link: 'https://quikres.vercel.app/',
     thumbnail: '/projects/quikres-1.png',
-    id: 'project2',
+    id: 'project1',
   },
   {
     name: 'ManyLinks',
@@ -191,6 +183,14 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
       'A sleek, single-page link aggregator to showcase all your important links in one place. Built with Next.js, TypeScript, MongoDB, Next-Auth, Tailwind CSS, and more.',
     link: 'https://manylinks.vercel.app/',
     thumbnail: '/projects/manylinks-1.png',
+    id: 'project2',
+  },
+  {
+    name: 'Sway Bae Offical (2025)',
+    description:
+      'The *NEW* online space for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, TypeScript, Supabase, Tailwind CSS, and more.',
+    link: 'https://swaybae.net',
+    thumbnail: '/projects/swaybae-v2.png',
     id: 'project3',
   },
   {
@@ -202,11 +202,11 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
     id: 'project4',
   },
   {
-    name: 'XO Chatbot',
+    name: 'Patricia Penisten: A Life Remembered',
     description:
-      'An interactive AI chatbot powered by Grok, designed for seamless and responsive conversations. Built with Next.js, TypeScript, Next-Auth, Tailwind CSS, and more.',
-    link: 'https://xochatbot.vercel.app',
-    thumbnail: '/projects/xochatbot.png',
+      'A website to celebrate the life and legacy of my grandmother, Pat Penisten (1935-2025). Built with Next.js, TypeScript, Supabase, Tailwind CSS, and more.',
+    link: 'https://patricia-penisten.com',
+    thumbnail: '/projects/patriciapenisten.png',
     id: 'project5',
   },
   {
@@ -218,11 +218,11 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
     id: 'project6',
   },
   {
-    name: 'Sway Bae Offical 2025',
+    name: 'XO Chatbot',
     description:
-      'The *NEW* online space for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, TypeScript, Supabase, Tailwind CSS, and more.',
-    link: 'https://swaybae.net',
-    thumbnail: '/projects/swaybae-v2.png',
+      'An interactive AI chatbot powered by Grok, designed for seamless and responsive conversations. Built with Next.js, TypeScript, Next-Auth, Tailwind CSS, and more.',
+    link: 'https://xochatbot.vercel.app',
+    thumbnail: '/projects/xochatbot.png',
     id: 'project7',
   },
   {
@@ -282,7 +282,7 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
     id: 'project14',
   },
   {
-    name: 'Sway Bae Offical 2024',
+    name: 'Sway Bae Offical (2024)',
     description:
       'The *OLD* online space for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
     link: 'https://swaybae-v1.vercel.app',
