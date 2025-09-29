@@ -179,14 +179,16 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
   },
   {
     name: 'Quik|Res',
-    description: 'AI-powered resume-to-website generator.',
+    description:
+      'An AI-powered resume-to-website generator for creating polished personal sites with ease. Built with Next.js, TypeScript, AWS S3, Clerk, Tailwind CSS, and more.',
     link: 'https://quikres.vercel.app/',
     thumbnail: '/projects/quikres-1.png',
     id: 'project2',
   },
   {
     name: 'ManyLinks',
-    description: 'Single page link aggregator.',
+    description:
+      'A sleek, single-page link aggregator to showcase all your important links in one place. Built with Next.js, TypeScript, MongoDB, Next-Auth, Tailwind CSS, and more.',
     link: 'https://manylinks.vercel.app/',
     thumbnail: '/projects/manylinks-1.png',
     id: 'project3',
@@ -216,11 +218,11 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
     id: 'project6',
   },
   {
-    name: 'Sway Bae Offical',
+    name: 'Sway Bae Offical 2025',
     description:
-      'The official website for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
+      'The *NEW* online space for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, TypeScript, Supabase, Tailwind CSS, and more.',
     link: 'https://swaybae.net',
-    thumbnail: '/projects/swaybae.png',
+    thumbnail: '/projects/swaybae-v2.png',
     id: 'project7',
   },
   {
@@ -278,6 +280,14 @@ export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
     link: 'https://egxo.fyi',
     thumbnail: '/projects/egxo-fyi.png',
     id: 'project14',
+  },
+  {
+    name: 'Sway Bae Offical 2024',
+    description:
+      'The *OLD* online space for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
+    link: 'https://swaybae-v1.vercel.app',
+    thumbnail: '/projects/swaybae-v1.png',
+    id: 'project15',
   },
 ]
 
