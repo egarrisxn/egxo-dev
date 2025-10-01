@@ -1,4 +1,3 @@
-import './globals.css'
 import type { ReactNode } from 'react'
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
@@ -6,11 +5,8 @@ import { ViewTransitions } from 'next-view-transitions'
 import { Analytics } from '@vercel/analytics/react'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
-
-const SITE_TITLE = 'egxo.dev'
-const SITE_DESC = 'Full Stack Developer. Digital Product Designer.'
-const SITE_URL = 'https://egxo.dev'
-const SITE_HANDLE = '@eg___xo'
+import { SITE_URL, SITE_TITLE, SITE_DESC, SITE_HANDLE } from '@/lib/config'
+import './globals.css'
 
 const geist = Geist({
   variable: '--font-geist',

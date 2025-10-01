@@ -1,13 +1,12 @@
 import type { MetadataRoute } from 'next'
 
-const SITE_TITLE = 'egxo.dev'
-const SITE_DESC = 'Full Stack Developer. Digital Product Designer.'
-
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: SITE_TITLE,
-    short_name: SITE_TITLE,
-    description: SITE_DESC,
+    name: 'egxo.dev',
+    short_name: 'egxo',
+    description: 'Full Stack Developer. Digital Product Designer.',
+    theme_color: '#071119',
+    background_color: '#071119',
     id: '/',
     start_url: '/',
     orientation: 'any',

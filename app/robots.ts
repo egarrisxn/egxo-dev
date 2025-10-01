@@ -1,7 +1,5 @@
 import type { MetadataRoute } from 'next'
 
-const SITE_URL = 'https://egxo.dev'
-
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
@@ -9,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: `${SITE_URL}/sitemap.xml`,
+    sitemap: `https://egxo.dev/sitemap.xml`,
   }
 }

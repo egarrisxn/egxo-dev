@@ -1,8 +1,6 @@
 import { promises as fs } from 'fs'
 import path from 'path'
 
-const SITE_URL = 'https://egxo.dev'
-
 async function getPostsSlugs(dir: string) {
   const entries = await fs.readdir(dir, {
     recursive: true,
@@ -25,13 +23,13 @@ export default async function sitemap() {
   const slugs = await getPostsSlugs(postsDirectory)
 
   const posts = slugs.map((slug) => ({
-    url: `${SITE_URL}/blog/${slug}`,
+    url: `https://egxo.dev/blog/${slug}`,
     lastModified: new Date().toISOString(),
   }))
 
   const routes = ['', '/about', '/contact', '/posts', '/projects'].map(
     (route) => ({
-      url: `${SITE_URL}${route}`,
+      url: `https://egxo.dev/${route}`,
       lastModified: new Date().toISOString(),
     }),
   )
