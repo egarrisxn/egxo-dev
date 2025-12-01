@@ -26,7 +26,7 @@ export function SelectProjects() {
               target="_blank"
             >
               {project.name}
-              <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-foreground transition-all duration-200 group-hover:max-w-full"></span>
+              <span className="absolute bottom-0.5 left-0 block h-px w-full max-w-0 bg-foreground transition-all duration-200 group-hover:max-w-full"></span>
             </a>
             <p className="text-muted-foreground">{project.description}</p>
           </div>
