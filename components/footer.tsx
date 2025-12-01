@@ -2,7 +2,7 @@ import { ThemeSwitch } from '@/components/theme-switch'
 
 export function Footer() {
   return (
-    <footer className="mt-24 border-t border-border p-4">
+    <footer className="z-50 mt-24 border-t border-border p-4">
       <div className="flex items-center justify-between text-muted-foreground">
         <section className="flex flex-row items-center gap-1.5 font-semibold tracking-tighter">
           <a

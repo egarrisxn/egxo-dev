@@ -1,14 +1,14 @@
 'use client'
 
-import { useMemo, useId, type ElementType, type CSSProperties } from 'react'
+import React, { useMemo, useId } from 'react'
 import { AnimatePresence, motion, Transition, Variants } from 'motion/react'
 import { cn } from '@/lib/utils'
 
 export type TextMorphProps = {
   children: string
-  as?: ElementType
+  as?: React.ElementType
   className?: string
-  style?: CSSProperties
+  style?: React.CSSProperties
   variants?: Variants
   transition?: Transition
 }

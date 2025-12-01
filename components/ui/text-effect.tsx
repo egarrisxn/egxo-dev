@@ -1,6 +1,6 @@
 'use client'
 
-import { memo, type JSX } from 'react'
+import React, { memo } from 'react'
 import {
   AnimatePresence,
   motion,
@@ -17,7 +17,7 @@ export type PerType = 'word' | 'char' | 'line'
 export type TextEffectProps = {
   children: string
   per?: PerType
-  as?: keyof JSX.IntrinsicElements
+  as?: keyof React.JSX.IntrinsicElements
   variants?: {
     container?: Variants
     item?: Variants
@@ -192,7 +192,7 @@ const createVariantsWithTransition = (
   transition?: Transition & { exit?: Transition },
 ): Variants => {
   if (!transition) return baseVariants
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { exit: _, ...mainTransition } = transition
 
   return {

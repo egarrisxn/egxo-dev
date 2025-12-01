@@ -5,7 +5,7 @@ interface AppError {
   reset: () => void
 }
 
-export default function Error({ reset }: AppError) {
+export default function PagesError({ reset }: AppError) {
   return (
     <section>
       <div className="flex flex-auto flex-col items-center justify-center px-4 text-center sm:flex-row">

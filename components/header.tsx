@@ -12,7 +12,7 @@ export function Header() {
   const showBack = pathname !== '/'
 
   return (
-    <>
+    <div className="z-50">
       {showBack && (
         <div className="absolute top-6 left-2">
           <SmartLink href="/" text="Back" variant="back" />
@@ -69,6 +69,6 @@ export function Header() {
           </TextEffect>
         </section>
       </header>
-    </>
+    </div>
   )
 }

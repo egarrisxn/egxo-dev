@@ -1,11 +1,6 @@
-type NavLink = {
+type Links = {
+  label: string
   href: string
-  label: string
-}
-
-type SocialLink = {
-  label: string
-  link: string
 }
 
 type WorkExperience = {
@@ -48,49 +43,61 @@ type AboutTab = {
   content: string
 }
 
-export const NAV_LINKS: NavLink[] = [
+export const EMAIL = 'egarrisxn@gmail.com'
+
+export const NAV_LINKS: Links[] = [
   { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
   { href: '/posts', label: 'Posts' },
+  { href: '/tools', label: 'Tools' },
   { href: '/contact', label: 'Contact' },
 ]
 
-export const EMAIL = 'egarrisxn@gmail.com'
-
-export const SOCIAL_LINKS: SocialLink[] = [
+export const SOCIAL_LINKS: Links[] = [
   {
     label: 'GitHub',
-    link: 'https://github.com/egarrisxn',
+    href: 'https://github.com/egarrisxn',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ethan-gx',
+    href: 'https://www.linkedin.com/in/ethan-gx',
   },
   {
     label: 'Peerlist',
-    link: 'https://peerlist.io/eg_xo',
+    href: 'https://peerlist.io/eg_xo',
   },
   {
     label: 'X (Twitter)',
-    link: 'https://x.com/eg__xo',
+    href: 'https://x.com/eg__xo',
   },
   {
     label: 'Instagram',
-    link: 'https://www.instagram.com/eg___xo',
+    href: 'https://www.instagram.com/eg___xo',
   },
 
   {
     label: 'Discord',
-    link: 'https://discord.com/users/eg___xo',
+    href: 'https://discord.com/users/eg___xo',
   },
   {
     label: 'Spotify',
-    link: 'https://open.spotify.com/user/egarrisxn',
+    href: 'https://open.spotify.com/user/egarrisxn',
   },
   {
     label: 'Bluesky',
-    link: 'https://bsky.app/profile/egxo.bsky.social',
+    href: 'https://bsky.app/profile/egxo.bsky.social',
   },
+]
+
+export const TOOL_LINKS: Links[] = [
+  { href: '/tools/button-copy', label: 'Vanilla CSS Button Copy' },
+  { href: '/tools/paint-canvas', label: 'HTML Canvas API Paint' },
+  { href: '/tools/palette-generator', label: 'Tailwind CSS Color Palettes' },
+  { href: '/tools/pomodoro-timer', label: 'Pomodoro Timer & Task List' },
+  { href: '/tools/qr-generator', label: 'QR Code React Generator' },
+  { href: '/tools/synth-player', label: 'Tone Synthesizer Player' },
+  { href: '/tools/transcribe-live', label: 'Web Speech API Transcribe' },
+  { href: '/tools/typing-test', label: 'Speed & Accuracy Typing Test' },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [

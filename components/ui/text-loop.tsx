@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, Children, type ReactNode } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   motion,
   AnimatePresence,
@@ -11,7 +11,7 @@ import {
 import { cn } from '@/lib/utils'
 
 export type TextLoopProps = {
-  children: ReactNode[]
+  children: React.ReactNode[]
   className?: string
   interval?: number
   transition?: Transition
@@ -32,7 +32,7 @@ export function TextLoop({
   mode = 'popLayout',
 }: TextLoopProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const items = Children.toArray(children)
+  const items = React.Children.toArray(children)
 
   useEffect(() => {
     if (!trigger) return

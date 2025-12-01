@@ -24,7 +24,7 @@ export default function Home() {
         transition={TRANSITION_SECTION}
       >
         <div className="flex-1">
-          <p className="mt-1 w-full max-w-[34.5rem] text-[0.95rem] leading-normal text-accent-foreground xl:max-w-none xl:text-base">
+          <p className="mt-1 w-full max-w-138 text-[0.95rem] leading-normal text-accent-foreground xl:max-w-none xl:text-base">
             {`Full Stack Developer and Digital Product Designer focused on building thoughtful tools for the web and the world. I take things one step at a time and try to stay guided by a Positive Mental Attitude (PMA).`}
           </p>
         </div>
@@ -138,7 +138,7 @@ export default function Home() {
 
         <div className="flex w-full max-w-md flex-wrap items-center justify-start gap-2 xl:gap-3">
           {SOCIAL_LINKS.map((link) => (
-            <MagneticSocialLink key={link.label} link={link.link}>
+            <MagneticSocialLink key={link.label} link={link.href}>
               {link.label}
             </MagneticSocialLink>
           ))}

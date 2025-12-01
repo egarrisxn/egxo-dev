@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: '/posts',
   },
   title: 'Posts',
-  description: 'Then posts page for EGXO MDX.',
+  description: 'Then posts page for egxo.dev',
 }
 
 export default function PostsPage() {
@@ -66,7 +66,7 @@ export default function PostsPage() {
           </div>
         </motion.section>
         <div className="pt-12">
-          <SmartLink href="/projects" text="Projects" variant="see-more" />
+          <SmartLink href="/tools" text="Tools" variant="see-more" />
         </div>
       </motion.div>
     </div>

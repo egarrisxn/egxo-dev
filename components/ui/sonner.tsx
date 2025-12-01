@@ -1,6 +1,6 @@
 'use client'
 
-import type { CSSProperties } from 'react'
+import * as React from 'react'
 import { useTheme } from 'next-themes'
 import { Toaster as Sonner, ToasterProps, toast as sonnerToast } from 'sonner'
 
@@ -16,7 +16,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
           '--normal-bg': 'var(--popover)',
           '--normal-text': 'var(--popover-foreground)',
           '--normal-border': 'var(--border)',
-        } as CSSProperties
+        } as React.CSSProperties
       }
       {...props}
     />

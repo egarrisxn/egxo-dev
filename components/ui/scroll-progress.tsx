@@ -1,13 +1,13 @@
 'use client'
 
-import { type RefObject } from 'react'
+import * as React from 'react'
 import { motion, SpringOptions, useScroll, useSpring } from 'motion/react'
 import { cn } from '@/lib/utils'
 
 export type ScrollProgressProps = {
   className?: string
   springOptions?: SpringOptions
-  containerRef?: RefObject<HTMLDivElement>
+  containerRef?: React.RefObject<HTMLDivElement>
 }
 
 const DEFAULT_SPRING_OPTIONS: SpringOptions = {

@@ -1,41 +1,38 @@
-import { dirname } from 'path'
-import { fileURLToPath } from 'url'
-import { FlatCompat } from '@eslint/eslintrc'
+import { defineConfig, globalIgnores } from 'eslint/config'
+import nextVitals from 'eslint-config-next/core-web-vitals'
+import nextTs from 'eslint-config-next/typescript'
+import prettier from 'eslint-config-prettier/flat'
+import * as mdx from 'eslint-plugin-mdx'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-})
-
-const eslintConfig = [
-  ...compat.config({
-    extends: [
-      'next/core-web-vitals',
-      'next/typescript',
-      'prettier',
-      'plugin:mdx/recommended',
-    ],
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  {
+    name: 'mdx/recommended',
+    files: ['**/*.mdx'],
+    ...mdx.flat,
+  },
+  {
     rules: {
       '@next/next/no-img-element': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
-      'react-hooks/exhaustive-deps': 'off',
-      'react/jsx-no-undef': 'off',
+      // '@typescript-eslint/no-explicit-any': 'off',
+      // '@typescript-eslint/no-unused-vars': 'off',
+      // 'react-hooks/exhaustive-deps': 'off',
+      // 'react/jsx-no-undef': 'off',
     },
-  }),
-  {
-    ignores: [
-      '**/node_modules/',
-      '.git/',
-      '.vscode/',
-      '.vercel/',
-      '.next/',
-      'public/',
-      'next-env.d.ts',
-    ],
   },
-]
+  globalIgnores([
+    '.git/',
+    '.vscode/',
+    '.vercel/',
+    '.next/**',
+    'public/',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+    '**/node_modules/',
+  ]),
+  prettier,
+])
 
 export default eslintConfig

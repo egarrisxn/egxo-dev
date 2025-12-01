@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef, type ReactNode } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import {
   motion,
   useMotionValue,
@@ -11,7 +11,7 @@ import {
 const SPRING_CONFIG = { stiffness: 26.7, damping: 4.1, mass: 0.2 }
 
 export type MagneticProps = {
-  children: ReactNode
+  children: React.ReactNode
   intensity?: number
   range?: number
   actionArea?: 'self' | 'parent' | 'global'
@@ -36,23 +36,27 @@ export function Magnetic({
 
   useEffect(() => {
     const calculateDistance = (e: MouseEvent) => {
-      if (ref.current) {
-        const rect = ref.current.getBoundingClientRect()
-        const centerX = rect.left + rect.width / 2
-        const centerY = rect.top + rect.height / 2
-        const distanceX = e.clientX - centerX
-        const distanceY = e.clientY - centerY
+      const element = ref.current
+      if (!element) return
 
-        const absoluteDistance = Math.sqrt(distanceX ** 2 + distanceY ** 2)
+      const rect = element.getBoundingClientRect()
+      const centerX = rect.left + rect.width / 2
+      const centerY = rect.top + rect.height / 2
+      const distanceX = e.clientX - centerX
+      const distanceY = e.clientY - centerY
 
-        if (isHovered && absoluteDistance <= range) {
-          const scale = 1 - absoluteDistance / range
-          x.set(distanceX * intensity * scale)
-          y.set(distanceY * intensity * scale)
-        } else {
-          x.set(0)
-          y.set(0)
-        }
+      const absoluteDistance = Math.sqrt(distanceX ** 2 + distanceY ** 2)
+
+      // Global mode: always “hovered”
+      const shouldMagnetize = actionArea === 'global' ? true : isHovered
+
+      if (shouldMagnetize && absoluteDistance <= range) {
+        const scale = 1 - absoluteDistance / range
+        x.set(distanceX * intensity * scale)
+        y.set(distanceY * intensity * scale)
+      } else {
+        x.set(0)
+        y.set(0)
       }
     }
 
@@ -61,24 +65,22 @@ export function Magnetic({
     return () => {
       document.removeEventListener('mousemove', calculateDistance)
     }
-  }, [ref, isHovered, intensity, range])
+  }, [isHovered, intensity, range, actionArea, x, y])
 
   useEffect(() => {
-    if (actionArea === 'parent' && ref.current?.parentElement) {
-      const parent = ref.current.parentElement
+    if (actionArea !== 'parent' || !ref.current?.parentElement) return
 
-      const handleParentEnter = () => setIsHovered(true)
-      const handleParentLeave = () => setIsHovered(false)
+    const parent = ref.current.parentElement
 
-      parent.addEventListener('mouseenter', handleParentEnter)
-      parent.addEventListener('mouseleave', handleParentLeave)
+    const handleParentEnter = () => setIsHovered(true)
+    const handleParentLeave = () => setIsHovered(false)
 
-      return () => {
-        parent.removeEventListener('mouseenter', handleParentEnter)
-        parent.removeEventListener('mouseleave', handleParentLeave)
-      }
-    } else if (actionArea === 'global') {
-      setIsHovered(true)
+    parent.addEventListener('mouseenter', handleParentEnter)
+    parent.addEventListener('mouseleave', handleParentLeave)
+
+    return () => {
+      parent.removeEventListener('mouseenter', handleParentEnter)
+      parent.removeEventListener('mouseleave', handleParentLeave)
     }
   }, [actionArea])
 

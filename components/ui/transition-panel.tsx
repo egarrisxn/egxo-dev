@@ -1,5 +1,6 @@
 'use client'
-import type { ReactNode } from 'react'
+
+import * as React from 'react'
 import {
   AnimatePresence,
   Transition,
@@ -10,7 +11,7 @@ import {
 import { cn } from '@/lib/utils'
 
 export type TransitionPanelProps = {
-  children: ReactNode[]
+  children: React.ReactNode[]
   className?: string
   transition?: Transition
   activeIndex: number

@@ -1,0 +1,692 @@
+/* ! Default Buttons */
+.default {
+  background: var(--color);
+  color: #fff;
+  border-radius: 8px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 6px 8px -2px rgba(0, 0, 0, 0.1);
+}
+.default:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 8px rgba(0, 0, 0, 0.15),
+    0 8px 16px -4px rgba(0, 0, 0, 0.2);
+}
+.default:active {
+  transform: translateY(0);
+  box-shadow:
+    0 3px 5px rgba(0, 0, 0, 0.15),
+    0 4px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* ! Rounded Buttons */
+.rounded {
+  background: var(--color);
+  color: #fff;
+  border-radius: 32px;
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.1),
+    0 6px 12px -2px rgba(0, 0, 0, 0.15);
+}
+.rounded:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.15),
+    0 10px 18px -4px rgba(0, 0, 0, 0.2);
+}
+.rounded:active {
+  transform: translateY(0);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    0 6px 12px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* ! Gradient Buttons */
+.gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color) 0%,
+    color-mix(in srgb, var(--color) 60%, black) 100%
+  );
+  color: #fff;
+  border-radius: 8px;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 6px 12px -2px rgba(0, 0, 0, 0.15),
+    inset 0 -2px 0 color-mix(in srgb, var(--color) 70%, black);
+}
+.gradient:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(
+    135deg,
+    var(--color) 0%,
+    color-mix(in srgb, var(--color) 50%, black) 100%
+  );
+  box-shadow:
+    0 6px 10px rgba(0, 0, 0, 0.15),
+    0 8px 16px -4px rgba(0, 0, 0, 0.25),
+    inset 0 -2px 0 color-mix(in srgb, var(--color) 70%, black);
+}
+.gradient:active {
+  transform: translateY(0);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color) 80%, black) 0%,
+    var(--color) 100%
+  );
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.15),
+    0 5px 10px -2px rgba(0, 0, 0, 0.2),
+    inset 0 -2px 0 color-mix(in srgb, var(--color) 70%, black);
+}
+
+/* ! Wave Buttons */
+.wave {
+  z-index: 1;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.wave::before,
+.wave::after {
+  position: absolute;
+  color: #fff;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.wave::before {
+  content: "";
+  background: var(--color);
+  color: #fff;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+.wave:hover {
+  transform: translateY(-2px);
+  color: var(--color);
+}
+.wave:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+.wave:active {
+  transform: translateY(2px);
+}
+
+/* ! Fold Buttons */
+.fold {
+  background-color: var(--color);
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0.5em 0.5em 0.5em #0000004f;
+}
+.fold::before {
+  position: absolute;
+  content: "";
+  transition-duration: 200ms;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(var(--color-rgb), 1) 50%,
+    rgba(var(--color-rgb), 1) 60%
+  );
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  border-radius: 0 0 0.5em 0;
+  box-shadow: 0.2em 0.2em 0.2em #0000004f;
+}
+.fold:hover:before {
+  height: 1.2em;
+  width: 1.2em;
+}
+.fold:active {
+  scale: 0.95;
+}
+
+/* ! Pop Buttons */
+.pop {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--color);
+  color: #fff;
+  border-radius: 12px;
+  transform: perspective(500px) translateZ(0) translateY(1px);
+  box-shadow:
+    0 0 0 2px rgba(var(--color-rgb), 0.3),
+    3px 6px 0 0 color-mix(in srgb, var(--color) 70%, black),
+    6px 12px 15px rgba(0, 0, 0, 0.2);
+}
+.pop:hover {
+  transform: perspective(500px) translateZ(6px) translateY(-2px);
+  box-shadow:
+    0 0 0 2px rgba(var(--color-rgb), 0.4),
+    4px 8px 0 0 color-mix(in srgb, var(--color) 70%, black),
+    10px 16px 20px rgba(0, 0, 0, 0.3);
+}
+.pop:active {
+  transform: perspective(500px) translateZ(-4px) translateY(0);
+  box-shadow:
+    0 0 0 2px rgba(var(--color-rgb), 0.3),
+    2px 4px 0 0 color-mix(in srgb, var(--color) 70%, black),
+    4px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ! Outline Buttons */
+.outline {
+  border: 2px solid var(--color);
+  background: transparent;
+  color: var(--color);
+  border-radius: 8px;
+  box-shadow: 0 0 0 2px rgba(var(--color-rgb), 0.1);
+  transition: all 0.3s ease;
+}
+.outline:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 0 4px rgba(var(--color-rgb), 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.outline:active {
+  transform: translateY(0);
+  box-shadow:
+    0 0 0 3px rgba(var(--color-rgb), 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ! Glow Buttons */
+.glow {
+  border: 2px solid var(--color);
+  background: transparent;
+  color: var(--color);
+  border-radius: 8px;
+  box-shadow: 0 0 0 0 rgba(var(--color-rgb), 0.3);
+  animation: pulse 2s infinite ease-in-out;
+}
+.glow:hover {
+  transform: translateY(-2px);
+  background: var(--color);
+  color: #fff;
+  box-shadow:
+    0 0 0 4px rgba(var(--color-rgb), 0.3),
+    0 0 20px rgba(var(--color-rgb), 0.6);
+}
+.glow:active {
+  transform: translateY(0);
+  box-shadow:
+    0 0 0 4px rgba(var(--color-rgb), 0.5),
+    0 0 15px rgba(var(--color-rgb), 0.7);
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--color-rgb), 0.3);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(var(--color-rgb), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--color-rgb), 0);
+  }
+}
+
+/* ! Neon Buttons */
+.neon {
+  border: 2px solid var(--color);
+  background: rgba(var(--color-rgb), 0.1);
+  color: var(--color);
+  border-radius: 8px;
+  text-shadow:
+    0 0 8px rgba(var(--color-rgb), 0.5),
+    0 0 16px rgba(var(--color-rgb), 0.4);
+  box-shadow:
+    0 0 5px rgba(var(--color-rgb), 0.2),
+    0 0 10px rgba(var(--color-rgb), 0.3),
+    0 0 15px rgba(var(--color-rgb), 0.4),
+    0 0 20px rgba(var(--color-rgb), 0.5);
+}
+.neon:hover {
+  transform: translateY(-2px);
+  background: var(--color);
+  color: #fff;
+  text-shadow:
+    0 0 8px #fff,
+    0 0 16px #fff;
+  box-shadow:
+    0 0 5px rgba(var(--color-rgb), 0.5),
+    0 0 10px rgba(var(--color-rgb), 0.6),
+    0 0 15px rgba(var(--color-rgb), 0.7),
+    0 0 20px rgba(var(--color-rgb), 0.8);
+}
+.neon:active {
+  transform: translateY(0);
+  box-shadow:
+    0 0 5px rgba(var(--color-rgb), 0.7),
+    0 0 10px rgba(var(--color-rgb), 0.8),
+    0 0 15px rgba(var(--color-rgb), 1),
+    0 0 20px rgba(var(--color-rgb), 1);
+}
+
+/* ! Liquid Buttons */
+.liquid {
+  z-index: 1;
+  border: 2px solid var(--color);
+  background: none;
+  color: var(--color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.liquid::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+.liquid:hover {
+  color: #fff;
+}
+.liquid:hover::before {
+  transform: scaleY(1);
+}
+.liquid:active {
+  transform: translateY(2px);
+}
+
+/* ! Retro Buttons */
+.retro {
+  z-index: 1;
+  border: 2px solid var(--color);
+  background: transparent;
+  color: var(--color);
+  border-radius: 8px;
+  width: 100%;
+  overflow: hidden;
+}
+.retro::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  background: var(--color);
+  width: 0;
+  height: 800%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: 0.5s ease;
+  display: block;
+}
+.retro:hover {
+  color: #fff;
+}
+.retro:hover::before {
+  width: 105%;
+}
+.retro:active {
+  transform: translateY(2px);
+}
+
+.nightlife {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(45deg, #ff6b6b, #4ecdc4) border-box;
+  color: var(--color);
+  border-radius: 8px;
+}
+.nightlife:hover {
+  transform: translateY(-2px);
+}
+.nightlife:active {
+  transform: translateY(2px);
+}
+
+/* ! Glitch Buttons */
+.glitch {
+  background: transparent;
+  color: var(--color);
+  border-radius: 8px;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 8px -2px rgba(0, 0, 0, 0.1),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+}
+.glitch:hover {
+  animation: glitch 0.3s linear infinite;
+}
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* ! Bubble Buttons*/
+.bubble {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  border-radius: 8px;
+  box-shadow:
+    0 2px 4px rgba(var(--color-rgb), 0.2),
+    0 4px 8px -2px rgba(var(--color-rgb), 0.2),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+}
+.bubble:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    0 8px 16px -4px rgba(0, 0, 0, 0.15),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+}
+.bubble::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: transform 0.3s ease;
+  background: var(--color);
+  border-radius: 8px;
+  transform: scale(0);
+}
+.bubble:hover::before {
+  border-radius: 8px;
+  transform: scale(1);
+}
+.bubble:active {
+  transform: translateY(0);
+}
+
+/* ! Appearance Buttons */
+.appearance {
+  border: 1px solid transparent;
+  outline: 2px solid;
+  outline-color: white;
+  outline-offset: 0;
+  transition: all 300ms cubic-bezier(0.36, 0.63, 0.5, 0.73);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 0 0 var(--color);
+}
+.appearance:hover {
+  transform: translateY(-2px);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  color: var(--color);
+  box-shadow: 0 0 0 2px var(--color);
+}
+.appearance:active {
+  transform: translateY(2px);
+}
+
+/* ! Metallic Buttons */
+.metallic {
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  color: var(--color);
+  border-radius: 12px;
+  box-shadow:
+    inset 2px 2px 5px #ffffff,
+    inset -2px -2px 5px #bababa;
+}
+.metallic:hover {
+  transform: translateY(-2px);
+}
+.metallic:active {
+  transform: translateY(0);
+}
+
+/* ! Glass Buttons */
+.glass {
+  border: 1px solid rgba(var(--color-rgb), 0.4);
+  background: rgba(var(--color-rgb), 0.4);
+  box-shadow: 0 4px 6px -1px rgba(var(--color-rgb), 0.3);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+}
+.glass.light,
+.glass.gray {
+  color: #1f2937;
+}
+.glass.dark,
+.glass.purple,
+.glass.blue {
+  color: #fff;
+}
+.glass:hover {
+  background: rgba(var(--color-rgb), 0.5);
+  box-shadow: 0 6px 8px -1px rgba(var(--color-rgb), 0.4);
+  transform: translateY(-2px);
+}
+.glass:active {
+  transform: translateY(0);
+}
+
+/* ! Neumorphic Buttons */
+.neumorphic {
+  background: var(--color);
+  border-radius: 12px;
+}
+.neumorphic.light,
+.neumorphic.gray {
+  color: #1f2937;
+  box-shadow:
+    12px 12px 24px rgba(0, 0, 0, 0.2),
+    -12px -12px 24px rgba(255, 255, 255, 0.9),
+    inset 0 0 0 rgba(0, 0, 0, 0.2),
+    inset 0 0 0 rgba(255, 255, 255, 0.9);
+}
+.neumorphic.light:hover,
+.neumorphic.gray:hover {
+  box-shadow:
+    16px 16px 32px rgba(0, 0, 0, 0.2),
+    -16px -16px 32px rgba(255, 255, 255, 0.9),
+    inset 0 0 0 rgba(0, 0, 0, 0.2),
+    inset 0 0 0 rgba(255, 255, 255, 0.9);
+}
+.neumorphic.light:active,
+.neumorphic.gray:active {
+  box-shadow:
+    0 0 0 rgba(0, 0, 0, 0.2),
+    0 0 0 rgba(255, 255, 255, 0.9),
+    inset 12px 12px 24px rgba(0, 0, 0, 0.2),
+    inset -12px -12px 24px rgba(255, 255, 255, 0.9);
+}
+.neumorphic.dark,
+.neumorphic.purple,
+.neumorphic.blue {
+  color: #fff;
+  box-shadow:
+    12px 12px 24px rgba(0, 0, 0, 0.5),
+    -12px -12px 24px rgba(255, 255, 255, 0.1),
+    inset 0 0 0 rgba(0, 0, 0, 0.5),
+    inset 0 0 0 rgba(255, 255, 255, 0.1);
+}
+.neumorphic.dark:hover,
+.neumorphic.purple:hover,
+.neumorphic.blue:hover {
+  box-shadow:
+    16px 16px 32px rgba(0, 0, 0, 0.5),
+    -16px -16px 32px rgba(255, 255, 255, 0.1),
+    inset 0 0 0 rgba(0, 0, 0, 0.5),
+    inset 0 0 0 rgba(255, 255, 255, 0.1);
+}
+.neumorphic.dark:active,
+.neumorphic.purple:active,
+.neumorphic.blue:active {
+  box-shadow:
+    0 0 0 rgba(0, 0, 0, 0.5),
+    0 0 0 rgba(255, 255, 255, 0.1),
+    inset 12px 12px 24px rgba(0, 0, 0, 0.5),
+    inset -12px -12px 24px rgba(255, 255, 255, 0.1);
+}
+
+/* ! Loading Buttons */
+.loading {
+  background: var(--color);
+  border-radius: 8px;
+  padding-left: 6px;
+  padding-right: 32px;
+}
+.loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  margin-left: 12px;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ! Progress Buttons */
+.progress {
+  border: 1px solid var(--color);
+  background-color: transparent;
+  color: var(--color);
+  overflow: hidden;
+}
+.progress::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 2.5px;
+  width: 100%;
+  background: var(--color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s ease;
+}
+.progress:hover::before {
+  transform: scaleX(1);
+}
+
+/* ! Progress Buttons */
+.progress {
+  border: 1px solid var(--color);
+  background-color: transparent;
+  color: var(--color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.progress::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 2.5px;
+  width: 100%;
+  background: var(--color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s ease;
+}
+.progress:hover::before {
+  transform: scaleX(1);
+}
+
+/* ! Success Buttons */
+.success {
+  border: 1px solid var(--color);
+  background: transparent;
+  color: var(--color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.success::before {
+  position: absolute;
+  content: "✓";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color);
+  color: #01eb01;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.success:hover::before {
+  transform: translateY(0);
+}
+
+/* ! Error buttons */
+.error {
+  border: 1px solid var(--color);
+  background: transparent;
+  color: var(--color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.error::before {
+  position: absolute;
+  content: "×";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #ff0000;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.error:hover::before {
+  transform: translateY(0);
+}
+
+/* ! Focus styles for all buttons */
+.button:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* ! Responsive adjustments */
+@media (max-width: 768px) {
+  .button {
+    width: 100%;
+  }
+}

@@ -13,13 +13,12 @@ export const metadata: Metadata = {
     canonical: '/about',
   },
   title: 'About',
-  description: 'Then about page for EGXO MDX.',
+  description: 'Then about page for egxo.dev',
 }
 
 export default function AboutPage() {
   return (
     <div className="mt-16">
-      <section></section>
       <motion.div
         className="flex h-full flex-col justify-between space-y-16"
         variants={VARIANTS_CONTAINER}
@@ -34,16 +33,7 @@ export default function AboutPage() {
           <AboutTabs />
         </motion.section>
         <div className="pt-12">
-          <SmartLink
-            href="https://x.com/eg__xo"
-            text="X (Twitter)"
-            variant="external"
-          />
-          <SmartLink
-            href="https://www.instagram.com/eg___xo"
-            text="Instagram"
-            variant="external"
-          />
+          <SmartLink href="/projects" text="Projects" variant="see-more" />
         </div>
       </motion.div>
     </div>

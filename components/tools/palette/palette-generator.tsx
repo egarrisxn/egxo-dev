@@ -1,0 +1,298 @@
+'use client'
+
+import { useState, useEffect, useMemo } from 'react'
+import { HexColorPicker } from 'react-colorful'
+import { toast } from 'sonner'
+import { motion } from 'motion/react'
+import {
+  hexToHSL,
+  hslToHex,
+  formatHexValue,
+  generateColorShades,
+  getLuminance,
+  type ColorShade,
+  type AccessibilityScore,
+} from '@/lib/helpers/palette-helpers'
+import {
+  ColorInput,
+  ColorDetails,
+  ColorSquare,
+  RandomizeColor,
+  CopyColor,
+} from './palette-colors'
+import { HueSlider, VibrancySlider } from './palette-sliders'
+import {
+  AccessibilityFailing,
+  AccessibilityPassing,
+} from './accessibility-check'
+import DownloadJson from './download-json'
+
+const TEST_SHADES = [50, 100, 200, 500, 700, 900]
+
+function getContrastRatio(color1: string, color2: string) {
+  const luminance1 = getLuminance(color1)
+  const luminance2 = getLuminance(color2)
+  const lighter = Math.max(luminance1, luminance2)
+  const darker = Math.min(luminance1, luminance2)
+  return (lighter + 0.05) / (darker + 0.05)
+}
+
+function getAccessibilityLevel(ratio: number) {
+  if (ratio >= 7) {
+    return { level: 'AAA' as const, pass: true }
+  }
+  if (ratio >= 4.5) {
+    return { level: 'AA' as const, pass: true }
+  }
+  if (ratio >= 3) {
+    return { level: 'AA Large' as const, pass: true }
+  }
+  return { level: 'Fail' as const, pass: false }
+}
+
+function computeAccessibilityScores(
+  colorShades: ColorShade[],
+): AccessibilityScore[] {
+  const results: AccessibilityScore[] = []
+
+  TEST_SHADES.forEach((bgShadeValue, bgIndex) => {
+    const bgShade = colorShades.find((s) => s.shade === bgShadeValue)
+    if (!bgShade) return
+
+    TEST_SHADES.slice(bgIndex + 1).forEach((fgShadeValue) => {
+      const fgShade = colorShades.find((s) => s.shade === fgShadeValue)
+      if (!fgShade) return
+
+      const ratio = getContrastRatio(bgShade.hex, fgShade.hex)
+      const { level, pass } = getAccessibilityLevel(ratio)
+
+      results.push({
+        background: bgShade,
+        foreground: fgShade,
+        ratio,
+        level,
+        pass,
+      })
+    })
+  })
+
+  return results.sort((a, b) => b.ratio - a.ratio)
+}
+
+export default function PaletteGenerator() {
+  const [baseColor, setBaseColor] = useState('#15437F')
+  const [vibrancy, setVibrancy] = useState(50)
+  const [hueShift, setHueShift] = useState(0)
+  const [copiedHex, setCopiedHex] = useState<string | null>(null)
+  const [inputValue, setInputValue] = useState(baseColor)
+  const [isRandomizing, setIsRandomizing] = useState(false)
+
+  // Compute color shades directly from baseColor/vibrancy/hueShift
+  const colorShades = useMemo(
+    () => generateColorShades(baseColor, vibrancy, hueShift),
+    [baseColor, vibrancy, hueShift],
+  )
+
+  useEffect(() => {
+    if (copiedHex) {
+      const timeout = setTimeout(() => setCopiedHex(null), 1000)
+      return () => clearTimeout(timeout)
+    }
+  }, [copiedHex])
+
+  useEffect(() => {
+    setInputValue(baseColor)
+  }, [baseColor])
+
+  const copyToClipboard = (hex: string) => {
+    navigator.clipboard.writeText(hex)
+    setCopiedHex(hex)
+    toast.success(`${hex} has been copied to your clipboard.`)
+  }
+
+  const downloadPalette = () => {
+    const palette = colorShades.reduce(
+      (acc, { shade, hex }) => {
+        acc[shade] = hex
+        return acc
+      },
+      {} as Record<number, string>,
+    )
+    const dataStr =
+      'data:text/json;charset=utf-8,' +
+      encodeURIComponent(JSON.stringify(palette, null, 2))
+    const downloadAnchorNode = document.createElement('a')
+    downloadAnchorNode.setAttribute('href', dataStr)
+    downloadAnchorNode.setAttribute(
+      'download',
+      `palette-${baseColor.replace('#', '')}.json`,
+    )
+    document.body.appendChild(downloadAnchorNode)
+    downloadAnchorNode.click()
+    downloadAnchorNode.remove()
+  }
+
+  const randomizeColor = () => {
+    setIsRandomizing(true)
+    setVibrancy(50)
+    setHueShift(0)
+
+    const completelyRandom = Math.random() < 0.3
+    const [currentHue] = hexToHSL(baseColor)
+
+    const newHue = completelyRandom
+      ? Math.floor(Math.random() * 360)
+      : (currentHue + (Math.random() * 120 - 60) + 360) % 360
+    const newSaturation = 20 + Math.random() * 80
+    const newLightness = 20 + Math.random() * 60
+
+    const newColor = hslToHex(newHue, newSaturation, newLightness)
+    setBaseColor(newColor)
+    setInputValue(newColor)
+    toast.success(`Randomized base color: ${newColor}`)
+
+    setTimeout(() => setIsRandomizing(false), 500)
+  }
+
+  // Accessibility calculations, now in a pure helper
+  const accessibilityScores = useMemo(
+    () => computeAccessibilityScores(colorShades),
+    [colorShades],
+  )
+
+  const passingCombinations = useMemo(
+    () => accessibilityScores.filter((score) => score.pass),
+    [accessibilityScores],
+  )
+
+  const failingCombinations = useMemo(
+    () => accessibilityScores.filter((score) => !score.pass),
+    [accessibilityScores],
+  )
+
+  return (
+    <div className="flex w-full flex-col gap-4">
+      {/* Header */}
+      <div className="flex flex-row items-center justify-between border-b pb-4">
+        <div className="flex flex-row items-center gap-2">
+          <ColorSquare baseColor={baseColor} />
+          <span className="text-xs leading-none text-slate-500 sm:pt-0.5 sm:text-base">
+            {baseColor}
+          </span>
+        </div>
+
+        <div className="flex">
+          <DownloadJson downloadPalette={downloadPalette} />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="space-y-6">
+          <div className="space-y-4 rounded-lg border p-4">
+            {/* Color randomizer */}
+            <div className="flex items-center justify-between">
+              <h3 className="font-medium">Base Color</h3>
+              <div className="flex items-center gap-2">
+                <RandomizeColor
+                  randomizeColor={randomizeColor}
+                  isRandomizing={isRandomizing}
+                />
+                <ColorSquare baseColor={baseColor} />
+              </div>
+            </div>
+
+            {/* Color selector */}
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+              <HexColorPicker
+                color={baseColor}
+                onChange={setBaseColor}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                }}
+              />
+            </div>
+
+            {/* Color input (#hex) */}
+            <div className="flex items-center gap-2">
+              <ColorSquare baseColor={baseColor} />
+              <ColorInput
+                inputValue={inputValue}
+                setInputValue={setInputValue}
+                setBaseColor={setBaseColor}
+                formatHexValue={(value) => formatHexValue(value, baseColor)}
+              />
+            </div>
+          </div>
+
+          {/* Vibrancy & hue adjustment */}
+          <div className="space-y-4 p-2">
+            <VibrancySlider vibrancy={vibrancy} setVibrancy={setVibrancy} />
+            <HueSlider hueShift={hueShift} setHueShift={setHueShift} />
+          </div>
+
+          {/* Hue visualizer */}
+          <div className="flex h-24 overflow-hidden rounded-lg">
+            {colorShades.map(({ shade, hex }, index) => (
+              <motion.div
+                key={shade}
+                className="flex-1"
+                style={{ backgroundColor: hex }}
+                title={`${shade}: ${hex}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3, delay: 0.05 * index }}
+              />
+            ))}
+          </div>
+
+          {/* Accessibility check */}
+          <div className="rounded-lg border p-4">
+            <div className="mb-4 flex items-center justify-between">
+              <h3 className="font-medium">Accessibility Pairs</h3>
+              <div className="text-xs text-gray-500">
+                {passingCombinations.length} passing /{' '}
+                {accessibilityScores.length} total
+              </div>
+            </div>
+            <div className="space-y-4">
+              <AccessibilityPassing combinations={passingCombinations} />
+              <AccessibilityFailing combinations={failingCombinations} />
+            </div>
+          </div>
+        </div>
+
+        {/* Color palette (50-900) */}
+        <div className="space-y-4">
+          {colorShades.map(
+            ({ shade, hex, hue, saturation, lightness }, index) => (
+              <motion.div
+                key={shade}
+                className="flex flex-row items-center gap-1 rounded-lg p-1 transition-all duration-200 hover:bg-gray-100 sm:p-4 md:px-0 lg:p-4 dark:hover:bg-gray-800"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.05 * index }}
+                whileHover={{ scale: 1.01, x: 5 }}
+              >
+                <ColorSquare className="lg:mr-4 lg:size-10" baseColor={hex} />
+                <div className="w-6 text-xs font-bold tracking-tight lg:w-10 lg:text-lg lg:tracking-normal">
+                  {shade}
+                </div>
+                <CopyColor
+                  copyToClipboard={copyToClipboard}
+                  hex={hex}
+                  copiedHex={copiedHex}
+                />
+                <ColorDetails
+                  hue={hue}
+                  saturation={saturation}
+                  lightness={lightness}
+                />
+              </motion.div>
+            ),
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}

@@ -1,18 +1,17 @@
-import type { ReactNode } from 'react'
 import { Magnetic } from '@/components/ui/magnetic'
 
 export function MagneticSocialLink({
   children,
   link,
 }: {
-  children: ReactNode
+  children: React.ReactNode
   link: string
 }) {
   return (
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <a
         href={link}
-        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-accent px-3 py-1 text-sm text-accent-foreground transition-colors duration-200 hover:bg-accent-foreground hover:text-accent"
+        className="group relative inline-flex shrink-0 items-center gap-px rounded-full bg-accent px-3 py-1 text-sm text-accent-foreground transition-colors duration-200 hover:bg-accent-foreground hover:text-accent"
       >
         {children}
         <svg

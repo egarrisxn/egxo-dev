@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     canonical: '/contact',
   },
   title: 'Contact',
-  description: 'Then contact page for EGXO MDX.',
+  description: 'Then contact page for egxo.dev.',
 }
 
 export default function ContactPage() {

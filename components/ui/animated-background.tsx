@@ -1,20 +1,13 @@
 'use client'
 
-import {
-  Children,
-  cloneElement,
-  ReactElement,
-  useEffect,
-  useState,
-  useId,
-} from 'react'
+import React, { cloneElement, useEffect, useState, useId } from 'react'
 import { AnimatePresence, Transition, motion } from 'motion/react'
 import { cn } from '@/lib/utils'
 
 export type AnimatedBackgroundProps = {
   children:
-    | ReactElement<{ 'data-id': string }>[]
-    | ReactElement<{ 'data-id': string }>
+    | React.ReactElement<{ 'data-id': string }>[]
+    | React.ReactElement<{ 'data-id': string }>
   defaultValue?: string
   onValueChange?: (newActiveId: string | null) => void
   className?: string
@@ -43,11 +36,12 @@ export function AnimatedBackground({
 
   useEffect(() => {
     if (defaultValue !== undefined) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setActiveId(defaultValue)
     }
   }, [defaultValue])
-
-  return Children.map(children, (child: any, index) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return React.Children.map(children, (child: any, index) => {
     const id = child.props['data-id']
 
     const interactionProps = enableHover

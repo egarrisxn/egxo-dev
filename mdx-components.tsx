@@ -1,5 +1,5 @@
 import type { MDXComponents } from 'mdx/types'
-import { ComponentPropsWithoutRef } from 'react'
+import * as React from 'react'
 import { highlight } from 'sugar-high'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -21,7 +21,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         </figure>
       )
     },
-    code: ({ children, ...props }: ComponentPropsWithoutRef<'code'>) => {
+    code: ({ children, ...props }: React.ComponentPropsWithoutRef<'code'>) => {
       const codeHTML = highlight(children as string)
       return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
     },

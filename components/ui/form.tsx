@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useId, type ComponentProps } from 'react'
+import React, { createContext, useContext, useId } from 'react'
 import * as LabelPrimitive from '@radix-ui/react-label'
 import { Slot } from '@radix-ui/react-slot'
 import {
@@ -71,7 +71,7 @@ const FormItemContext = createContext<FormItemContextValue>(
   {} as FormItemContextValue,
 )
 
-function FormItem({ className, ...props }: ComponentProps<'div'>) {
+function FormItem({ className, ...props }: React.ComponentProps<'div'>) {
   const id = useId()
 
   return (
@@ -90,7 +90,7 @@ function FormLabel({
   htmlFor,
   useForm = false,
   ...props
-}: ComponentProps<typeof LabelPrimitive.Root> & { useForm?: boolean }) {
+}: React.ComponentProps<typeof LabelPrimitive.Root> & { useForm?: boolean }) {
   const field = useFormField()
   const error = useForm ? field?.error : undefined
   const id = useForm ? field?.formItemId : htmlFor
@@ -110,7 +110,7 @@ function FormLabel({
   )
 }
 
-function FormControl({ ...props }: ComponentProps<typeof Slot>) {
+function FormControl({ ...props }: React.ComponentProps<typeof Slot>) {
   const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
 
   return (
@@ -128,7 +128,7 @@ function FormControl({ ...props }: ComponentProps<typeof Slot>) {
   )
 }
 
-function FormDescription({ className, ...props }: ComponentProps<'p'>) {
+function FormDescription({ className, ...props }: React.ComponentProps<'p'>) {
   const { formDescriptionId } = useFormField()
 
   return (
@@ -141,7 +141,7 @@ function FormDescription({ className, ...props }: ComponentProps<'p'>) {
   )
 }
 
-function FormMessage({ className, ...props }: ComponentProps<'p'>) {
+function FormMessage({ className, ...props }: React.ComponentProps<'p'>) {
   const { error, formMessageId } = useFormField()
   const body = error ? String(error?.message ?? '') : props.children
 
@@ -149,7 +149,7 @@ function FormMessage({ className, ...props }: ComponentProps<'p'>) {
     <p
       data-slot="form-message"
       id={formMessageId}
-      className={cn('min-h-[1rem] pl-1 text-xs text-destructive', className)}
+      className={cn('min-h-4 pl-1 text-xs text-destructive', className)}
       {...props}
     >
       {body || '\u00A0'}
