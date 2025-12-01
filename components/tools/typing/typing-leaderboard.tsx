@@ -1,42 +1,21 @@
 'use client'
 
 import { useState } from 'react'
+import type { TypingLeaderboardEntry } from '@/lib/types'
 import { Button } from '@/components/ui/button'
+import ClearTypingLeaderboard from './clear-typing-leaderboard'
 
-interface ClearLeaderboardButtonProps {
-  onClear: () => void
-}
-
-function ClearLeaderboardButton({ onClear }: ClearLeaderboardButtonProps) {
-  return (
-    <Button
-      onClick={onClear}
-      className="text-sm text-red-600 underline"
-      variant="link"
-    >
-      Clear Leaderboard
-    </Button>
-  )
-}
-
-interface LeaderboardEntry {
-  name: string
+interface TypingLeaderboardProps {
   wpm: number
   accuracy: number
-  timestamp: number
-}
-
-interface LeaderboardProps {
-  wpm: number
-  accuracy: number
-  leaderboard: LeaderboardEntry[]
+  leaderboard: TypingLeaderboardEntry[]
   submitted: boolean
   onSubmitScore: (name: string) => void
   onResetGame: () => void
   onClearLeaderboard: () => void
 }
 
-export function Leaderboard({
+export default function TypingLeaderboard({
   wpm,
   accuracy,
   leaderboard,
@@ -44,7 +23,7 @@ export function Leaderboard({
   onSubmitScore,
   onResetGame,
   onClearLeaderboard,
-}: LeaderboardProps) {
+}: TypingLeaderboardProps) {
   const [name, setName] = useState('')
 
   const handleSubmit = () => {
@@ -108,7 +87,7 @@ export function Leaderboard({
           )}
           {leaderboard.length > 0 && (
             <div className="mt-4">
-              <ClearLeaderboardButton onClear={onClearLeaderboard} />
+              <ClearTypingLeaderboard onClear={onClearLeaderboard} />
             </div>
           )}
         </div>

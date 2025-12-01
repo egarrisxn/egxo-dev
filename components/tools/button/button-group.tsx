@@ -1,18 +1,9 @@
 import type { CSSProperties } from 'react'
-import { hexToRgb, getButtonStyles } from '@/lib/helpers/button-helpers'
-
-interface Variant {
-  name: string
-  color: string
-}
-
-interface Group {
-  name: string
-  variants: Variant[]
-}
+import { hexToRgb, getButtonStyles } from '@/helpers/button-copy'
+import type { ButtonGroups } from '@/lib/types'
 
 interface ButtonGroupProps {
-  group: Group
+  group: ButtonGroups
   onCopy: (css: string) => void
 }
 

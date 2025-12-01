@@ -1,10 +1,14 @@
-interface GameStatsProps {
+interface TypingStatsProps {
   liveWpm: number
   isStarted: boolean
   isFinished: boolean
 }
 
-export function GameStats({ liveWpm, isStarted, isFinished }: GameStatsProps) {
+export default function TypingStats({
+  liveWpm,
+  isStarted,
+  isFinished,
+}: TypingStatsProps) {
   return (
     <div className="mt-4 flex h-6 items-center gap-2">
       {isStarted && !isFinished ? (

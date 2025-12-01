@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import { MonitorIcon, MoonIcon, SunIcon } from 'lucide-react'
+import { MonitorIcon, MoonIcon, SunIcon } from './icons'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 
 const THEMES_OPTIONS = [

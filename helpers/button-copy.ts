@@ -1,5 +1,5 @@
 // Convert hex to Rgb
-export function hexToRgb(hex: string) {
+export const hexToRgb = (hex: string) => {
   if (!/^#([0-9A-F]{3}|[0-9A-F]{6})$/i.test(hex)) {
     throw new Error('Invalid HEX color')
   }

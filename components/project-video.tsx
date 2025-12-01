@@ -1,4 +1,4 @@
-import { XIcon } from 'lucide-react'
+import { XCloseIcon } from './icons'
 import {
   MorphingDialog,
   MorphingDialogTrigger,
@@ -54,7 +54,7 @@ export function ProjectVideo({ video }: ProjectVideoProps) {
             exit: { opacity: 0, transition: { duration: 0 } },
           }}
         >
-          <XIcon className="size-5 text-muted-foreground/80" />
+          <XCloseIcon className="size-5 text-muted-foreground/80" />
         </MorphingDialogClose>
       </MorphingDialogContainer>
     </MorphingDialog>

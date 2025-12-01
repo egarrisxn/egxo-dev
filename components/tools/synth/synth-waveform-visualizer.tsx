@@ -3,13 +3,13 @@
 import { useEffect, useRef } from 'react'
 import type * as Tone from 'tone'
 
-interface WaveformVisualizerProps {
+interface SynthWaveformVisualizerProps {
   analyser: Tone.Analyser | null
 }
 
-export const WaveformVisualizer: React.FC<WaveformVisualizerProps> = ({
+export default function SynthWaveformVisualizer({
   analyser,
-}) => {
+}: SynthWaveformVisualizerProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const animationRef = useRef<number | null>(null)
 
@@ -40,8 +40,8 @@ export const WaveformVisualizer: React.FC<WaveformVisualizerProps> = ({
       ctx.lineWidth = 2
 
       const sliceWidth = width / waveform.length
-
       let x = 0
+
       ctx.moveTo(x, height / 2)
 
       for (let i = 0; i < waveform.length; i++) {
@@ -61,7 +61,7 @@ export const WaveformVisualizer: React.FC<WaveformVisualizerProps> = ({
     draw()
 
     return () => {
-      if (animationRef.current) {
+      if (animationRef.current !== null) {
         cancelAnimationFrame(animationRef.current)
       }
     }

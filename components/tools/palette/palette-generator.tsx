@@ -9,57 +9,32 @@ import {
   hslToHex,
   formatHexValue,
   generateColorShades,
-  getLuminance,
-  type ColorShade,
-  type AccessibilityScore,
-} from '@/lib/helpers/palette-helpers'
-import {
-  ColorInput,
-  ColorDetails,
-  ColorSquare,
-  RandomizeColor,
-  CopyColor,
-} from './palette-colors'
-import { HueSlider, VibrancySlider } from './palette-sliders'
-import {
-  AccessibilityFailing,
-  AccessibilityPassing,
-} from './accessibility-check'
-import DownloadJson from './download-json'
-
-const TEST_SHADES = [50, 100, 200, 500, 700, 900]
-
-function getContrastRatio(color1: string, color2: string) {
-  const luminance1 = getLuminance(color1)
-  const luminance2 = getLuminance(color2)
-  const lighter = Math.max(luminance1, luminance2)
-  const darker = Math.min(luminance1, luminance2)
-  return (lighter + 0.05) / (darker + 0.05)
-}
-
-function getAccessibilityLevel(ratio: number) {
-  if (ratio >= 7) {
-    return { level: 'AAA' as const, pass: true }
-  }
-  if (ratio >= 4.5) {
-    return { level: 'AA' as const, pass: true }
-  }
-  if (ratio >= 3) {
-    return { level: 'AA Large' as const, pass: true }
-  }
-  return { level: 'Fail' as const, pass: false }
-}
+  getAccessibilityLevel,
+  getContrastRatio,
+} from '@/helpers/palette-generator'
+import { TEST_COLOR_SHADES } from '@/lib/data'
+import type { PaletteColorShade, PaletteAccessibilityScore } from '@/lib/types'
+import RandomizePaletteColor from './randomize-palette-color'
+import PaletteColorInput from './palette-color-input'
+import PaletteColorDetails from './palette-color-details'
+import PaletteColorSquare from './palette-color-square'
+import CopyPaletteColors from './copy-palette-color'
+import PaletteHueSlider from './palette-hue-slider'
+import PaletteVibrancySlider from './pallete-vibrancy-slider'
+import AccessibilityPassing from './accessibility-passing'
+import AccessibilityFailing from './accessibility-failing'
+import DownloadJson from './download-palette-json'
 
 function computeAccessibilityScores(
-  colorShades: ColorShade[],
-): AccessibilityScore[] {
-  const results: AccessibilityScore[] = []
+  colorShades: PaletteColorShade[],
+): PaletteAccessibilityScore[] {
+  const results: PaletteAccessibilityScore[] = []
 
-  TEST_SHADES.forEach((bgShadeValue, bgIndex) => {
+  TEST_COLOR_SHADES.forEach((bgShadeValue, bgIndex) => {
     const bgShade = colorShades.find((s) => s.shade === bgShadeValue)
     if (!bgShade) return
 
-    TEST_SHADES.slice(bgIndex + 1).forEach((fgShadeValue) => {
+    TEST_COLOR_SHADES.slice(bgIndex + 1).forEach((fgShadeValue) => {
       const fgShade = colorShades.find((s) => s.shade === fgShadeValue)
       if (!fgShade) return
 
@@ -132,7 +107,7 @@ export default function PaletteGenerator() {
     downloadAnchorNode.remove()
   }
 
-  const randomizeColor = () => {
+  const randomizePaletteColor = () => {
     setIsRandomizing(true)
     setVibrancy(50)
     setHueShift(0)
@@ -154,7 +129,7 @@ export default function PaletteGenerator() {
     setTimeout(() => setIsRandomizing(false), 500)
   }
 
-  // Accessibility calculations, now in a pure helper
+  // Accessibility calculations
   const accessibilityScores = useMemo(
     () => computeAccessibilityScores(colorShades),
     [colorShades],
@@ -175,7 +150,7 @@ export default function PaletteGenerator() {
       {/* Header */}
       <div className="flex flex-row items-center justify-between border-b pb-4">
         <div className="flex flex-row items-center gap-2">
-          <ColorSquare baseColor={baseColor} />
+          <PaletteColorSquare baseColor={baseColor} />
           <span className="text-xs leading-none text-slate-500 sm:pt-0.5 sm:text-base">
             {baseColor}
           </span>
@@ -193,11 +168,11 @@ export default function PaletteGenerator() {
             <div className="flex items-center justify-between">
               <h3 className="font-medium">Base Color</h3>
               <div className="flex items-center gap-2">
-                <RandomizeColor
-                  randomizeColor={randomizeColor}
+                <RandomizePaletteColor
+                  randomizePaletteColor={randomizePaletteColor}
                   isRandomizing={isRandomizing}
                 />
-                <ColorSquare baseColor={baseColor} />
+                <PaletteColorSquare baseColor={baseColor} />
               </div>
             </div>
 
@@ -215,8 +190,8 @@ export default function PaletteGenerator() {
 
             {/* Color input (#hex) */}
             <div className="flex items-center gap-2">
-              <ColorSquare baseColor={baseColor} />
-              <ColorInput
+              <PaletteColorSquare baseColor={baseColor} />
+              <PaletteColorInput
                 inputValue={inputValue}
                 setInputValue={setInputValue}
                 setBaseColor={setBaseColor}
@@ -227,8 +202,11 @@ export default function PaletteGenerator() {
 
           {/* Vibrancy & hue adjustment */}
           <div className="space-y-4 p-2">
-            <VibrancySlider vibrancy={vibrancy} setVibrancy={setVibrancy} />
-            <HueSlider hueShift={hueShift} setHueShift={setHueShift} />
+            <PaletteVibrancySlider
+              vibrancy={vibrancy}
+              setVibrancy={setVibrancy}
+            />
+            <PaletteHueSlider hueShift={hueShift} setHueShift={setHueShift} />
           </div>
 
           {/* Hue visualizer */}
@@ -274,16 +252,19 @@ export default function PaletteGenerator() {
                 transition={{ duration: 0.3, delay: 0.05 * index }}
                 whileHover={{ scale: 1.01, x: 5 }}
               >
-                <ColorSquare className="lg:mr-4 lg:size-10" baseColor={hex} />
+                <PaletteColorSquare
+                  className="lg:mr-4 lg:size-10"
+                  baseColor={hex}
+                />
                 <div className="w-6 text-xs font-bold tracking-tight lg:w-10 lg:text-lg lg:tracking-normal">
                   {shade}
                 </div>
-                <CopyColor
+                <CopyPaletteColors
                   copyToClipboard={copyToClipboard}
                   hex={hex}
                   copiedHex={copiedHex}
                 />
-                <ColorDetails
+                <PaletteColorDetails
                   hue={hue}
                   saturation={saturation}
                   lightness={lightness}

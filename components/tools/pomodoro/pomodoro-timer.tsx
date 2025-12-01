@@ -2,6 +2,13 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { Play, Pause, RotateCcw, Settings } from 'lucide-react'
+import { initialSettings } from '@/helpers/pomodoro-timer'
+import { DEFAULT_SETTINGS } from '@/lib/data'
+import type {
+  PomodoroTimerMode,
+  PomodoroTimerPreset,
+  PomodoroTimerSettings,
+} from '@/lib/types'
 import { Progress } from '@/components/ui/progress'
 import { Button } from '@/components/ui/button'
 import { Slider } from '@/components/ui/slider'
@@ -20,37 +27,13 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 
-type TimerMode = 'work' | 'break'
-type TimerPreset = '25/5' | '50/10' | '90/20' | 'custom'
-
-interface TimerSettings {
-  workTime: number
-  breakTime: number
-  preset: TimerPreset
-}
-
-const DEFAULT_SETTINGS: TimerSettings = {
-  workTime: 50 * 60,
-  breakTime: 10 * 60,
-  preset: '50/10',
-}
-
-// Helper function for state initialization
-const loadSettings = (): TimerSettings => {
-  if (typeof window === 'undefined') return DEFAULT_SETTINGS
-  const saved = localStorage.getItem('pomodoroSettings')
-  return saved ? JSON.parse(saved) : DEFAULT_SETTINGS
-}
-
-// Get settings only once during the initial render
-const initialSettings = loadSettings()
-
 export default function PomodoroTimer() {
   // Initialize state directly from loaded settings
-  const [settings, setSettings] = useState<TimerSettings>(initialSettings)
+  const [settings, setSettings] =
+    useState<PomodoroTimerSettings>(initialSettings)
   const [timeLeft, setTimeLeft] = useState(initialSettings.workTime)
   const [isActive, setIsActive] = useState(false)
-  const [mode, setMode] = useState<TimerMode>('work')
+  const [mode, setMode] = useState<PomodoroTimerMode>('work')
   const [customWorkTime, setCustomWorkTime] = useState(
     Math.floor(initialSettings.workTime / 60),
   )
@@ -76,7 +59,7 @@ export default function PomodoroTimer() {
       }, 1000)
     } else if (isActive && timeLeft === 0) {
       // Calculate next state values based on the current state
-      const nextMode: TimerMode = mode === 'work' ? 'break' : 'work'
+      const nextMode: PomodoroTimerMode = mode === 'work' ? 'break' : 'work'
       const nextTime =
         nextMode === 'work' ? settings.workTime : settings.breakTime
 
@@ -118,8 +101,8 @@ export default function PomodoroTimer() {
   }
 
   const applyPreset = useCallback(
-    (preset: TimerPreset) => {
-      let newSettings: TimerSettings
+    (preset: PomodoroTimerPreset) => {
+      let newSettings: PomodoroTimerSettings
       switch (preset) {
         case '25/5':
           newSettings = { workTime: 25 * 60, breakTime: 5 * 60, preset }
@@ -155,7 +138,7 @@ export default function PomodoroTimer() {
 
   // Handle preset change for Select component
   const handlePresetChange = (value: string) => {
-    const preset = value as TimerPreset
+    const preset = value as PomodoroTimerPreset
     // Only apply if it's not custom, or if it is custom, the button handles the apply
     if (preset !== 'custom') {
       applyPreset(preset)

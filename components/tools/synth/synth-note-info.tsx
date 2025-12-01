@@ -1,33 +1,11 @@
+import { getNoteFrequency } from '@/helpers/synth-player'
 import { ScrollArea } from '@/components/ui/scroll-area'
 
-function getNoteFrequency(note: string): string {
-  const A4 = 440
-  const notes = [
-    'C',
-    'C#',
-    'D',
-    'D#',
-    'E',
-    'F',
-    'F#',
-    'G',
-    'G#',
-    'A',
-    'A#',
-    'B',
-  ]
-  const octave = Number.parseInt(note.slice(-1))
-  const noteIndex = notes.indexOf(note.slice(0, -1))
-  const N = noteIndex - 9 + (octave - 4) * 12
-  const freq = A4 * Math.pow(2, N / 12)
-  return freq.toFixed(1)
-}
-
-interface NoteInfoProps {
+interface SynthNoteInfoProps {
   activeNotes: string[]
 }
 
-export function NoteInfo({ activeNotes }: NoteInfoProps) {
+export default function SynthNoteInfo({ activeNotes }: SynthNoteInfoProps) {
   const notes = Array.isArray(activeNotes) ? activeNotes : []
 
   return (

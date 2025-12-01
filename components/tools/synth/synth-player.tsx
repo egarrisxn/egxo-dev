@@ -2,12 +2,13 @@
 
 import { useEffect, useState, useCallback, useRef } from 'react'
 import * as Tone from 'tone'
-import { Slider } from '@/components/ui/slider'
-import { WaveformVisualizer } from './waveform-visualizer'
-import { SynthKeyboard } from './synth-keyboard'
-import { NoteInfo } from './note-info'
-import { PitchShift } from './pitch-shift'
-import { AudioVisualizer } from './audio-visualizer'
+import { SYNTH_KEY_MAP } from '@/lib/data'
+import SynthLabeledSlider from './synth-labeled-slider'
+import SynthWaveformVisualizer from './synth-waveform-visualizer'
+import SynthKeyboard from './synth-keyboard'
+import SynthNoteInfo from './synth-note-info'
+import SynthPitchShift from './synth-pitch-shift'
+import SynthAudioVisualizer from './synth-audio-visualizer'
 
 export class SynthEngine {
   synth: Tone.PolySynth
@@ -128,51 +129,6 @@ export class SynthEngine {
   }
 }
 
-const keyMap: { [key: string]: string } = {
-  a: 'C4',
-  w: 'C#4',
-  s: 'D4',
-  e: 'D#4',
-  d: 'E4',
-  f: 'F4',
-  t: 'F#4',
-  g: 'G4',
-  y: 'G#4',
-  h: 'A4',
-  u: 'A#4',
-  j: 'B4',
-  k: 'C5',
-  o: 'C#5',
-  l: 'D5',
-  p: 'D#5',
-  ';': 'E5',
-  "'": 'F5',
-  ']': 'F#5',
-  '\\': 'G5',
-}
-
-const LabeledSlider = ({
-  label,
-  value,
-  onChange,
-}: {
-  label: string
-  value: number
-  onChange: (val: number) => void
-}) => (
-  <div className="flex flex-col gap-2">
-    <span className="text-xs font-bold tracking-wider text-card-foreground uppercase">
-      {label}
-    </span>
-    <Slider
-      value={[value]}
-      onValueChange={(val) => onChange(val[0])}
-      max={1}
-      step={0.01}
-    />
-  </div>
-)
-
 export default function SynthPlayer() {
   const synthRef = useRef<SynthEngine | null>(null)
   const [analyser, setAnalyser] = useState<Tone.Analyser | null>(null)
@@ -227,7 +183,7 @@ export default function SynthPlayer() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!synthRef.current || activeKeys.has(e.key.toLowerCase())) return
 
-      const note = keyMap[e.key.toLowerCase()]
+      const note = SYNTH_KEY_MAP[e.key.toLowerCase()]
       if (note) {
         synthRef.current.synth.triggerAttack(note)
         setActiveKeys((prev) => new Set(prev).add(e.key.toLowerCase()))
@@ -237,7 +193,7 @@ export default function SynthPlayer() {
 
     const handleKeyUp = (e: KeyboardEvent) => {
       if (!synthRef.current) return
-      const note = keyMap[e.key.toLowerCase()]
+      const note = SYNTH_KEY_MAP[e.key.toLowerCase()]
       if (note) {
         synthRef.current.synth.triggerRelease(note)
         setActiveKeys((prev) => {
@@ -313,29 +269,29 @@ export default function SynthPlayer() {
     <div className="w-[375px] sm:w-[500px] sm:rounded-xl sm:border sm:border-border sm:bg-card sm:p-6 sm:shadow-lg md:w-[800px]">
       <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="col-span-1 h-[100px]">
-          <WaveformVisualizer analyser={analyser} />
+          <SynthWaveformVisualizer analyser={analyser} />
         </div>
         <div className="col-span-1 h-[100px]">
-          <NoteInfo activeNotes={activeNotes} />
+          <SynthNoteInfo activeNotes={activeNotes} />
         </div>
       </div>
       <div className="grid grid-cols-4 items-start gap-2 md:gap-4">
         <div className="col-span-1 flex items-center justify-center">
-          <PitchShift onChange={handlePitchShift} />
+          <SynthPitchShift onChange={handlePitchShift} />
         </div>
         <div className="col-span-3 mt-2 space-y-6">
           <div className="grid grid-cols-3 items-center gap-2 px-2 md:gap-4 md:px-4">
-            <LabeledSlider
+            <SynthLabeledSlider
               label="Filter"
               value={filterValue}
               onChange={handleFilterFrequency}
             />
-            <LabeledSlider
+            <SynthLabeledSlider
               label="Delay"
               value={delayValue}
               onChange={handleDelayTime}
             />
-            <LabeledSlider
+            <SynthLabeledSlider
               label="Reverb"
               value={reverbValue}
               onChange={handleReverbDecay}
@@ -343,17 +299,17 @@ export default function SynthPlayer() {
           </div>
 
           <div className="grid grid-cols-3 items-center gap-2 px-2 md:gap-4 md:px-4">
-            <LabeledSlider
+            <SynthLabeledSlider
               label="Tremolo"
               value={tremoloValue}
               onChange={handleTremoloDepth}
             />
-            <LabeledSlider
+            <SynthLabeledSlider
               label="BitCrush"
               value={bitCrusherValue}
               onChange={handleBitCrusherDepth}
             />
-            <LabeledSlider
+            <SynthLabeledSlider
               label="Distort"
               value={distortionValue}
               onChange={handleDistortionDepth}
@@ -363,7 +319,7 @@ export default function SynthPlayer() {
       </div>
 
       <div className="mb-6 flex size-full items-center justify-center overflow-hidden rounded-sm border border-gray-200 bg-white">
-        <AudioVisualizer activeNotes={activeNotes} resetKey={resetKey} />
+        <SynthAudioVisualizer activeNotes={activeNotes} resetKey={resetKey} />
       </div>
 
       <SynthKeyboard

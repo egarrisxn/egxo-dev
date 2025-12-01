@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { QRCodeSVG } from 'qrcode.react'
+import type { QRCorrectionLevel } from '@/lib/types'
 import { Button } from '@/components/ui/button'
 import { Slider } from '@/components/ui/slider'
 import {
@@ -12,16 +13,13 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 
-type ErrorCorrectionLevel = 'L' | 'M' | 'Q' | 'H'
-
 export default function QRCodeGenerator() {
   const [url, setUrl] = useState('https://egxo.dev')
   const [qrCode, setQRCode] = useState('https://egxo.dev')
   const [color, setColor] = useState('#000000')
   const [backgroundColor, setBackgroundColor] = useState('#ffffff')
-  const [size, setSize] = useState(350)
-  const [errorCorrection, setErrorCorrection] =
-    useState<ErrorCorrectionLevel>('M')
+  const [size, setSize] = useState(200)
+  const [errorCorrection, setErrorCorrection] = useState<QRCorrectionLevel>('M')
 
   const generateQRCode = (e: React.FormEvent) => {
     e.preventDefault()
@@ -91,7 +89,7 @@ export default function QRCodeGenerator() {
               <Select
                 value={errorCorrection}
                 onValueChange={(value) =>
-                  setErrorCorrection(value as ErrorCorrectionLevel)
+                  setErrorCorrection(value as QRCorrectionLevel)
                 }
               >
                 <SelectTrigger className="w-full" id="errorCorrection">

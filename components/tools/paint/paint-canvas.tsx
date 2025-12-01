@@ -2,45 +2,12 @@
 
 import type React from 'react'
 import { useRef, useState, useEffect } from 'react'
+import { CANVAS_PAINT_COLORS } from '@/lib/data'
+import type { DrawingEvent } from '@/lib/types'
 import { Button } from '@/components/ui/button'
-import { CanvasHeader } from './canvas-header'
-import { CanvasToolBar } from './canvas-toolbar'
-import { CanvasPalette } from './canvas-palette'
-
-const paintColors = [
-  '#000000',
-  '#808080',
-  '#800000',
-  '#808000',
-  '#008000',
-  '#008080',
-  '#000080',
-  '#800080',
-  '#808040',
-  '#004040',
-  '#0080FF',
-  '#004080',
-  '#8000FF',
-  '#804000',
-  '#FFFFFF',
-  '#C0C0C0',
-  '#FF0000',
-  '#FFFF00',
-  '#00FF00',
-  '#00FFFF',
-  '#0000FF',
-  '#FF00FF',
-  '#FFFF80',
-  '#00FF80',
-  '#80FFFF',
-  '#8080FF',
-  '#FF0080',
-  '#FF8040',
-]
-
-type DrawingEvent =
-  | React.MouseEvent<HTMLCanvasElement>
-  | React.TouchEvent<HTMLCanvasElement>
+import PaintCanvasHeader from './paint-canvas-header'
+import PaintCanvasToolbar from './paint-canvas-toolbar'
+import PaintCanvasPalette from './paint-canvas-palette'
 
 export default function PaintCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -282,13 +249,13 @@ export default function PaintCanvas() {
         className="fixed inset-0 z-40 flex items-center justify-center"
       >
         <div className="w-[90vw] max-w-[740px] rounded-sm border border-border bg-card sm:shadow-lg">
-          <CanvasHeader
+          <PaintCanvasHeader
             onMinimize={minimizeWindow}
             onClose={closeWindow}
             onNew={clearCanvas}
           />
           <div className="flex">
-            <CanvasToolBar selectedTool={tool} onToolSelect={setTool} />
+            <PaintCanvasToolbar selectedTool={tool} onToolSelect={setTool} />
 
             {/* Drawing area adapts to viewport size and orientation */}
             <div
@@ -311,8 +278,8 @@ export default function PaintCanvas() {
               />
             </div>
           </div>
-          <CanvasPalette
-            colors={paintColors}
+          <PaintCanvasPalette
+            colors={CANVAS_PAINT_COLORS}
             selectedColor={color}
             onColorSelect={setColor}
           />

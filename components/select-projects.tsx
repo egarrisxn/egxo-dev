@@ -1,9 +1,9 @@
 'use client'
 
 import { useMediaQuery } from '@/hooks/use-media-query'
+import { SELECT_PROJECTS } from '@/lib/data'
 import { ProjectVideo } from '@/components/project-video'
 import { ProjectImage } from '@/components/project-image'
-import { SELECT_PROJECTS } from '@/lib/data'
 
 export function SelectProjects() {
   const isDesktop = useMediaQuery('(min-width: 1024px)')

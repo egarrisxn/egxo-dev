@@ -2,117 +2,16 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { cn } from '@/lib/utils'
+import type {
+  Transcript,
+  ISpeechRecognition,
+  SpeechRecognitionConstructor,
+  SpeechRecognitionEvent,
+  SpeechRecognitionErrorEvent,
+} from '@/lib/types'
 import { Button } from '@/components/ui/button'
+import { MicIcon, MicOffIcon, SettingsIcon } from '@/components/icons'
 import LanguageSettings from './language-settings'
-
-interface IconProps {
-  className?: string
-}
-
-const MicIcon = ({ className }: IconProps) => (
-  <svg
-    width={24}
-    height={24}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-  >
-    <path d="M12 19v3" />
-    <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-    <rect x="9" y="2" width="6" height="13" rx="3" />
-  </svg>
-)
-
-const MicOffIcon = ({ className }: IconProps) => (
-  <svg
-    width={24}
-    height={24}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-  >
-    <path d="M12 19v3" />
-    <path d="M15 9.34V5a3 3 0 0 0-5.68-1.33" />
-    <path d="M16.95 16.95A7 7 0 0 1 5 12v-2" />
-    <path d="M18.89 13.23A7 7 0 0 0 19 12v-2" />
-    <path d="m2 2 20 20" />
-    <path d="M9 9v3a3 3 0 0 0 5.12 2.12" />
-  </svg>
-)
-
-const SettingsIcon = ({ className }: IconProps) => (
-  <svg
-    width={24}
-    height={24}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-  >
-    <path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
-    <circle cx="12" cy="12" r="3" />
-  </svg>
-)
-
-interface Transcript {
-  id: string
-  text: string
-  timestamp: number
-  isFinal: boolean
-}
-
-interface SpeechRecognitionAlternative {
-  transcript: string
-}
-
-interface SpeechRecognitionResult {
-  readonly isFinal: boolean
-  readonly length: number
-  item(index: number): SpeechRecognitionAlternative
-  [index: number]: SpeechRecognitionAlternative
-}
-
-interface SpeechRecognitionResultList {
-  readonly length: number
-  item(index: number): SpeechRecognitionResult
-  [index: number]: SpeechRecognitionResult
-}
-
-interface SpeechRecognitionEvent extends Event {
-  readonly resultIndex: number
-  readonly results: SpeechRecognitionResultList
-}
-
-interface SpeechRecognitionErrorEvent extends Event {
-  readonly error: string
-}
-
-interface ISpeechRecognition extends EventTarget {
-  continuous: boolean
-  interimResults: boolean
-  lang: string
-  start: () => void
-  stop: () => void
-  onresult: ((event: SpeechRecognitionEvent) => void) | null
-  onerror: ((event: SpeechRecognitionErrorEvent) => void) | null
-  onend: (() => void) | null
-}
-
-type SpeechRecognitionConstructor = new () => ISpeechRecognition
 
 export default function TranscribeLive() {
   const [isListening, setIsListening] = useState(false)

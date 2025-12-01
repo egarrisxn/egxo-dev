@@ -1,21 +1,7 @@
-export interface ColorShade {
-  hex: string
-  shade: number
-  hue: number
-  saturation: number
-  lightness: number
-}
-
-export interface AccessibilityScore {
-  background: ColorShade
-  foreground: ColorShade
-  ratio: number
-  level: string
-  pass: boolean
-}
+import type { PaletteColorShade } from '@/lib/types'
 
 // Convert hex to HSL
-export function hexToHSL(hex: string): [number, number, number] {
+export const hexToHSL = (hex: string): [number, number, number] => {
   hex = hex.replace(/^#/, '')
   const r = Number.parseInt(hex.substring(0, 2), 16) / 255
   const g = Number.parseInt(hex.substring(2, 4), 16) / 255
@@ -43,7 +29,7 @@ export function hexToHSL(hex: string): [number, number, number] {
 }
 
 // Convert HSL to hex
-export function hslToHex(h: number, s: number, l: number): string {
+export const hslToHex = (h: number, s: number, l: number): string => {
   h /= 360
   s /= 100
   l /= 100
@@ -79,7 +65,7 @@ export function hslToHex(h: number, s: number, l: number): string {
 }
 
 // Format and validate hex value
-export function formatHexValue(value: string, baseColor: string): string {
+export const formatHexValue = (value: string, baseColor: string): string => {
   let hex = value.replace(/[^0-9A-Fa-f]/g, '')
   if (!hex) return baseColor
 
@@ -108,11 +94,11 @@ export function formatHexValue(value: string, baseColor: string): string {
 }
 
 // Generate color shades
-export function generateColorShades(
+export const generateColorShades = (
   baseColor: string,
   vibrancy: number,
   hueShift: number,
-): ColorShade[] {
+): PaletteColorShade[] => {
   const shades = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]
   const [baseHue, baseSat] = hexToHSL(baseColor)
   const adjustedHue = (baseHue + hueShift + 360) % 360
@@ -160,7 +146,7 @@ export function generateColorShades(
   })
 }
 
-export function getLuminance(hex: string): number {
+export const getLuminance = (hex: string): number => {
   const rgb = parseInt(hex.replace('#', ''), 16)
   const r = (rgb >> 16) & 0xff
   const g = (rgb >> 8) & 0xff
@@ -175,4 +161,25 @@ export function getLuminance(hex: string): number {
   const B = sb <= 0.03928 ? sb / 12.92 : Math.pow((sb + 0.055) / 1.055, 2.4)
 
   return 0.2126 * R + 0.7152 * G + 0.0722 * B
+}
+
+export const getContrastRatio = (color1: string, color2: string) => {
+  const luminance1 = getLuminance(color1)
+  const luminance2 = getLuminance(color2)
+  const lighter = Math.max(luminance1, luminance2)
+  const darker = Math.min(luminance1, luminance2)
+  return (lighter + 0.05) / (darker + 0.05)
+}
+
+export const getAccessibilityLevel = (ratio: number) => {
+  if (ratio >= 7) {
+    return { level: 'AAA' as const, pass: true }
+  }
+  if (ratio >= 4.5) {
+    return { level: 'AA' as const, pass: true }
+  }
+  if (ratio >= 3) {
+    return { level: 'AA Large' as const, pass: true }
+  }
+  return { level: 'Fail' as const, pass: false }
 }

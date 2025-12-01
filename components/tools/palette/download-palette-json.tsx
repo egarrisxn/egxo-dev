@@ -1,14 +1,16 @@
-import { Download } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { DownloadIcon } from '@/components/icons'
 
-interface DownloadJsonProps {
+interface DownloadPaletteJsonProps {
   downloadPalette: () => void
 }
 
-export default function DownloadJson({ downloadPalette }: DownloadJsonProps) {
+export default function DownloadPaletteJson({
+  downloadPalette,
+}: DownloadPaletteJsonProps) {
   return (
     <Button variant="outline" size="icon" onClick={downloadPalette}>
-      <Download className="size-4" />
+      <DownloadIcon className="size-4" />
       <span className="sr-only">Download JSON</span>
     </Button>
   )

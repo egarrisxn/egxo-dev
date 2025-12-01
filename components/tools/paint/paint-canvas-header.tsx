@@ -2,17 +2,17 @@
 
 import { Button } from '@/components/ui/button'
 
-interface CanvasHeaderProps {
+interface PaintCanvasHeaderProps {
   onMinimize: () => void
   onClose: () => void
   onNew: () => void
 }
 
-export function CanvasHeader({
+export default function PaintCanvasHeader({
   onMinimize,
   onClose,
   onNew,
-}: CanvasHeaderProps) {
+}: PaintCanvasHeaderProps) {
   return (
     <header>
       <section className="flex items-center justify-between rounded-t bg-blue-600/90 px-2 py-1 text-card">

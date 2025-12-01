@@ -2,30 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import { Plus, Trash2 } from 'lucide-react'
+import { loadInitialTasks } from '@/helpers/pomodoro-timer'
+import type { TaskItem } from '@/lib/types'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 
-interface Task {
-  id: string
-  text: string
-  completed: boolean
-}
-
-// Helper function to load tasks from localStorage once on initial render
-const loadInitialTasks = (): Task[] => {
-  if (typeof window === 'undefined') return []
-  const savedTasks = localStorage.getItem('focusTasks')
-  try {
-    return savedTasks ? JSON.parse(savedTasks) : []
-  } catch (error) {
-    console.error('Error parsing tasks from localStorage:', error)
-    return []
-  }
-}
-
-export default function TaskList() {
+export default function PomodoroTaskList() {
   // Initialize state directly using the result of loadInitialTasks()
-  const [tasks, setTasks] = useState<Task[]>(loadInitialTasks)
+  const [tasks, setTasks] = useState<TaskItem[]>(loadInitialTasks)
   const [newTaskText, setNewTaskText] = useState('')
 
   useEffect(() => {
@@ -35,7 +19,7 @@ export default function TaskList() {
   const addTask = () => {
     if (!newTaskText.trim()) return
 
-    const newTask: Task = {
+    const newTask: TaskItem = {
       id: Date.now().toString(),
       text: newTaskText,
       completed: false,

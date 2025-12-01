@@ -6,7 +6,7 @@ import {
   VARIANTS_CONTAINER,
   VARIANTS_SECTION,
   TRANSITION_SECTION,
-} from '@/lib/constants'
+} from '@/lib/motion'
 
 export const metadata: Metadata = {
   alternates: {

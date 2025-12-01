@@ -1,44 +1,14 @@
 'use client'
 
+import { TRANSCRIPTION_LANGUAGES } from '@/lib/data'
 import { Button } from '@/components/ui/button'
-
-interface IconProps {
-  className?: string
-}
-
-const XCloseIcon = ({ className }: IconProps) => (
-  <svg
-    className={className}
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M18 6 6 18" />
-    <path d="m6 6 12 12" />
-  </svg>
-)
+import { XCloseIcon } from '@/components/icons'
 
 interface LanguageSettingsProps {
   selectedLanguages: string[]
   onLanguagesChange: (languages: string[]) => void
   onClose: () => void
 }
-
-const AVAILABLE_LANGUAGES = [
-  { code: 'en-US', name: 'English (US)', flag: '🇺🇸' },
-  { code: 'hi-IN', name: 'हिन्दी (Hindi)', flag: '🇮🇳' },
-  { code: 'es-ES', name: 'Español', flag: '🇪🇸' },
-  { code: 'fr-FR', name: 'Français', flag: '🇫🇷' },
-  { code: 'de-DE', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'ja-JP', name: '日本語', flag: '🇯🇵' },
-  { code: 'zh-CN', name: '中文', flag: '🇨🇳' },
-]
 
 export default function LanguageSettings({
   selectedLanguages,
@@ -74,7 +44,7 @@ export default function LanguageSettings({
           </p>
 
           <div className="grid grid-cols-1 gap-2">
-            {AVAILABLE_LANGUAGES.map((lang) => (
+            {TRANSCRIPTION_LANGUAGES.map((lang) => (
               <div
                 key={lang.code}
                 className={`flex cursor-pointer flex-col rounded-xl p-3 text-card-foreground shadow-sm transition-all ${

@@ -2,12 +2,15 @@
 
 import { Button } from '@/components/ui/button'
 
-interface ToolBarProps {
+interface PaintCanvasToolbarProps {
   selectedTool: string
   onToolSelect: (tool: string) => void
 }
 
-export function CanvasToolBar({ selectedTool, onToolSelect }: ToolBarProps) {
+export default function PaintCanvasToolbar({
+  selectedTool,
+  onToolSelect,
+}: PaintCanvasToolbarProps) {
   return (
     <aside className="w-8 border-r border-border bg-card p-0.5">
       <Button

@@ -1,47 +1,14 @@
-type Links = {
-  label: string
-  href: string
-}
-
-type WorkExperience = {
-  company: string
-  title: string
-  start: string
-  end: string
-  link: string
-  id: string
-}
-
-type BlogPost = {
-  year: number
-  title: string
-  description: string
-  link: string
-  uid: string
-}
-
-type ProjectBase = {
-  id: string
-  name: string
-  description: string
-  link: string
-}
-
-type ProjectWithVideo = ProjectBase & {
-  video: string
-  thumbnail: string
-}
-
-type ProjectectWithoutVideo = ProjectBase & {
-  thumbnail: string
-  video?: never
-}
-
-type AboutTab = {
-  title: string
-  subtitle: string
-  content: string
-}
+import type {
+  Links,
+  WorkExperience,
+  BlogPost,
+  ProjectWithVideo,
+  ProjectWithoutVideo,
+  AboutTab,
+  PomodoroTimerSettings,
+  SynthKeys,
+  OffsetSynthKeys,
+} from '@/lib/types'
 
 export const EMAIL = 'egarrisxn@gmail.com'
 
@@ -175,7 +142,7 @@ export const SELECT_PROJECTS: ProjectWithVideo[] = [
   },
 ]
 
-export const MORE_PROJECTS: ProjectectWithoutVideo[] = [
+export const MORE_PROJECTS: ProjectWithoutVideo[] = [
   {
     name: 'Quik|Res',
     description:
@@ -315,3 +282,338 @@ export const ABOUT_ITEMS: AboutTab[] = [
     content: `Beyond code and design, I've led teams, managed client relationships, and overseen creative projects. My past roles in account management, event leadership, and operations have shaped the way I approach current and future work. I focus on balancing strategy, communication, and execution to keep projects moving smoothly. I also prioritize creating collaborative environments where team members can thrive, encouraging transparency and feedback throughout projects. I'm exploring how AI can support productivity and workflows when applied thoughtfully, making complex processes more efficient while keeping a human-centered approach.`,
   },
 ]
+
+export const SYNTH_KEY_MAP: { [key: string]: string } = {
+  a: 'C4',
+  w: 'C#4',
+  s: 'D4',
+  e: 'D#4',
+  d: 'E4',
+  f: 'F4',
+  t: 'F#4',
+  g: 'G4',
+  y: 'G#4',
+  h: 'A4',
+  u: 'A#4',
+  j: 'B4',
+  k: 'C5',
+  o: 'C#5',
+  l: 'D5',
+  p: 'D#5',
+  ';': 'E5',
+  "'": 'F5',
+  ']': 'F#5',
+  '\\': 'G5',
+}
+
+export const SYNTH_WHITE_KEYS: SynthKeys[] = [
+  { key: 'a', note: 'C4', label: 'A' },
+  { key: 's', note: 'D4', label: 'S' },
+  { key: 'd', note: 'E4', label: 'D' },
+  { key: 'f', note: 'F4', label: 'F' },
+  { key: 'g', note: 'G4', label: 'G' },
+  { key: 'h', note: 'A4', label: 'H' },
+  { key: 'j', note: 'B4', label: 'J' },
+  { key: 'k', note: 'C5', label: 'K' },
+  { key: 'l', note: 'D5', label: 'L' },
+  { key: ';', note: 'E5', label: ';' },
+  { key: "'", note: 'F5', label: "'" },
+  { key: '\\', note: 'G5', label: '\\' },
+]
+
+export const SYNTH_BLACK_KEYS: OffsetSynthKeys[] = [
+  { key: 'w', note: 'C#4', label: 'W', offset: 1.7 },
+  { key: 'e', note: 'D#4', label: 'E', offset: 2.4 },
+  { key: 't', note: 'F#4', label: 'T', offset: 3.75 },
+  { key: 'y', note: 'G#4', label: 'Y', offset: 4.4 },
+  { key: 'u', note: 'A#4', label: 'U', offset: 5.05 },
+  { key: 'o', note: 'C#5', label: 'O', offset: 6.4 },
+  { key: 'p', note: 'D#5', label: 'P', offset: 7.1 },
+  { key: ']', note: 'F#5', label: ']', offset: 8.45 },
+]
+
+export const TYPING_TESTS = [
+  "True fear doesn't arrive like thunder. It lingers quietly, in corners of the room you don't look at and in questions you're too afraid to ask. It masquerades as curiosity at first, a gentle nudge to keep exploring. But the deeper you go, the more you realize you were never meant to uncover what lies beneath. By the time you feel it creeping up your spine, it's already too late to run.",
+
+  "People often romanticize the life of an artist—thinking it's all brushes and inspiration and brilliance. But they don't see the hours spent staring into nothing, the toll of obsession, or the way truth claws at your mind when you try to translate it into lines and color. Talent is nothing without the willingness to surrender yourself to madness, just to capture a fleeting image that may never be understood.",
+
+  "There are things in this world that simply cannot be explained—events that shatter logic and stories that sound like dreams but leave real scars. As a manga artist, my duty isn't to solve them or label them as fiction. It's to record them exactly as they happened. Because some truths are too strange to be ignored, and too dangerous to be forgotten.",
+
+  "Inspiration is a strange thing. It doesn't always come from beauty, joy, or love. Sometimes, it comes from places you wish you never went. A haunted village, a cursed painting, a woman whose smile was far too wide. The most powerful stories are born not from peace, but from the things that unsettle your soul and linger long after the page is turned.",
+
+  "When I use Heaven's Door, I see people for who they truly are. Not who they pretend to be. Every line on the page of their lives is a confession. Guilt, regret, jealousy—all written plainly, if you know how to read it. Most people have secrets they'd kill to protect. The real horror isn't what I find in their past. It's how far they'll go to keep it buried.",
+
+  "Not all cursed places wear their history like a warning sign. Some are beautiful, serene, even inviting. But beneath the silence is something twisted—a history soaked into the soil. They wait for people like me. People who can't resist the pull of a mystery. And once you set foot inside, it's not the ghosts you need to fear. It's the story that demands to be told.",
+
+  "I've come to understand that monsters aren't always supernatural. Sometimes, they look like ordinary people—teachers, lovers, neighbors—driven to horror by grief, pride, or desperation. What they do can't be excused, but it can be understood. And that understanding is what makes it all the more terrifying. Evil without reason is simple. But evil with a human heart—that's what haunts you.",
+
+  "I draw not because it's a career or because I want to be famous. I draw because I don't know how not to. The stories, the places, the people—they find their way into my mind, and they won't leave until I give them form. Some artists create worlds. I simply record the ones most people are too afraid to acknowledge exist.",
+
+  "Curiosity is the engine of every great story. It's what pushes us forward, even when we should turn back. But curiosity is also dangerous. It whispers that you're safe, that you're in control, right up until the moment it leads you somewhere you can't escape from. The fire it lights is mesmerizing—until it consumes everything, including the hand that sparked it.",
+
+  "You can see someone's face for years and never know them. But open the pages of their life, and the truth spills out in ink. Heaven's Door doesn't lie. Every shameful thought, every fleeting cruelty, every act of quiet kindness—it's all there. People hide so much from the world. But their hearts, once revealed, are louder than any scream.",
+]
+
+export const BUTTON_COPY_GROUPS = [
+  {
+    name: 'Default',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Rounded',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Gradient',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Wave',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Fold',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Pop',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Outline',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Glow',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Neon',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Liquid',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Retro',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Glitch',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Bubble',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Appearance',
+    variants: [
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+      { name: 'green', color: '#22c55e' },
+      { name: 'orange', color: '#f59e0b' },
+      { name: 'red', color: '#ef4444' },
+    ],
+  },
+  {
+    name: 'Metallic',
+    variants: [
+      { name: 'light', color: '#ffffff' },
+      { name: 'gray', color: '#d9d9d9' },
+      { name: 'dark', color: '#1f2937' },
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+    ],
+  },
+  {
+    name: 'Glass',
+    variants: [
+      { name: 'light', color: '#ffffff' },
+      { name: 'gray', color: '#d9d9d9' },
+      { name: 'dark', color: '#1f2937' },
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+    ],
+  },
+  {
+    name: 'Neumorphic',
+    variants: [
+      { name: 'light', color: '#ffffff' },
+      { name: 'gray', color: '#d9d9d9' },
+      { name: 'dark', color: '#1f2937' },
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+    ],
+  },
+  {
+    name: 'Loading',
+    variants: [
+      { name: 'light', color: '#ffffff' },
+      { name: 'gray', color: '#d9d9d9' },
+      { name: 'dark', color: '#1f2937' },
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+    ],
+  },
+  {
+    name: 'Progress',
+    variants: [
+      { name: 'light', color: '#ffffff' },
+      { name: 'gray', color: '#d9d9d9' },
+      { name: 'dark', color: '#1f2937' },
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+    ],
+  },
+  {
+    name: 'Success',
+    variants: [
+      { name: 'light', color: '#ffffff' },
+      { name: 'gray', color: '#d9d9d9' },
+      { name: 'dark', color: '#1f2937' },
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+    ],
+  },
+  {
+    name: 'Error',
+    variants: [
+      { name: 'light', color: '#ffffff' },
+      { name: 'gray', color: '#d9d9d9' },
+      { name: 'dark', color: '#1f2937' },
+      { name: 'purple', color: '#6366f1' },
+      { name: 'blue', color: '#3b82f6' },
+    ],
+  },
+]
+
+export const CANVAS_PAINT_COLORS = [
+  '#000000',
+  '#808080',
+  '#800000',
+  '#808000',
+  '#008000',
+  '#008080',
+  '#000080',
+  '#800080',
+  '#808040',
+  '#004040',
+  '#0080FF',
+  '#004080',
+  '#8000FF',
+  '#804000',
+  '#FFFFFF',
+  '#C0C0C0',
+  '#FF0000',
+  '#FFFF00',
+  '#00FF00',
+  '#00FFFF',
+  '#0000FF',
+  '#FF00FF',
+  '#FFFF80',
+  '#00FF80',
+  '#80FFFF',
+  '#8080FF',
+  '#FF0080',
+  '#FF8040',
+]
+
+export const TEST_COLOR_SHADES = [50, 100, 200, 500, 700, 900]
+
+export const TRANSCRIPTION_LANGUAGES = [
+  { code: 'en-US', name: 'English (US)', flag: '🇺🇸' },
+  { code: 'hi-IN', name: 'हिन्दी (Hindi)', flag: '🇮🇳' },
+  { code: 'es-ES', name: 'Español', flag: '🇪🇸' },
+  { code: 'fr-FR', name: 'Français', flag: '🇫🇷' },
+  { code: 'de-DE', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'ja-JP', name: '日本語', flag: '🇯🇵' },
+  { code: 'zh-CN', name: '中文', flag: '🇨🇳' },
+]
+
+export const TYPING_STORAGE_KEY = 'typing-leaderboard'
+
+export const DEFAULT_SETTINGS: PomodoroTimerSettings = {
+  workTime: 50 * 60,
+  breakTime: 10 * 60,
+  preset: '50/10',
+}

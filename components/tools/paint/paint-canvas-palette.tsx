@@ -2,17 +2,17 @@
 
 import { Button } from '@/components/ui/button'
 
-interface ColorPaletteProps {
+interface PaintCanvasPaletteProps {
   colors: string[]
   selectedColor: string
   onColorSelect: (color: string) => void
 }
 
-export function CanvasPalette({
+export default function PaintCanvasPalette({
   colors,
   selectedColor,
   onColorSelect,
-}: ColorPaletteProps) {
+}: PaintCanvasPaletteProps) {
   return (
     <div className="flex border-t border-border bg-card p-1">
       <section className="flex flex-wrap gap-1">
