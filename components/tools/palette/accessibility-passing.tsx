@@ -13,12 +13,12 @@ export default function AccessibilityPassing({
       <h4 className="mb-2 flex items-center text-sm font-medium text-green-600 dark:text-green-400">
         <CheckIcon className="mr-1 size-4" /> Accessible Combinations
       </h4>
-      <div className="custom-scrollbar grid max-h-48 grid-cols-1 gap-2 overflow-y-auto pr-2">
+      <div className="custom-scrollbar grid max-h-48 grid-cols-1 gap-1.5 overflow-y-auto pr-2 pb-1.5">
         {combinations.length > 0 ? (
           combinations.map((score, index) => (
             <div
               key={index}
-              className="flex items-center justify-between rounded border border-green-100 bg-green-50 p-2 dark:border-green-900 dark:bg-green-900/20"
+              className="flex items-center justify-between rounded-md border border-green-100 bg-green-50 p-2 dark:border-green-900 dark:bg-green-900/20"
             >
               <div className="flex items-center gap-2">
                 <div className="flex items-center">
@@ -53,7 +53,7 @@ export default function AccessibilityPassing({
                 <span className="text-xs font-medium">
                   {score.ratio.toFixed(2)}:1
                 </span>
-                <div className="rounded bg-green-100 px-1.5 py-0.5 text-xs text-green-800 dark:bg-green-900 dark:text-green-200">
+                <div className="rounded-md bg-green-100 px-1.5 py-0.5 text-xs text-green-800 dark:bg-green-900 dark:text-green-200">
                   {score.level}
                 </div>
               </div>

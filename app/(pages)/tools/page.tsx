@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import * as motion from 'motion/react-client'
 import { TOOL_LINKS } from '@/lib/data'
 import {

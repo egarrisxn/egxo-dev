@@ -234,7 +234,7 @@ export default function TranscribeLive() {
           {transcripts.map((transcript) => (
             <div
               key={transcript.id}
-              className="flex flex-col gap-6 rounded-xl border border-border bg-card p-4 text-card-foreground shadow-sm"
+              className="flex flex-col gap-6 p-4 sm:rounded-2xl sm:border sm:border-accent-foreground/40 sm:bg-card sm:shadow-md sm:ring-1 sm:ring-muted/50 sm:ring-inset"
             >
               <p className="text-lg leading-relaxed text-balance text-card-foreground">
                 {transcript.text}
@@ -243,7 +243,7 @@ export default function TranscribeLive() {
           ))}
 
           {currentTranscript && (
-            <div className="flex flex-col gap-6 rounded-xl border-2 border-accent/30 bg-muted/50 p-4 text-card-foreground shadow-sm">
+            <div className="flex flex-col gap-6 rounded-2xl border-2 border-accent/30 bg-muted/50 p-4 shadow-md">
               <p className="text-lg leading-relaxed text-balance text-muted-foreground">
                 {currentTranscript}
               </p>
@@ -254,9 +254,7 @@ export default function TranscribeLive() {
             <div className="flex items-center justify-center py-8">
               <div className="space-y-2 text-center">
                 <div className="flex justify-center">
-                  <div className="animate-pulse">
-                    <MicIcon className="size-8 text-accent" />
-                  </div>
+                  <MicIcon className="size-7 animate-pulse text-accent" />
                 </div>
                 <p className="text-muted-foreground">Listening...</p>
               </div>
@@ -276,7 +274,7 @@ export default function TranscribeLive() {
               onClick={toggleListening}
               size="lg"
               className={cn(
-                'h-16 w-full text-lg font-medium transition-all',
+                'h-16 w-full cursor-pointer text-lg font-medium transition-all',
                 isListening
                   ? 'bg-destructive text-foreground hover:bg-destructive/90'
                   : 'bg-accent text-accent-foreground hover:bg-accent/90',

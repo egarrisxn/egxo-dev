@@ -54,7 +54,7 @@ export default function TypingLeaderboard({
                 {leaderboard.map((entry, i) => (
                   <li
                     key={i}
-                    className="flex justify-between rounded border bg-background/40 p-2 text-sm"
+                    className="flex justify-between rounded-md border bg-background/40 p-2 text-sm"
                   >
                     <span className="max-w-40 truncate font-medium">
                       {entry.name}

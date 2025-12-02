@@ -27,7 +27,7 @@ export default function QRCodeGenerator() {
   }
 
   return (
-    <div className="flex w-full max-w-md flex-col gap-4 sm:rounded-xl sm:border sm:border-border sm:bg-card sm:py-6 sm:shadow-lg">
+    <div className="flex w-full max-w-md flex-col gap-4 text-card-foreground sm:rounded-2xl sm:border sm:border-accent-foreground/40 sm:bg-card sm:py-6 sm:shadow-md sm:ring-1 sm:ring-muted/50 sm:ring-inset">
       <div className="px-1 sm:px-6">
         <form onSubmit={generateQRCode} className="space-y-4">
           <div>
@@ -44,7 +44,7 @@ export default function QRCodeGenerator() {
               value={url}
               onChange={(e) => setUrl(e.target.value)}
               required
-              className="w-full"
+              className="w-full bg-background"
             />
           </div>
 

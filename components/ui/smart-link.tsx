@@ -36,11 +36,11 @@ export function SmartLink({ href, text, variant = 'more' }: SmartLinkProps) {
   const iconClasses = clsx(
     'mt-0.5 transition-all duration-300 ease-out',
     variant === 'back' &&
-      'translate-x-0.5 text-foreground group-hover:-translate-x-0.5 group-hover:scale-x-105',
+      'translate-x-0.5 text-foreground size-4 group-hover:-translate-x-0.5 group-hover:scale-x-105',
     variant === 'more' &&
-      '-translate-x-0.5 text-foreground group-hover:translate-x-0.5 group-hover:scale-x-105',
+      '-translate-x-0.5 text-foreground size-4 group-hover:translate-x-0.5 group-hover:scale-x-105',
     variant === 'external' &&
-      'group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-105 text-sky-600 group-hover:text-sky-700 dark:text-sky-400 dark:group-hover:text-sky-500',
+      'group-hover:translate-x-0.5 group-hover:-translate-y-0.5 size-4.5 group-hover:scale-105 text-sky-600 group-hover:text-sky-700 dark:text-sky-400 dark:group-hover:text-sky-500',
   )
 
   return (

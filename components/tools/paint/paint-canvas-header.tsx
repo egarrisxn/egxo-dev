@@ -15,10 +15,8 @@ export default function PaintCanvasHeader({
 }: PaintCanvasHeaderProps) {
   return (
     <header>
-      <section className="flex items-center justify-between rounded-t bg-blue-600/90 px-2 py-1 text-card">
-        <p className="text-sm font-medium text-card dark:font-semibold">
-          Paint Canvas
-        </p>
+      <section className="flex items-center justify-between rounded-t-xl border-t border-accent-foreground/40 bg-blue-600/90 px-2 py-1 text-card">
+        <p className="text-sm font-medium text-white">Paint Canvas</p>
         <div className="flex gap-1">
           <Button
             variant="ghost"

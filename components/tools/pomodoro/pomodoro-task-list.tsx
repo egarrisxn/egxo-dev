@@ -48,7 +48,7 @@ export default function PomodoroTaskList() {
   }
 
   return (
-    <div className="flex h-fit w-full max-w-96 min-w-80 flex-col gap-6 text-card-foreground sm:max-w-96 sm:min-w-96 sm:rounded-xl sm:border sm:border-border sm:bg-card sm:py-6 sm:shadow-lg xl:min-w-[26em]">
+    <div className="flex h-fit w-full max-w-96 min-w-80 flex-col gap-6 text-card-foreground ring-1 ring-muted/50 ring-inset sm:max-w-96 sm:min-w-96 sm:rounded-2xl sm:border sm:border-accent-foreground/40 sm:bg-card sm:py-6 sm:shadow-md xl:min-w-[26em]">
       <div className="rid-rows-[auto_auto] grid auto-rows-min items-start gap-2 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] xl:hidden">
         <div className="mx-auto text-lg leading-none font-bold">Task List</div>
       </div>
@@ -74,7 +74,7 @@ export default function PomodoroTaskList() {
             tasks.map((task) => (
               <div
                 key={task.id}
-                className={`group flex items-center rounded p-1.5 ${task.completed ? 'bg-primary/5' : ''}`}
+                className={`group flex items-center rounded-md p-1.5 ${task.completed ? 'bg-primary/5' : ''}`}
               >
                 <Checkbox
                   checked={task.completed}

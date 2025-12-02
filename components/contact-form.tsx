@@ -1,8 +1,8 @@
 'use client'
 
-import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { formSchema, type FormData } from '@/lib/schemas'
 import { toast } from '@/components/ui/sonner'
 import {
   Form,
@@ -12,21 +12,8 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 
-const formSchema = z.object({
-  name: z
-    .string()
-    .min(3, { message: 'Name must be at least 3 characters' })
-    .max(100),
-  email: z.email({ message: 'Please enter a valid email address' }),
-  message: z.string().min(10, { message: 'Message is too short' }).max(500),
-})
-
-type FormData = z.infer<typeof formSchema>
-
-export async function sendEmail(data: FormData) {
+async function sendEmail(data: FormData) {
   try {
     const res = await fetch('/api/contact', {
       method: 'POST',
@@ -68,7 +55,12 @@ export default function ContactForm() {
               <FormItem className="w-full">
                 <FormLabel>Name</FormLabel>
                 <FormControl>
-                  <Input {...field} placeholder="Jane Doe" aria-label="Name" />
+                  <input
+                    {...field}
+                    placeholder="Jane Doe"
+                    aria-label="Name"
+                    className="flex h-9 w-full min-w-0 rounded-md border border-input bg-card/70 px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-card file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:aria-invalid:ring-destructive/40"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -81,11 +73,12 @@ export default function ContactForm() {
               <FormItem className="w-full">
                 <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input
+                  <input
                     {...field}
                     type="email"
                     placeholder="your@email.com"
                     aria-label="Email"
+                    className="flex h-9 w-full min-w-0 rounded-md border border-input bg-card/70 px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-card file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:aria-invalid:ring-destructive/40"
                   />
                 </FormControl>
                 <FormMessage />
@@ -100,11 +93,11 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>
-                <Textarea
+                <textarea
                   {...field}
                   placeholder="Insert message here.."
                   aria-label="Message"
-                  className="min-h-32"
+                  className="flex field-sizing-content min-h-32 w-full rounded-md border border-input bg-card/70 px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:aria-invalid:ring-destructive/40"
                 />
               </FormControl>
               <FormMessage />
@@ -119,7 +112,7 @@ export default function ContactForm() {
           {form.formState.isSubmitting ? (
             'Sending...'
           ) : (
-            <span className="inline-flex items-center gap-2">
+            <span className="inline-flex items-center gap-1">
               Send Message
               <svg
                 width="12"

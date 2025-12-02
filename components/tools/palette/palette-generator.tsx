@@ -146,7 +146,7 @@ export default function PaletteGenerator() {
   )
 
   return (
-    <div className="flex w-full flex-col gap-4">
+    <div className="flex w-full flex-col gap-4 p-4 sm:rounded-2xl sm:border sm:border-accent-foreground/40 sm:bg-card sm:shadow-md sm:ring-1 sm:ring-muted/50 sm:ring-inset">
       {/* Header */}
       <div className="flex flex-row items-center justify-between border-b pb-4">
         <div className="flex flex-row items-center gap-2">
@@ -161,7 +161,7 @@ export default function PaletteGenerator() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="space-y-6">
           <div className="space-y-4 rounded-lg border p-4">
             {/* Color randomizer */}
@@ -189,7 +189,7 @@ export default function PaletteGenerator() {
             </div>
 
             {/* Color input (#hex) */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5">
               <PaletteColorSquare baseColor={baseColor} />
               <PaletteColorInput
                 inputValue={inputValue}
@@ -201,7 +201,7 @@ export default function PaletteGenerator() {
           </div>
 
           {/* Vibrancy & hue adjustment */}
-          <div className="space-y-4 p-2">
+          <div className="space-y-3 p-2">
             <PaletteVibrancySlider
               vibrancy={vibrancy}
               setVibrancy={setVibrancy}
@@ -225,7 +225,7 @@ export default function PaletteGenerator() {
           </div>
 
           {/* Accessibility check */}
-          <div className="rounded-lg border p-4">
+          <div className="rounded-lg border p-3">
             <div className="mb-4 flex items-center justify-between">
               <h3 className="font-medium">Accessibility Pairs</h3>
               <div className="text-xs text-gray-500">
@@ -233,7 +233,7 @@ export default function PaletteGenerator() {
                 {accessibilityScores.length} total
               </div>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-3">
               <AccessibilityPassing combinations={passingCombinations} />
               <AccessibilityFailing combinations={failingCombinations} />
             </div>
@@ -241,22 +241,22 @@ export default function PaletteGenerator() {
         </div>
 
         {/* Color palette (50-900) */}
-        <div className="space-y-4">
+        <div className="space-y-6.5">
           {colorShades.map(
             ({ shade, hex, hue, saturation, lightness }, index) => (
               <motion.div
                 key={shade}
-                className="flex flex-row items-center gap-1 rounded-lg p-1 transition-all duration-200 hover:bg-gray-100 sm:p-4 md:px-0 lg:p-4 dark:hover:bg-gray-800"
+                className="flex flex-row items-center gap-1.5 rounded-lg p-1 transition-all duration-200 hover:bg-gray-100 md:px-0 lg:p-3 dark:hover:bg-gray-800"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: 0.05 * index }}
                 whileHover={{ scale: 1.01, x: 5 }}
               >
                 <PaletteColorSquare
-                  className="lg:mr-4 lg:size-10"
+                  className="lg:mr-2 lg:size-10"
                   baseColor={hex}
                 />
-                <div className="w-6 text-xs font-bold tracking-tight lg:w-10 lg:text-lg lg:tracking-normal">
+                <div className="w-4.5 text-xs font-bold tracking-tight lg:w-8.5 lg:text-base">
                   {shade}
                 </div>
                 <CopyPaletteColors

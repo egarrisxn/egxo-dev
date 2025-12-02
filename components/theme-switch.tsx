@@ -54,7 +54,7 @@ export function ThemeSwitch() {
         return (
           <button
             key={theme.id}
-            className="inline-flex size-7 items-center justify-center text-muted-foreground transition-colors duration-100 focus-visible:outline-2 data-[checked=true]:text-foreground dark:text-muted-foreground dark:data-[checked=true]:text-foreground"
+            className="inline-flex size-7 cursor-pointer items-center justify-center text-muted-foreground transition-colors duration-100 focus-visible:outline-2 data-[checked=true]:text-foreground dark:text-muted-foreground dark:data-[checked=true]:text-foreground"
             type="button"
             aria-label={`Switch to ${theme.label} theme`}
             data-id={theme.id}

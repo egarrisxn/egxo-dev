@@ -153,14 +153,14 @@ export default function PomodoroTimer() {
   }
 
   return (
-    <div className="flex h-fit w-full max-w-96 min-w-80 flex-col gap-6 text-card-foreground sm:max-w-96 sm:min-w-96 sm:rounded-xl sm:border sm:border-border sm:bg-card sm:py-6 sm:shadow-lg xl:min-w-[26em]">
+    <div className="flex h-fit w-full max-w-96 min-w-80 flex-col gap-6 text-card-foreground ring-1 ring-muted/50 ring-inset sm:max-w-96 sm:min-w-96 sm:rounded-2xl sm:border sm:border-accent-foreground/40 sm:bg-card sm:py-6 sm:shadow-md xl:min-w-[26em]">
       <Progress value={calculateProgress()} />
-      <div className="rid-rows-[auto_auto] grid auto-rows-min items-start gap-2 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto]">
+      <div className="grid auto-rows-min grid-rows-[auto_auto] items-start gap-2 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto]">
         <div className="mx-auto text-3xl leading-none font-bold">
           {mode === 'work' ? 'Focus Timer' : 'Break Time'}
         </div>
         <div
-          className="mx-auto text-7xl text-muted-foreground"
+          className="mx-auto text-6xl text-muted-foreground"
           dangerouslySetInnerHTML={{ __html: formatTime(timeLeft) }}
         />
       </div>
@@ -181,7 +181,7 @@ export default function PomodoroTimer() {
               <SettingsIcon />
             </Button>
           </DialogTrigger>
-          <DialogContent>
+          <DialogContent className="rounded-2xl border border-accent-foreground/40 bg-card shadow-md ring-1 ring-muted/50 ring-inset">
             <DialogHeader>
               <DialogTitle>Timer Settings</DialogTitle>
             </DialogHeader>

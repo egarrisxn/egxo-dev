@@ -13,12 +13,12 @@ export default function AccessibilityFailing({
       <h4 className="mb-2 flex items-center text-sm font-medium text-red-600 dark:text-red-400">
         <AlertCircleIcon className="mr-1 size-4" /> Inaccessible Combinations
       </h4>
-      <div className="custom-scrollbar grid max-h-48 grid-cols-1 gap-2 overflow-y-auto pr-2">
+      <div className="custom-scrollbar grid max-h-48 grid-cols-1 gap-1.5 overflow-y-auto pr-2 pb-1.5">
         {combinations.length > 0 ? (
           combinations.map((score, index) => (
             <div
               key={index}
-              className="flex items-center justify-between rounded border border-red-100 bg-red-50 p-2 dark:border-red-900 dark:bg-red-900/20"
+              className="flex items-center justify-between rounded-md border border-red-100 bg-red-50 p-2 dark:border-red-900 dark:bg-red-900/20"
             >
               <div className="flex items-center gap-2">
                 <div className="flex items-center">
@@ -53,7 +53,7 @@ export default function AccessibilityFailing({
                 <span className="text-xs font-medium">
                   {score.ratio.toFixed(2)}:1
                 </span>
-                <div className="dark:bg-900 rounded bg-red-100 px-1.5 py-0.5 text-xs text-red-800 dark:text-red-200">
+                <div className="dark:bg-900 rounded-md bg-red-100 px-1.5 py-0.5 text-xs text-red-800 dark:text-red-200">
                   {score.level}
                 </div>
               </div>

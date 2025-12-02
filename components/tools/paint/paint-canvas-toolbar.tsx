@@ -12,12 +12,12 @@ export default function PaintCanvasToolbar({
   onToolSelect,
 }: PaintCanvasToolbarProps) {
   return (
-    <aside className="w-8 border-r border-border bg-card p-0.5">
+    <aside className="w-8 border-t border-r border-accent-foreground/40 bg-card p-0.5">
       <Button
         variant="ghost"
         className={`mb-0.5 size-7 min-w-0 p-0 ${
           selectedTool === 'brush'
-            ? 'border border-border bg-card shadow-inner'
+            ? 'border border-accent-foreground/40 bg-card shadow-inner'
             : ''
         }`}
         onClick={() => onToolSelect('brush')}
@@ -40,7 +40,7 @@ export default function PaintCanvasToolbar({
         variant="ghost"
         className={`mb-0.5 size-7 min-w-0 p-0 ${
           selectedTool === 'eraser'
-            ? 'border border-border bg-card shadow-inner'
+            ? 'border border-accent-foreground/40 bg-card shadow-inner'
             : ''
         }`}
         onClick={() => onToolSelect('eraser')}

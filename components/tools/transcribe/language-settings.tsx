@@ -27,7 +27,7 @@ export default function LanguageSettings({
   }
 
   return (
-    <div className="sm:rounded-xl sm:border sm:border-border sm:bg-card sm:shadow-lg">
+    <div className="sm:rounded-2xl sm:border sm:border-accent-foreground/40 sm:bg-card sm:shadow-md sm:ring-1 sm:ring-muted/50 sm:ring-inset">
       <div className="container mx-auto p-4">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-lg font-semibold text-foreground">
@@ -62,7 +62,7 @@ export default function LanguageSettings({
                     </span>
                   </div>
                   {selectedLanguages[0] === lang.code && (
-                    <span className="rounded bg-accent px-2 py-1 text-xs text-accent-foreground">
+                    <span className="rounded-md bg-accent px-2 py-1 text-xs text-accent-foreground">
                       Primary
                     </span>
                   )}

@@ -266,7 +266,7 @@ export default function SynthPlayer() {
   // if (!analyser) return <div>Loading Audio Engine...</div>;
 
   return (
-    <div className="w-[375px] sm:w-[500px] sm:rounded-xl sm:border sm:border-border sm:bg-card sm:p-6 sm:shadow-lg md:w-[800px]">
+    <div className="w-[375px] sm:w-[500px] sm:rounded-2xl sm:border sm:border-accent-foreground/40 sm:bg-card sm:p-6 sm:shadow-md sm:ring-1 sm:ring-muted/50 sm:ring-inset md:w-[800px]">
       <div className="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="col-span-1 h-[100px]">
           <SynthWaveformVisualizer analyser={analyser} />

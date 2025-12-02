@@ -14,7 +14,7 @@ export function AboutTabs() {
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`rounded-md px-3 py-1 text-xs font-medium sm:text-sm ${
+            className={`cursor-pointer rounded-md px-3 py-1 text-xs font-medium sm:text-sm ${
               activeIndex === index
                 ? 'bg-zinc-200 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-100'
                 : 'bg-zinc-100 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-300'

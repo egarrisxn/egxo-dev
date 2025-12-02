@@ -248,7 +248,7 @@ export default function PaintCanvas() {
         ref={containerRef}
         className="fixed inset-0 z-40 flex items-center justify-center"
       >
-        <div className="w-[90vw] max-w-[740px] rounded-sm border border-border bg-card sm:shadow-lg">
+        <div className="w-[90vw] max-w-[740px] rounded-2xl border border-accent-foreground/40 bg-card shadow-md ring-1 ring-muted/50 ring-inset">
           <PaintCanvasHeader
             onMinimize={minimizeWindow}
             onClose={closeWindow}
@@ -260,11 +260,11 @@ export default function PaintCanvas() {
             {/* Drawing area adapts to viewport size and orientation */}
             <div
               ref={canvasContainerRef}
-              className="h-[55vh] w-[90vw] max-w-[740px] touch-none overflow-hidden border-t border-border md:overflow-auto"
+              className="h-[45vh] w-[90vw] max-w-[740px] touch-none overflow-hidden border-t border-accent-foreground/40 md:overflow-auto"
             >
               <canvas
                 ref={canvasRef}
-                className="block h-full w-full touch-none"
+                className="block size-full touch-none"
                 // Mouse Events (Desktop)
                 onMouseDown={startDrawing}
                 onMouseMove={draw}
@@ -283,7 +283,7 @@ export default function PaintCanvas() {
             selectedColor={color}
             onColorSelect={setColor}
           />
-          <section className="rounded-b-sm border-t border-border bg-card p-1.5 text-sm">
+          <section className="rounded-b-2xl border-t border-accent-foreground/40 bg-card p-1.5 text-sm">
             For help, hit that help button above!
           </section>
         </div>

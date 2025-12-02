@@ -14,7 +14,7 @@ export default function PaintCanvasPalette({
   onColorSelect,
 }: PaintCanvasPaletteProps) {
   return (
-    <div className="flex border-t border-border bg-card p-1">
+    <div className="flex border-t border-accent-foreground/40 bg-card p-1">
       <section className="flex flex-wrap gap-1">
         {colors.map((c) => (
           <Button
