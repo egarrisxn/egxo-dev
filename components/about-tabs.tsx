@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { TransitionPanel } from '@/components/ui/transition-panel'
 import { ABOUT_ITEMS } from '@/lib/data'
+import { TransitionPanel } from '@/components/ui/transition-panel'
 
 export function AboutTabs() {
   const [activeIndex, setActiveIndex] = useState(0)

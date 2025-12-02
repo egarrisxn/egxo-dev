@@ -1,7 +1,7 @@
 'use client'
 
 import { SYNTH_BLACK_KEYS, SYNTH_WHITE_KEYS } from '@/lib/data'
-import SynthKey from './synth-key'
+import SynthKey from '@/components/tools/synth/synth-key'
 
 interface SynthKeyboardProps {
   activeKeys: Set<string>

@@ -10,7 +10,7 @@ import {
 } from 'motion/react'
 import { cn } from '@/lib/utils'
 
-export type TextLoopProps = {
+export interface TextLoopProps {
   children: React.ReactNode[]
   className?: string
   interval?: number

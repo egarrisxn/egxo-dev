@@ -1,31 +1,25 @@
 import { Link } from 'next-view-transitions'
-import {
-  ArrowLeft,
-  ArrowRight,
-  ArrowUpRight,
-  type LucideIcon,
-} from 'lucide-react'
 import clsx from 'clsx'
-
-type Variant = 'back' | 'see-more' | 'external'
+import type { LinkVariant, IconComponent } from '@/lib/types'
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  ArrowUpRightIcon,
+} from '@/components/icons'
 
 interface SmartLinkProps {
   href: string
   text: string
-  variant?: Variant
+  variant?: LinkVariant
 }
 
-const icons: Record<Variant, LucideIcon> = {
-  back: ArrowLeft,
-  'see-more': ArrowRight,
-  external: ArrowUpRight,
+const icons: Record<LinkVariant, IconComponent> = {
+  back: ArrowLeftIcon,
+  more: ArrowRightIcon,
+  external: ArrowUpRightIcon,
 }
 
-export function SmartLink({
-  href,
-  text,
-  variant = 'see-more',
-}: SmartLinkProps) {
+export function SmartLink({ href, text, variant = 'more' }: SmartLinkProps) {
   const Icon = icons[variant]
 
   const isExternal = variant === 'external'
@@ -43,7 +37,7 @@ export function SmartLink({
     'mt-0.5 transition-all duration-300 ease-out',
     variant === 'back' &&
       'translate-x-0.5 text-foreground group-hover:-translate-x-0.5 group-hover:scale-x-105',
-    variant === 'see-more' &&
+    variant === 'more' &&
       '-translate-x-0.5 text-foreground group-hover:translate-x-0.5 group-hover:scale-x-105',
     variant === 'external' &&
       'group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-105 text-sky-600 group-hover:text-sky-700 dark:text-sky-400 dark:group-hover:text-sky-500',

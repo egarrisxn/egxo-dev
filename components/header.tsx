@@ -1,11 +1,11 @@
 'use client'
 
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { Link } from 'next-view-transitions'
+import { NAV_LINKS } from '@/lib/data'
 import { TextEffect } from '@/components/ui/text-effect'
 import { SmartLink } from '@/components/ui/smart-link'
-import { usePathname } from 'next/navigation'
-import { NAV_LINKS } from '@/lib/data'
 
 export function Header() {
   const pathname = usePathname()

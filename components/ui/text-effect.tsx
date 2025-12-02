@@ -10,20 +10,18 @@ import {
   Variants,
 } from 'motion/react'
 import { cn } from '@/lib/utils'
+import type { PerAnimationType, PresetAnimationType } from '@/lib/types'
 
-export type PresetType = 'blur' | 'fade-in-blur' | 'scale' | 'fade' | 'slide'
-export type PerType = 'word' | 'char' | 'line'
-
-export type TextEffectProps = {
+export interface TextEffectProps {
   children: string
-  per?: PerType
+  per?: PerAnimationType
   as?: keyof React.JSX.IntrinsicElements
   variants?: {
     container?: Variants
     item?: Variants
   }
   className?: string
-  preset?: PresetType
+  preset?: PresetAnimationType
   delay?: number
   speedReveal?: number
   speedSegment?: number
@@ -36,7 +34,7 @@ export type TextEffectProps = {
   style?: React.CSSProperties
 }
 
-const defaultStaggerTimes: Record<PerType, number> = {
+const defaultStaggerTimes: Record<PerAnimationType, number> = {
   char: 0.03,
   word: 0.05,
   line: 0.1,
@@ -64,7 +62,7 @@ const defaultItemVariants: Variants = {
 }
 
 const presetVariants: Record<
-  PresetType,
+  PresetAnimationType,
   { container: Variants; item: Variants }
 > = {
   blur: {

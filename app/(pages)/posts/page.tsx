@@ -66,7 +66,7 @@ export default function PostsPage() {
           </div>
         </motion.section>
         <div className="pt-12">
-          <SmartLink href="/tools" text="Tools" variant="see-more" />
+          <SmartLink href="/tools" text="Tools" variant="more" />
         </div>
       </motion.div>
     </div>

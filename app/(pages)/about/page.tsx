@@ -33,7 +33,7 @@ export default function AboutPage() {
           <AboutTabs />
         </motion.section>
         <div className="pt-12">
-          <SmartLink href="/projects" text="Projects" variant="see-more" />
+          <SmartLink href="/projects" text="Projects" variant="more" />
         </div>
       </motion.div>
     </div>

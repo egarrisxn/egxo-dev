@@ -1,9 +1,14 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { Play, Pause, RotateCcw, Settings } from 'lucide-react'
+import {
+  PlayIcon,
+  PauseIcon,
+  RotateCcwIcon,
+  SettingsIcon,
+} from '@/components/icons'
 import { initialSettings } from '@/helpers/pomodoro-timer'
-import { DEFAULT_SETTINGS } from '@/lib/data'
+import { DEFAULT_TIMER_SETTINGS } from '@/lib/data'
 import type {
   PomodoroTimerMode,
   PomodoroTimerPreset,
@@ -121,7 +126,7 @@ export default function PomodoroTimer() {
           }
           break
         default:
-          newSettings = DEFAULT_SETTINGS
+          newSettings = DEFAULT_TIMER_SETTINGS
       }
       setSettings(newSettings)
       setIsActive(false)
@@ -162,10 +167,10 @@ export default function PomodoroTimer() {
 
       <div className="mx-auto space-x-3 px-6">
         <Button onClick={toggleTimer} size="icon">
-          {isActive ? <Pause /> : <Play />}
+          {isActive ? <PauseIcon /> : <PlayIcon />}
         </Button>
         <Button onClick={resetTimer} size="icon">
-          <RotateCcw />
+          <RotateCcwIcon />
         </Button>
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
@@ -173,7 +178,7 @@ export default function PomodoroTimer() {
               size="icon"
               className="cursor-pointer opacity-60 transition-opacity hover:opacity-100"
             >
-              <Settings />
+              <SettingsIcon />
             </Button>
           </DialogTrigger>
           <DialogContent>

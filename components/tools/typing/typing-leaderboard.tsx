@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import type { TypingLeaderboardEntry } from '@/lib/types'
 import { Button } from '@/components/ui/button'
-import ClearTypingLeaderboard from './clear-typing-leaderboard'
+import ClearTypingLeaderboard from '@/components/tools/typing/clear-typing-leaderboard'
 
 interface TypingLeaderboardProps {
   wpm: number

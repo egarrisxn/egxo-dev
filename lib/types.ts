@@ -1,3 +1,5 @@
+import type { ComponentType, SVGProps } from 'react'
+
 export interface Links {
   label: string
   href: string
@@ -152,3 +154,18 @@ export interface SynthKeys {
 export interface OffsetSynthKeys extends SynthKeys {
   offset: number
 }
+
+export type ThemeId = 'light' | 'dark' | 'system'
+
+export type LinkVariant = 'back' | 'more' | 'external'
+
+export type IconComponent = ComponentType<SVGProps<SVGSVGElement>>
+
+export type PresetAnimationType =
+  | 'blur'
+  | 'fade-in-blur'
+  | 'scale'
+  | 'fade'
+  | 'slide'
+
+export type PerAnimationType = 'word' | 'char' | 'line'

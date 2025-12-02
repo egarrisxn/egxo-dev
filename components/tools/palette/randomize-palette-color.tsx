@@ -1,5 +1,5 @@
-import { RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { RefreshCwIcon } from '@/components/icons'
 
 interface RandomizePaletteColorProps {
   randomizePaletteColor: () => void
@@ -19,7 +19,7 @@ export default function RandomizePaletteColor({
         className="text-xs"
         disabled={isRandomizing}
       >
-        <RefreshCw
+        <RefreshCwIcon
           className={`mr-1 size-3 ${isRandomizing ? 'animate-spin' : ''}`}
         />
         Randomize

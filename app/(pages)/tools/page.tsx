@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import * as motion from 'motion/react-client'
-import { SmartLink } from '@/components/ui/smart-link'
 import { TOOL_LINKS } from '@/lib/data'
 import {
   VARIANTS_CONTAINER,
   VARIANTS_SECTION,
   TRANSITION_SECTION,
 } from '@/lib/motion'
+import { SmartLink } from '@/components/ui/smart-link'
 
 export const metadata: Metadata = {
   alternates: {
@@ -48,7 +48,7 @@ export default function ToolsPage() {
           </motion.ul>
         </motion.section>
         <div className="pt-12">
-          <SmartLink href="/contact" text="Contact" variant="see-more" />
+          <SmartLink href="/contact" text="Contact" variant="more" />
         </div>
       </motion.div>
     </div>

@@ -7,10 +7,9 @@ import {
   useSpring,
   type SpringOptions,
 } from 'motion/react'
+import { MAGNETIC_SPRING_CONFIG } from '@/lib/data'
 
-const SPRING_CONFIG = { stiffness: 26.7, damping: 4.1, mass: 0.2 }
-
-export type MagneticProps = {
+export interface MagneticProps {
   children: React.ReactNode
   intensity?: number
   range?: number
@@ -23,7 +22,7 @@ export function Magnetic({
   intensity = 0.6,
   range = 100,
   actionArea = 'self',
-  springOptions = SPRING_CONFIG,
+  springOptions = MAGNETIC_SPRING_CONFIG,
 }: MagneticProps) {
   const [isHovered, setIsHovered] = useState(false)
   const ref = useRef<HTMLDivElement>(null)

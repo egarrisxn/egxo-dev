@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-type ProjectImageProps = {
+interface ProjectImageProps {
   href: string
   thumbnail: string
 }

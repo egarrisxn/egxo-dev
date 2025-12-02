@@ -2,18 +2,13 @@
 
 import * as React from 'react'
 import { motion, SpringOptions, useScroll, useSpring } from 'motion/react'
+import { DEFAULT_SPRING_OPTIONS } from '@/lib/data'
 import { cn } from '@/lib/utils'
 
-export type ScrollProgressProps = {
+export interface ScrollProgressProps {
   className?: string
   springOptions?: SpringOptions
   containerRef?: React.RefObject<HTMLDivElement>
-}
-
-const DEFAULT_SPRING_OPTIONS: SpringOptions = {
-  stiffness: 200,
-  damping: 50,
-  restDelta: 0.001,
 }
 
 export function ScrollProgress({

@@ -4,8 +4,8 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { ViewTransitions } from 'next-view-transitions'
 import { Analytics } from '@vercel/analytics/react'
 import { ThemeProvider } from '@/context/theme-provider'
-import { Toaster } from '@/components/ui/sonner'
 import { SITE_URL, SITE_TITLE, SITE_DESC, SITE_HANDLE } from '@/lib/config'
+import { Toaster } from '@/components/ui/sonner'
 import './globals.css'
 
 const geist = Geist({

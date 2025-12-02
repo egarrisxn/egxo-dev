@@ -56,7 +56,7 @@ export default function ProjectsPage() {
           </div>
         </motion.section>
         <div className="pt-12">
-          <SmartLink href="/posts" text="Posts" variant="see-more" />
+          <SmartLink href="/posts" text="Posts" variant="more" />
         </div>
       </motion.div>
     </div>

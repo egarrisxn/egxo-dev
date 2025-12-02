@@ -1,11 +1,11 @@
-import { DEFAULT_SETTINGS } from '@/lib/data'
+import { DEFAULT_TIMER_SETTINGS } from '@/lib/data'
 import type { PomodoroTimerSettings, TaskItem } from '@/lib/types'
 
 // State initialization
 const loadSettings = (): PomodoroTimerSettings => {
-  if (typeof window === 'undefined') return DEFAULT_SETTINGS
+  if (typeof window === 'undefined') return DEFAULT_TIMER_SETTINGS
   const saved = localStorage.getItem('pomodoroSettings')
-  return saved ? JSON.parse(saved) : DEFAULT_SETTINGS
+  return saved ? JSON.parse(saved) : DEFAULT_TIMER_SETTINGS
 }
 
 // Get settings only once during the initial render

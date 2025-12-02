@@ -1,4 +1,4 @@
-import { DownloadIcon } from './icons'
+import { DownloadIcon } from '@/components/icons'
 
 export function ResumeDownloadIcon() {
   return (

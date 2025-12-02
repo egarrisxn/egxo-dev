@@ -1,4 +1,3 @@
-import { XCloseIcon } from './icons'
 import {
   MorphingDialog,
   MorphingDialogTrigger,
@@ -6,8 +5,9 @@ import {
   MorphingDialogClose,
   MorphingDialogContainer,
 } from '@/components/ui/morphing-dialog'
+import { XCloseIcon } from '@/components/icons'
 
-type ProjectVideoProps = {
+interface ProjectVideoProps {
   video: string
 }
 

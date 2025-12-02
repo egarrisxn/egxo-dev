@@ -11,7 +11,7 @@ import type {
 } from '@/lib/types'
 import { Button } from '@/components/ui/button'
 import { MicIcon, MicOffIcon, SettingsIcon } from '@/components/icons'
-import LanguageSettings from './language-settings'
+import LanguageSettings from '@/components/tools/transcribe/language-settings'
 
 export default function TranscribeLive() {
   const [isListening, setIsListening] = useState(false)

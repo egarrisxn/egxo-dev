@@ -4,9 +4,9 @@ import { useRef } from 'react'
 import { useTypingTest } from '@/hooks/typing-test/use-typing-test'
 import { useTypingLeaderboard } from '@/hooks/typing-test/use-typing-leaderboard'
 import { Button } from '@/components/ui/button'
-import TypingArea from './typing-area'
-import TypingStats from './typing-stats'
-import TypingLeaderboard from './typing-leaderboard'
+import TypingArea from '@/components/tools/typing/typing-area'
+import TypingStats from '@/components/tools/typing/typing-stats'
+import TypingLeaderboard from '@/components/tools/typing/typing-leaderboard'
 
 interface TypingTestProps {
   quotes: string[]

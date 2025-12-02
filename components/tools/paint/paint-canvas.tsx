@@ -5,9 +5,9 @@ import { useRef, useState, useEffect } from 'react'
 import { CANVAS_PAINT_COLORS } from '@/lib/data'
 import type { DrawingEvent } from '@/lib/types'
 import { Button } from '@/components/ui/button'
-import PaintCanvasHeader from './paint-canvas-header'
-import PaintCanvasToolbar from './paint-canvas-toolbar'
-import PaintCanvasPalette from './paint-canvas-palette'
+import PaintCanvasHeader from '@/components/tools/paint/paint-canvas-header'
+import PaintCanvasToolbar from '@/components/tools/paint/paint-canvas-toolbar'
+import PaintCanvasPalette from '@/components/tools/paint/paint-canvas-palette'
 
 export default function PaintCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null)

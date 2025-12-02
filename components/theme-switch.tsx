@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import { MonitorIcon, MoonIcon, SunIcon } from './icons'
 import { AnimatedBackground } from '@/components/ui/animated-background'
+import { MonitorIcon, MoonIcon, SunIcon } from '@/components/icons'
 
 const THEMES_OPTIONS = [
   {

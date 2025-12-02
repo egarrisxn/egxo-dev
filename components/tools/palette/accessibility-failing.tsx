@@ -1,5 +1,5 @@
-import { AlertCircle } from 'lucide-react'
 import type { PaletteAccessibilityScore } from '@/lib/types'
+import { AlertCircleIcon } from '@/components/icons'
 
 interface AccessibilityFailingProps {
   combinations: PaletteAccessibilityScore[]
@@ -11,7 +11,7 @@ export default function AccessibilityFailing({
   return (
     <div>
       <h4 className="mb-2 flex items-center text-sm font-medium text-red-600 dark:text-red-400">
-        <AlertCircle className="mr-1 size-4" /> Inaccessible Combinations
+        <AlertCircleIcon className="mr-1 size-4" /> Inaccessible Combinations
       </h4>
       <div className="custom-scrollbar grid max-h-48 grid-cols-1 gap-2 overflow-y-auto pr-2">
         {combinations.length > 0 ? (

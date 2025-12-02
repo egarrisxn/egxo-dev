@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Plus, Trash2 } from 'lucide-react'
+import { PlusIcon, TrashIcon } from '@/components/icons'
 import { loadInitialTasks } from '@/helpers/pomodoro-timer'
 import type { TaskItem } from '@/lib/types'
 import { Button } from '@/components/ui/button'
@@ -62,7 +62,7 @@ export default function PomodoroTaskList() {
             className="h-9 w-full min-w-0 grow rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none selection:bg-primary selection:text-primary-foreground file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 md:text-sm dark:bg-input/30 dark:aria-invalid:ring-destructive/40"
           />
           <Button onClick={addTask} size="icon">
-            <Plus />
+            <PlusIcon />
           </Button>
         </div>
         <div className="max-h-60 space-y-1 overflow-y-auto py-2 xl:max-h-none">
@@ -91,7 +91,7 @@ export default function PomodoroTaskList() {
                   onClick={() => removeTask(task.id)}
                   className="size-4 p-2.5 text-primary/50 opacity-0 group-hover:opacity-100 hover:bg-transparent hover:text-primary/70"
                 >
-                  <Trash2 className="size-2" />
+                  <TrashIcon className="size-2" />
                 </Button>
               </div>
             ))

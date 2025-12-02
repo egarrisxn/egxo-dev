@@ -4,7 +4,7 @@ import React, { useMemo, useId } from 'react'
 import { AnimatePresence, motion, Transition, Variants } from 'motion/react'
 import { cn } from '@/lib/utils'
 
-export type TextMorphProps = {
+export interface TextMorphProps {
   children: string
   as?: React.ElementType
   className?: string

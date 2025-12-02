@@ -612,8 +612,20 @@ export const TRANSCRIPTION_LANGUAGES = [
 
 export const TYPING_STORAGE_KEY = 'typing-leaderboard'
 
-export const DEFAULT_SETTINGS: PomodoroTimerSettings = {
+export const DEFAULT_TIMER_SETTINGS: PomodoroTimerSettings = {
   workTime: 50 * 60,
   breakTime: 10 * 60,
   preset: '50/10',
+}
+
+export const MAGNETIC_SPRING_CONFIG = {
+  stiffness: 26.7,
+  damping: 4.1,
+  mass: 0.2,
+}
+
+export const DEFAULT_SPRING_OPTIONS = {
+  stiffness: 200,
+  damping: 50,
+  restDelta: 0.001,
 }

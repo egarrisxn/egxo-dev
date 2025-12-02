@@ -1,4 +1,4 @@
-import { Check, Copy } from 'lucide-react'
+import { CheckIcon, CopyIcon } from '@/components/icons'
 
 interface CopyPaletteColorProps {
   copyToClipboard: (value: string) => void
@@ -18,9 +18,9 @@ export default function CopyPaletteColor({
     >
       {hex}
       {copiedHex === hex ? (
-        <Check className="size-3 text-green-500 lg:size-4" />
+        <CheckIcon className="size-3 text-green-500 lg:size-4" />
       ) : (
-        <Copy className="size-3 opacity-50 lg:size-4" />
+        <CopyIcon className="size-3 opacity-50 lg:size-4" />
       )}
     </div>
   )

@@ -3,12 +3,12 @@
 import { useEffect, useState, useCallback, useRef } from 'react'
 import * as Tone from 'tone'
 import { SYNTH_KEY_MAP } from '@/lib/data'
-import SynthLabeledSlider from './synth-labeled-slider'
-import SynthWaveformVisualizer from './synth-waveform-visualizer'
-import SynthKeyboard from './synth-keyboard'
-import SynthNoteInfo from './synth-note-info'
-import SynthPitchShift from './synth-pitch-shift'
-import SynthAudioVisualizer from './synth-audio-visualizer'
+import SynthLabeledSlider from '@/components/tools/synth/synth-labeled-slider'
+import SynthWaveformVisualizer from '@/components/tools/synth/synth-waveform-visualizer'
+import SynthKeyboard from '@/components/tools/synth/synth-keyboard'
+import SynthNoteInfo from '@/components/tools/synth/synth-note-info'
+import SynthPitchShift from '@/components/tools/synth/synth-pitch-shift'
+import SynthAudioVisualizer from '@/components/tools/synth/synth-audio-visualizer'
 
 export class SynthEngine {
   synth: Tone.PolySynth

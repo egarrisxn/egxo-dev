@@ -1,15 +1,15 @@
 import { Link } from 'next-view-transitions'
 import * as motion from 'motion/react-client'
-import { SmartLink } from '@/components/ui/smart-link'
-import { AnimatedBackground } from '@/components/ui/animated-background'
-import { MagneticSocialLink } from '@/components/magnetic-social-link'
-import { SelectProjects } from '@/components/select-projects'
 import { WORK_EXPERIENCE, BLOG_POSTS, EMAIL, SOCIAL_LINKS } from '@/lib/data'
 import {
   VARIANTS_CONTAINER,
   VARIANTS_SECTION,
   TRANSITION_SECTION,
 } from '@/lib/motion'
+import { SmartLink } from '@/components/ui/smart-link'
+import { AnimatedBackground } from '@/components/ui/animated-background'
+import { MagneticSocialLink } from '@/components/magnetic-social-link'
+import { SelectProjects } from '@/components/select-projects'
 
 export default function Home() {
   return (
@@ -29,7 +29,7 @@ export default function Home() {
           </p>
         </div>
         <div className="pt-2">
-          <SmartLink href="/about" text="Learn more" variant="see-more" />
+          <SmartLink href="/about" text="Learn more" variant="more" />
         </div>
       </motion.section>
 
@@ -40,7 +40,7 @@ export default function Home() {
         <h3 className="mb-5 text-lg font-medium">Select Projects</h3>
         <SelectProjects />
         <div className="pt-7">
-          <SmartLink href="/projects" text="Explore more" variant="see-more" />
+          <SmartLink href="/projects" text="Explore more" variant="more" />
         </div>
       </motion.section>
 
@@ -80,7 +80,7 @@ export default function Home() {
           <SmartLink
             href="/resume/EG-US-RESUME-2025.pdf"
             text="See more"
-            variant="see-more"
+            variant="more"
           />
         </div>
       </motion.section>
@@ -116,7 +116,7 @@ export default function Home() {
           </AnimatedBackground>
         </div>
         <div className="pt-5">
-          <SmartLink href="/posts" text="Read more" variant="see-more" />
+          <SmartLink href="/posts" text="Read more" variant="more" />
         </div>
       </motion.section>
 

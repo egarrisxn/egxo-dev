@@ -2,7 +2,7 @@
 
 import { toast } from 'sonner'
 import { BUTTON_COPY_GROUPS } from '@/lib/data'
-import ButtonGroup from './button-group'
+import ButtonGroup from '@/components/tools/button/button-group'
 
 export default function ButtonCopy() {
   const copyButtonCode = async (code: string) => {

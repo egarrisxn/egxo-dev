@@ -1,12 +1,14 @@
 import { Magnetic } from '@/components/ui/magnetic'
 
+interface MagneticSocialLinkProps {
+  children: React.ReactNode
+  link: string
+}
+
 export function MagneticSocialLink({
   children,
   link,
-}: {
-  children: React.ReactNode
-  link: string
-}) {
+}: MagneticSocialLinkProps) {
   return (
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <a

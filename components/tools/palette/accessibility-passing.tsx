@@ -1,5 +1,5 @@
-import { Check } from 'lucide-react'
 import type { PaletteAccessibilityScore } from '@/lib/types'
+import { CheckIcon } from '@/components/icons'
 
 interface AccessibilityPassingProps {
   combinations: PaletteAccessibilityScore[]
@@ -11,7 +11,7 @@ export default function AccessibilityPassing({
   return (
     <div>
       <h4 className="mb-2 flex items-center text-sm font-medium text-green-600 dark:text-green-400">
-        <Check className="mr-1 size-4" /> Accessible Combinations
+        <CheckIcon className="mr-1 size-4" /> Accessible Combinations
       </h4>
       <div className="custom-scrollbar grid max-h-48 grid-cols-1 gap-2 overflow-y-auto pr-2">
         {combinations.length > 0 ? (
