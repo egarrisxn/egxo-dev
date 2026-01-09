@@ -144,7 +144,7 @@ export const SELECT_PROJECTS: ProjectWithVideo[] = [
 
 export const MORE_PROJECTS: ProjectWithoutVideo[] = [
   {
-    name: 'Quik|Res',
+    name: 'QuikRes',
     description:
       'An AI-powered resume-to-website generator for creating polished personal sites with ease. Built with Next.js, TypeScript, AWS S3, Clerk, Tailwind CSS, and more.',
     link: 'https://quikres.vercel.app/',
@@ -160,7 +160,7 @@ export const MORE_PROJECTS: ProjectWithoutVideo[] = [
     id: 'project2',
   },
   {
-    name: 'Sway Bae Offical (2025)',
+    name: 'Sway Bae Offical v2',
     description:
       'The *NEW* online space for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, TypeScript, Supabase, Tailwind CSS, and more.',
     link: 'https://swaybae.net',
@@ -192,7 +192,7 @@ export const MORE_PROJECTS: ProjectWithoutVideo[] = [
     id: 'project6',
   },
   {
-    name: 'XO Chatbot',
+    name: 'XOChatbot',
     description:
       'An interactive AI chatbot powered by Grok, designed for seamless and responsive conversations. Built with Next.js, TypeScript, Next-Auth, Tailwind CSS, and more.',
     link: 'https://xochatbot.vercel.app',
@@ -208,7 +208,7 @@ export const MORE_PROJECTS: ProjectWithoutVideo[] = [
     id: 'project8',
   },
   {
-    name: 'XO Starter',
+    name: 'XOStarter',
     description:
       'A clean and flexible Next.js starter template focused on performance and scalability. Built with Next.js, TypeScript, Tailwind CSS, and more.',
     link: 'https://xostarter.vercel.app',
@@ -256,7 +256,7 @@ export const MORE_PROJECTS: ProjectWithoutVideo[] = [
     id: 'project14',
   },
   {
-    name: 'Sway Bae Offical (2023)',
+    name: 'Sway Bae Offical v1',
     description:
       'The *OLD* online space for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
     link: 'https://swaybae-v1.vercel.app',
