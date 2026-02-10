@@ -71,7 +71,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'Freelance',
     title: 'Full Stack Developer & Digital Product Designer',
-    start: '2024',
+    start: '2023',
     end: 'Present',
     link: 'https://egxo.dev',
     id: 'work1',
