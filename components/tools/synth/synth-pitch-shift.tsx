@@ -58,7 +58,7 @@ export default function SynthPitchShift({ onChange }: SynthPitchShiftProps) {
         />
 
         <div
-          className="absolute inset-0 flex items-center justify-center text-xl font-extrabold"
+          className="absolute inset-0 flex items-center justify-center text-xl font-bold"
           style={{ userSelect: 'none' }}
         >
           {pitchShift === -12 ? '0' : (pitchShift + 12).toFixed(2)}

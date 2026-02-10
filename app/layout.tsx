@@ -1,6 +1,6 @@
 import * as React from 'react'
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Cascadia_Code, Cascadia_Mono } from 'next/font/google'
 import { ViewTransitions } from 'next-view-transitions'
 import { Analytics } from '@vercel/analytics/react'
 import { ThemeProvider } from '@/context/theme-provider'
@@ -8,14 +8,20 @@ import { SITE_URL, SITE_TITLE, SITE_DESC, SITE_HANDLE } from '@/lib/config'
 import { Toaster } from '@/components/ui/sonner'
 import './globals.css'
 
-const geist = Geist({
-  variable: '--font-geist',
+const cascadiaCode = Cascadia_Code({
   subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-cascadia-code',
+  display: 'swap',
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const cascadiaMono = Cascadia_Mono({
   subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-cascadia-mono',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -81,7 +87,7 @@ export default function RootLayout({
         </head>
 
         <body
-          className={`${geist.variable} ${geistMono.variable} font-sans tracking-tight antialiased`}
+          className={`${cascadiaCode.variable} ${cascadiaMono.variable} font-sans tracking-tight antialiased`}
         >
           <ThemeProvider
             attribute="class"
