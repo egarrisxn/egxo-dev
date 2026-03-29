@@ -25,7 +25,7 @@ export default function Home() {
       >
         <div className="flex-1">
           <p className="mt-1 w-full max-w-138 text-[0.95rem] leading-normal text-accent-foreground xl:max-w-none xl:text-base">
-            {`Full Stack Developer and Digital Product Designer focused on building thoughtful tools for the web and the world. I take things one step at a time and try to stay guided by a Positive Mental Attitude (PMA).`}
+            {`Full Stack Developer & Digital Product Designer focused on building thoughtful tools for the web and the world. I take things one step at a time and always try to keep the PMAs (Positive Mental Attitude).`}
           </p>
         </div>
         <div className="pt-2">

@@ -56,7 +56,7 @@ export function Header() {
             href="/"
             className="font-bold text-foreground/80 hover:text-foreground"
           >
-            ★ ★ ★ Ethan G.
+            ★ Ethan Garrison ★
           </Link>
           <TextEffect
             as="p"
