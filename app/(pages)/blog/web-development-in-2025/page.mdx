@@ -1,0 +1,107 @@
+export const metadata = {
+  title: 'Web Development in 2025',
+  description:
+    'A personal look back at the trends, tools, and lessons that shaped web development in 2025',
+  alternates: {
+    canonical: '/blog/web-development-in-2025',
+  },
+}
+
+# Web Development in 2025
+
+Looking back, 2025 felt like one of those years where web development started to settle into itself a little more. Things were still moving fast, but it felt less chaotic than before. The tools got better, the workflows got tighter, and a lot of ideas that felt experimental not too long ago started feeling normal.
+
+For me, 2025 was the year modern web development really leaned into balance. It was not just about shipping fast. It was about building things that were fast, maintainable, and actually enjoyable to work on. In this post, I want to look back at some of the biggest things that stood out to me throughout the year.
+
+---
+
+## AI Became Part of the Workflow
+
+One of the biggest shifts in 2025 was how normal AI started to feel in day-to-day development. It stopped feeling like a gimmick and started feeling more like a utility. Not perfect, not magical, but genuinely useful.
+
+I found it especially helpful for scaffolding, debugging, writing repetitive functions, and speeding up the blank-page phase of development. It did not replace actual thinking, but it definitely reduced some of the friction.
+
+```tsx
+function formatSlug(title: string): string {
+  return title.toLowerCase().trim().replace(/\s+/g, '-')
+}
+```
+
+Code like this is simple, but that was kind of the point. AI was great at helping with the obvious stuff so I could spend more energy on the parts that actually needed judgment.
+
+## Full-Stack Development Felt More Natural
+
+2025 also felt like a strong year for full-stack frameworks. The line between frontend and backend kept getting thinner, and honestly, that made a lot of projects feel easier to reason about.
+
+Instead of wiring together a bunch of disconnected tools, it became more common to work in setups where routing, rendering, server logic, and deployment all lived closer together. That made the overall development experience feel smoother, especially for smaller teams or solo developers trying to move quickly.
+
+The best part was that this approach did not just help with speed. It also helped reduce context switching, which is one of those invisible things that can drain momentum fast.
+
+## Performance Still Mattered
+
+If there was one thing that never went out of style in 2025, it was performance. No matter how good the tooling got, nobody suddenly decided slow websites were acceptable.
+
+A lot of the conversation still centered around reducing unnecessary client-side JavaScript, improving load times, optimizing images, and being smarter about what actually needed to happen in the browser. That felt like a good thing. There was more intention behind how apps were built.
+
+I think that was one of the healthier signs of the year. Developers were not just chasing features. They were paying attention to how things felt for real users.
+
+## Type Safety Kept Winning
+
+By 2025, TypeScript felt less like a trend and more like a default expectation. It was just part of the way a lot of people built things.
+
+That made sense. As apps got bigger and more connected across frontend, backend, and database layers, having stronger guardrails just made life easier. Type safety helped catch mistakes early, made refactoring less stressful, and gave projects a little more structure without slowing everything down.
+
+```tsx
+type Post = {
+  id: number
+  title: string
+  published: boolean
+}
+
+const post: Post = {
+  id: 1,
+  title: 'Looking Back at 2025',
+  published: true,
+}
+```
+
+It is not flashy, but it is one of those things that quietly improves almost everything.
+
+## Design Systems and UI Quality Improved
+
+Another thing that stood out in 2025 was how much better teams got at building consistent interfaces. Design systems felt more important, more intentional, and more baked into the development process.
+
+Instead of treating UI as the final layer you throw on top, more people seemed to think in systems from the start. Components, spacing, color tokens, states, accessibility, and reuse all felt like a bigger part of the conversation.
+
+```tsx
+const cardStyles =
+  'rounded-xl border border-neutral-200 bg-white p-4 shadow-sm'
+```
+
+Even small snippets like that reflect a bigger shift. People wanted interfaces that were easier to scale, easier to maintain, and easier to trust.
+
+## AI Hype Still Needed a Reality Check
+
+Even though AI became more useful in 2025, it also needed a reality check. There was still a gap between code that looked correct and code that actually belonged in a production app.
+
+That was probably one of the more important lessons of the year. AI could help accelerate development, but it still needed oversight. You still had to review logic, think through edge cases, and make sure the code matched the standards of the project.
+
+In other words, it became a good assistant, but not a substitute for taste or experience.
+
+## Tooling Got Better, but the Web Stayed the Web
+
+A lot of tooling genuinely improved in 2025. Development servers felt faster. Error messages got better. Framework workflows became more polished. Local development and deployment often felt a little less painful than before.
+
+At the same time, web development still had all the usual chaos tucked underneath it. Hydration issues, caching weirdness, browser inconsistencies, dependency updates, and random edge cases did not disappear. They just got better dressed.
+
+That is probably part of why 2025 felt so familiar. The tools improved, but the craft still required patience.
+
+## Final Thoughts
+
+If I had to sum up web development in 2025, I would say it felt sharper. Not simpler, exactly, but more intentional. There was a stronger sense of what tools were actually worth using, what patterns were worth keeping, and what kind of developer experience people wanted long term.
+
+For me, that made 2025 a fun year to build on the web. It felt like the ecosystem matured without losing its energy. There was still plenty of experimentation, but there was also more focus, better defaults, and a stronger appreciation for building things that last.
+
+And honestly, that is a pretty good place for web development to be.
+
+-EG

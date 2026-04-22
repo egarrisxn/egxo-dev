@@ -30,29 +30,28 @@ export const SOCIAL_LINKS: Links[] = [
     href: 'https://www.linkedin.com/in/ethan-gx',
   },
   {
-    label: 'Peerlist',
-    href: 'https://peerlist.io/eg_xo',
+    label: 'Instagram',
+    href: 'https://www.instagram.com/eg___xo',
   },
   {
     label: 'X (Twitter)',
     href: 'https://x.com/eg__xo',
   },
   {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/eg___xo',
-  },
-
-  {
     label: 'Discord',
     href: 'https://discord.com/users/eg___xo',
   },
   {
-    label: 'Spotify',
-    href: 'https://open.spotify.com/user/egarrisxn',
+    label: 'Peerlist',
+    href: 'https://peerlist.io/eg_xo',
   },
   {
     label: 'Bluesky',
     href: 'https://bsky.app/profile/egxo.bsky.social',
+  },
+  {
+    label: 'Spotify',
+    href: 'https://open.spotify.com/user/egarrisxn',
   },
 ]
 
@@ -96,12 +95,28 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    year: 2026,
+    title: 'Where the Developer Market is Headed',
+    description:
+      'A personal look at the developer job market in 2026, the trends shaping tech work, and what may be coming next',
+    link: '/blog/where-the-developer-market-is-headed',
+    uid: 'blog-1',
+  },
+  {
+    year: 2026,
+    title: 'Web Development in 2025',
+    description:
+      'A personal look back at the trends, tools, and lessons that shaped web development in 2025',
+    link: '/blog/web-development-in-2025',
+    uid: 'blog-2',
+  },
+  {
     year: 2025,
     title: 'Truly Understanding MDX',
     description:
       'Wrap your brain around MDX and the benefits it has for the modern web',
     link: '/blog/truly-understanding-mdx',
-    uid: 'blog-1',
+    uid: 'blog-3',
   },
   {
     year: 2025,
@@ -109,7 +124,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       'Explore the Benefits and Features of TypeScript for building scalable applications',
     link: '/blog/typescript-is-the-new-norm',
-    uid: 'blog-2',
+    uid: 'blog-4',
   },
   {
     year: 2025,
@@ -117,7 +132,7 @@ export const BLOG_POSTS: BlogPost[] = [
     description:
       'Discover how React Server Components improves performance and reduces bundle size',
     link: '/blog/the-power-of-rsc',
-    uid: 'blog-3',
+    uid: 'blog-5',
   },
 ]
 
@@ -192,28 +207,12 @@ export const MORE_PROJECTS: ProjectWithoutVideo[] = [
     id: 'project6',
   },
   {
-    name: 'XOChatbot',
-    description:
-      'An interactive AI chatbot powered by Grok, designed for seamless and responsive conversations. Built with Next.js, TypeScript, Next-Auth, Tailwind CSS, and more.',
-    link: 'https://xochatbot.vercel.app',
-    thumbnail: '/projects/xochatbot.png',
-    id: 'project7',
-  },
-  {
     name: 'International Worldwide',
     description:
       'A multilingual platform for practicing coding challenges with internationalization support. Built with Next.js, JavaScript, Next-Intl, Tailwind CSS, and more.',
     link: 'https://international-worldwide.vercel.app',
     thumbnail: '/projects/internationalworldwide.png',
-    id: 'project8',
-  },
-  {
-    name: 'XOStarter',
-    description:
-      'A clean and flexible Next.js starter template focused on performance and scalability. Built with Next.js, TypeScript, Tailwind CSS, and more.',
-    link: 'https://xostarter.vercel.app',
-    thumbnail: '/projects/xostarter.png',
-    id: 'project9',
+    id: 'project7',
   },
   {
     name: 'ATS Resbuilder',
@@ -221,7 +220,7 @@ export const MORE_PROJECTS: ProjectWithoutVideo[] = [
       'A professional resume builder focused on ATS compatibility for better hiring results. Built with Next.js, JavaScript, MDX, Tailwind CSS, and more.',
     link: 'https://ats-resbuilder.vercel.app',
     thumbnail: '/projects/resbuilder.png',
-    id: 'project10',
+    id: 'project8',
   },
   {
     name: 'Resplashpad',
@@ -229,7 +228,7 @@ export const MORE_PROJECTS: ProjectWithoutVideo[] = [
       'A high-resolution photo browser powered by the Unsplash API. Built with Vite, TypeScript, TanStack Query, Tailwind CSS, and more.',
     link: 'https://resplashpad.vercel.app',
     thumbnail: '/projects/resplashpad.png',
-    id: 'project11',
+    id: 'project9',
   },
   {
     name: 'n00b:dev',
@@ -237,7 +236,7 @@ export const MORE_PROJECTS: ProjectWithoutVideo[] = [
       'A developer blog sharing practical coding tips, tools, and insights for beginner level developers. Built with Astro, TypeScript, Tailwind CSS, and more.',
     link: 'https://n00bdev.vercel.app',
     thumbnail: '/projects/n00bdev.png',
-    id: 'project12',
+    id: 'project10',
   },
   {
     name: 'Unofficial Merchandise',
@@ -245,15 +244,7 @@ export const MORE_PROJECTS: ProjectWithoutVideo[] = [
       'A modern e-commerce storefront offering smooth shopping and Stripe-powered payments. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
     link: 'https://unofficialmerchandise.vercel.app',
     thumbnail: '/projects/unofficialmerchandise.png',
-    id: 'project13',
-  },
-  {
-    name: 'Egxo.fyi',
-    description:
-      'A personal blog to share thoughts, insights, and development experiences. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
-    link: 'https://egxo.fyi',
-    thumbnail: '/projects/egxo-fyi.png',
-    id: 'project14',
+    id: 'project11',
   },
   {
     name: 'Sway Bae Offical v1',
@@ -261,7 +252,7 @@ export const MORE_PROJECTS: ProjectWithoutVideo[] = [
       'The *OLD* online space for streamer Sway Bae, featuring exclusive content and creator updates. Built with Next.js, JavaScript, Sanity, Tailwind CSS, and more.',
     link: 'https://swaybae-v1.vercel.app',
     thumbnail: '/projects/swaybae-v1.png',
-    id: 'project15',
+    id: 'project12',
   },
 ]
 
